@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "hooks"
+  ],
+  "rules": {
+    "hooks/sort": [
+      2,
+      {
+        "groups": [
+          "useDispatch",
+          "useNavigate",
+          "useReducer",
+          "useContext",
+          "useSelector",
+          "useStepState",
+          "useState",
+          "useRef",
+          "useCallback",
+          "useComponentState",
+          "useEffect"
+        ]
+      }
+    ]
+  }
+}

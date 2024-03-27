@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "react-redux"
+  ],
+  "extends": [
+    "plugin:react-redux/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/store/**/*.js",
+        "src/store/**/*.jsx",
+        "src/store/**/*.ts",
+        "src/store/**/*.tsx"
+      ],
+      "rules": {
+        "no-param-reassign": "off"
+      }
+    }
+  ]
+}

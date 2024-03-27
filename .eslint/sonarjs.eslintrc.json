@@ -1,0 +1,4 @@
+{
+  "plugins": ["sonarjs"],
+  "extends": ["plugin:sonarjs/recommended"]
+}
