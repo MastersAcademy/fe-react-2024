@@ -15,7 +15,7 @@ jobs:
         - run: npm install --production
         - run: npm run lint:css
 
-    lint-html:
+    lint-ts:
       name: Lint TS
       runs-on: ubuntu-latest
       steps:
@@ -24,7 +24,7 @@ jobs:
           with:
             node-version: 14.18.1
         - run: npm install --production
-        - run: npm run lint:TS
+        - run: npm run lint:ts
 
     lint-branch-name:
         name: Validate branch name
