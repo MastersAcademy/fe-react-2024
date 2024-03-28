@@ -22,6 +22,7 @@ echo ""
 echo "***************************************************"
 echo "\033[0m"
 
-echo .brachlintrc.json
+echo "Content of .brachlintrc.json:"
+cat .branchlintrc.json
 
 npx branch-name-lint --config  .brachlintrc.json
