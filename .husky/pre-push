@@ -5,9 +5,9 @@ echo "\033[0;33m"
 echo "***************************************************"
 echo ""
 echo "We use branch-name-lint."
-echo "To push a branch, be sure you have right prefix, ticket name in uppercase, and description split by underscore. Example branch name:"
+echo "To push a branch, be sure you have right prefix (task), the two-digit task number, dash(-) and task name."
 echo ""
-echo "  * task/01-api_models"
+echo "Example of a branch name:  ---> task/01-api_models <---"
 echo ""
 echo "Read more: https://github.com/barzik/branch-name-lint"
 echo ""
@@ -22,4 +22,5 @@ echo ""
 echo "***************************************************"
 echo "\033[0m"
 
-npx branch-name-lint --config  .brachlintrc.json
+cd "$(git rev-parse --show-toplevel)" || exit
+npx branch-name-lint .branchlintrc.json
