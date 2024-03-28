@@ -1,0 +1,37 @@
+
+name: Awesome Linter
+
+on: pull_request
+
+jobs:
+    lint-css:
+      name: Lint CSS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 14.18.1
+        - run: npm install --production
+        - run: npm run lint:css
+
+    lint-html:
+      name: Lint TS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 14.18.1
+        - run: npm install --production
+        - run: npm run lint:TS
+
+    lint-branch-name:
+        name: Validate branch name
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: lekterable/branchlint-action@v1.0.0
+              with:
+                  allowed: |
+                      /^(task|hotfix|setup)/([0-9]{2}-.{1,70})/i
