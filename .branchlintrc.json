@@ -1,0 +1,15 @@
+{
+  "branchNameLinter": {
+    "prefixes": [
+      "task",
+      "hotfix",
+      "setup"
+    ],
+    "regex": "^[a-z]+/([0-9]{2}-.{1,70})",
+    "regexOptions": "i",
+    "separator": "/",
+    "msgDoesNotMatchRegex": "Branch \"%s\" does not match the allowed pattern: \"%s\"",
+    "msgPrefixNotAllowed": "Branch prefix \"%s\" is not allowed. Allowed prefixes: task, hotfix, setup",
+    "msgBranchDisallowed": "Pushing to \"%s\" is not allowed, use git-flow.\n\nExample:\n* task/01-api_models\n\n"
+  }
+}

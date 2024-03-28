@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "ignore": ["/props|Props|\\w+Props/g"]
+      }
+    ],
+    "unicorn/filename-case": "off",
+    "unicorn/consistent-function-scoping": "off"
+  }
+}

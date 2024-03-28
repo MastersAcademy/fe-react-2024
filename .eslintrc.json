@@ -1,0 +1,33 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "es2021": true
+  },
+  "ignorePatterns": ["!src/**/*.{ts,js}", "*.js", "node_modules", "vite.config.ts"],
+  "root": true,
+  "extends": [
+    "./.eslint/custom-style.eslintrc.json5",
+    "./.eslint/ordered-imports.eslintrc.json5",
+    "./.eslint/prettier.eslintrc.json",
+    "./.eslint/react.eslintrc.json",
+    "./.eslint/react-redux.eslintrc.json",
+    "./.eslint/sonarjs.eslintrc.json",
+    "./.eslint/typescript-naming-convention.eslintrc.js",
+    "./.eslint/unicorn.eslintrc.json",
+    "./.eslint/unicorn-react.eslintrc.json"
+  ],
+  "rules": {
+    "consistent-return": "off",
+    "@typescript-eslint/consistent-type-imports": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
