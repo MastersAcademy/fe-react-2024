@@ -22,4 +22,5 @@ echo ""
 echo "***************************************************"
 echo "\033[0m"
 
-npx branch-name-lint
+cd "$(git rev-parse --show-toplevel)" || exit
+npx branch-name-lint .branchlintrc.json
