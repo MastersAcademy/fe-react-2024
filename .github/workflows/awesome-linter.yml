@@ -12,7 +12,7 @@ jobs:
         - uses: actions/setup-node@v1
           with:
             node-version: 20.9.0
-        - run: npm install --production
+        - run: npm ci --only=production --ignore-scripts
         - run: npm run lint:css
 
     lint-ts:
@@ -23,7 +23,7 @@ jobs:
         - uses: actions/setup-node@v1
           with:
             node-version: 20.9.0
-        - run: npm install --production
+        - run: npm ci --only=production --ignore-scripts
         - run: npm run lint:ts
 
     lint-branch-name:
