@@ -5,7 +5,7 @@
   "env": {
     "es2021": true
   },
-  "ignorePatterns": ["!src/**/*.{ts,js}", "*.js", "node_modules", "vite.config.ts"],
+  "ignorePatterns": ["!src/**/*.{ts,js}", "*.js", "node_modules", "vite.config.ts", "global.d.ts"],
   "root": true,
   "extends": [
     "./.eslint/custom-style.eslintrc.json5",
