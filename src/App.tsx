@@ -6,7 +6,7 @@ function App() {
     return (
         <>
             <HeaderComponent />
-            <div className={'home'}>Home page</div>
+            <div className="home">Home page</div>
         </>
     );
 }
