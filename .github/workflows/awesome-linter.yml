@@ -13,7 +13,7 @@ jobs:
           with:
             node-version: 20.9.0
         - run: npm pkg delete scripts.prepare
-        - run: npm install --production
+        - run: npm install
         - run: npm run lint:css
 
     lint-ts:
@@ -25,7 +25,7 @@ jobs:
           with:
             node-version: 20.9.0
         - run: npm pkg delete scripts.prepare
-        - run: npm install --production
+        - run: npm install
         - run: npm run lint:ts
 
     lint-branch-name:
