@@ -11,7 +11,7 @@ function App() {
             <main className="home">
                 <h1>
                     <img src={reactLogo} alt="React logo" />
-                    Home page
+                    Home page {sfdsfs}
                 </h1>
             </main>
         </>
