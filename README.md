@@ -12,4 +12,4 @@ This is a repository for the Masters Academy course "Getting Started with React"
 
 ## Useful documentation
 
-- [Git linters](docs/git-linters.md)
+- [Wiki](https://github.com/MastersAcademy/fe-react-2024/wiki)
