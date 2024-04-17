@@ -1,4 +1,3 @@
-body {
-  display: flex;
-  flex-direction: column;
+* {
+  outline: 1px #F00 solid;
 }
