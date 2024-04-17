@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.img {
+  width: 330px;
+  height: 292px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.description {
+  line-height: 1.5;
+  width: 330px;
+}
+
+@media only screen and (min-width: 1280px) {
+
+  .container {
+    flex-direction: row-reverse;
+    gap: 75px;
+  }
+
+  .img {
+    width: 500px;
+    height: 489px;
+    margin-top: 70px;
+  }
+
+  .description {
+    width: 575px;
+  }
+}
