@@ -1,4 +1,53 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
 body {
+  color: #221F1F;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+@media (max-width: 1200px) {
+
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+
+  section {
+    padding: 5rem 5% 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  html {
+    font-size: 50%;
+  }
 }

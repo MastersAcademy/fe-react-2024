@@ -1,2 +1,3 @@
-import styles from './header.module.css';
-export const HeaderComponent = () => <header className={styles.header}>Header</header>;
+import './header.css';
+
+export const HeaderComponent = () => <header className="header">Header</header>;
