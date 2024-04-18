@@ -2,6 +2,7 @@ import headerLogo from '@/assets/logo.svg';
 
 import { Auth } from '../auth';
 import { Basket } from '../basket';
+import { Burger } from '../burger';
 import { ThemeSwitcher } from '../theme-switcher';
 import { WidthContainer } from '../width-container';
 
@@ -33,6 +34,9 @@ export const HeaderComponent = () => (
                         <Basket />
                     </div>
                     <Auth />
+                </div>
+                <div className={styles['header__burger']}>
+                    <Burger />
                 </div>
             </div>
         </WidthContainer>

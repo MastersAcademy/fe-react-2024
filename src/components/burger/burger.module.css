@@ -1,0 +1,44 @@
+.burger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.burger span {
+  position: absolute;
+  width: 23px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  transition: all .5s;
+}
+
+.burger span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.burger span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+.burger_active {
+  transform: translateX(0);
+}
+
+.burger_active span:nth-of-type(1) {
+  display: none;
+}
+
+.burger_active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.burger_active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
