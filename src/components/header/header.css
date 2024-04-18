@@ -1,8 +1,8 @@
-.header {
+header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   min-height: 8rem;
   z-index: 3;
   background-color: #111;

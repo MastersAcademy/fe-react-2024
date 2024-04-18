@@ -1,3 +1,3 @@
 import './header.css';
 
-export const HeaderComponent = () => <header className="header">Header</header>;
+export const HeaderComponent = () => <section className="head">Header</section>;
