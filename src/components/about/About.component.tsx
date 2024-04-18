@@ -5,7 +5,7 @@ export function AboutComponent() {
         <>
             <main className={styles.about}>
                 <section className={styles.about__imageContainer}>
-                    <img className={styles.about__image} src="src/assets/image.jpg" alt="aboutMe" />
+                    <img className={styles.about__image} src="./src/assets/image.jpg" alt="aboutMe" />
                 </section>
                 <section className={styles.about__description}>
                     <h1 className={styles.about__heading}>About Me</h1>
