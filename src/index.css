@@ -1,10 +1,11 @@
 :root {
+  width: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, .87);
-  background-color: #242424;
+  background-color: #FFF;
   font-synthesis: none;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +23,7 @@ a:hover {
 }
 
 body {
+  width: 100%;
   margin: 0;
   align-items: center;
   min-width: 320px;
@@ -31,6 +33,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 700;
 }
 
 button {
