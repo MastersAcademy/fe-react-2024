@@ -1,0 +1,32 @@
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.auth-buttons__button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 13px 0 10px;
+  border-radius: 40px;
+  min-height: 34px;
+  box-sizing: border-box;
+  line-height: 34px;
+  transition: .2s all;
+}
+
+.auth-buttons__button_login {
+  background-color: #333;
+}
+
+.auth-buttons__button_login:hover {
+  background-color: #A83E3E;
+}
+
+.auth-buttons__button_sign-up {
+  background-color: #EA4242;
+}
+
+.auth-buttons__button_sign-up:hover {
+  background-color: #B91313;
+}

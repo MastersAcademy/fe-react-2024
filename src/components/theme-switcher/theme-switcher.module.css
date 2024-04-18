@@ -1,0 +1,27 @@
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-switcher__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background-color: transparent;
+  transition: .3s all;
+}
+
+.theme-switcher__button:hover {
+  will-change: contents;
+  transform: scale(1.2);
+}
+
+.theme-switcher__separator {
+  width: 1px;
+  height: 20px;
+  background-color: #656565;
+}

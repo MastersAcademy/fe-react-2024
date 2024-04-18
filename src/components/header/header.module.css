@@ -1,4 +1,60 @@
 .header {
-  font-size: 34px;
-  text-align: center;
+  padding: 15px 0;
+  background-color: #000;
+  font-family: "Montserrat";
+}
+
+.header__inner_left {
+  display: flex;
+  gap: 50px;
+}
+
+.header__inner_right {
+  display: flex;
+  align-items: center;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 45px;
+  margin-right: 115px;
+}
+
+.header__nav-item a {
+  position: relative;
+  transition: .3s ease all;
+}
+
+.header__nav-item a::after {
+  content: "";
+  border-top: 1px solid #FFF;
+  width: 100%;
+  position: absolute;
+  display: block;
+  transform: rotateY(90deg);
+  transition: transform .3s;
+}
+
+.header__nav-item a:hover::after {
+  transform: rotateY(0deg);
+}
+
+.header__nav-item_active a {
+  font-weight: 700;
+}
+
+.header__basket {
+  will-change: contents;
+  margin-right: 40px;
+  transition: .3s all;
+}
+
+.header__basket:hover {
+  transform: rotate(-10deg);
 }

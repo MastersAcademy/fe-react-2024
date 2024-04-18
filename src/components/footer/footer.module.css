@@ -1,0 +1,23 @@
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 30px;
+  border-top: 1px solid #CCC;
+  gap: 30px;
+}
+
+.footer__inner a {
+  font-weight: 400;
+  color: #FC613A;
+}
+
+.footer__social-media ul {
+  display: flex;
+  gap: 25px;
+}
+
+.footer__social-media a {
+  display: flex;
+}
