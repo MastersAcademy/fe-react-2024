@@ -2,7 +2,7 @@ import { AboutComponent } from './components/about/About.component.tsx';
 
 import styles from './App.module.css';
 
-export default function App() {
+function App() {
     return (
         <>
             <main className={styles.main}>
@@ -11,3 +11,4 @@ export default function App() {
         </>
     );
 }
+export default App;
