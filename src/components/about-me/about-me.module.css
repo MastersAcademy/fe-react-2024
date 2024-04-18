@@ -1,0 +1,16 @@
+.about-me-block {
+  padding: 30px;
+  font-size: 20px;
+  max-width: 350px;
+}
+
+.about-me-avatar {
+  border-radius: 30px;
+  height: 294px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-me-description {
+  font-size: 16px;
+}
