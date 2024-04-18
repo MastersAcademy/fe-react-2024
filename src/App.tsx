@@ -1,15 +1,13 @@
 import { AboutComponent } from './components/about/About.component.tsx';
 
-import './App.css';
+import styles from './App.module.css';
 
-function App() {
+export default function App() {
     return (
         <>
-            <main className="main">
+            <main className={styles.main}>
                 <AboutComponent />
             </main>
         </>
     );
 }
-
-export default App;

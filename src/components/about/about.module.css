@@ -29,7 +29,7 @@
 @media (min-width: 390px) {
 
   .about {
-    padding: 0 20px;
+    padding: 0 40px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -49,8 +49,8 @@
   }
 
   .about__image {
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
     margin: 0 auto;
   }
 }
