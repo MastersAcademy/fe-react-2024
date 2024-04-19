@@ -10,12 +10,21 @@ export const AboutComponent = () => (
                     Hi! My name is Artur and I&apos;m a Junior Frontend Developer. I am already familiar with main Web Technologies like
                     React, HTML, CSS, JavaScript and Git version control system. <br />
                     <br /> This page was developed during the course{' '}
-                    <a href="https://www.mastersacademy.education/frontend-for-beginners-it">&apos;Intro to React&apos;</a> from Masters
-                    Academy in 2024. <br />
+                    <a href="https://www.mastersacademy.education/javascript-it" target="_blank" rel="noopener noreferrer">
+                        &apos;Intro to React&apos;
+                    </a>{' '}
+                    from Masters Academy in 2024. <br />
                     <br /> This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create
                     my own small project for the portfolio. <br />
-                    <br /> You can contact me via <a href="https://www.linkedin.com/in/artur-kobylatsky/">Linkedin</a> and check out my{' '}
-                    <a href="https://github.com/Allocene">GitHub</a>.
+                    <br /> You can contact me via{' '}
+                    <a href="https://www.linkedin.com/in/artur-kobylatsky/" target="_blank" rel="noopener noreferrer">
+                        Linkedin
+                    </a>{' '}
+                    and check out my{' '}
+                    <a href="https://github.com/Allocene" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                    .
                 </p>
             </div>
             <div className={styles.image}>
