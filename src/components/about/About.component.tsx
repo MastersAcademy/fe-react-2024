@@ -11,7 +11,11 @@ export const AboutComponent = () => (
                 React, HTML, CSS, JavaScript and Git version control system.
             </p>
             <p className="about__descr-text">
-                This page was developed during the course &apos;Intro to React&apos; from Masters Academy in 2024.
+                This page was developed during the course{' '}
+                <a className="intro" href="https://www.mastersacademy.education/frontend-react-it" target="_blank" rel="noreferrer">
+                    &apos;Intro to React&apos;
+                </a>{' '}
+                from Masters Academy in 2024.
             </p>
             <p className="about__descr-text">
                 This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own
@@ -19,11 +23,11 @@ export const AboutComponent = () => (
             </p>
             <p className="about__descr-text">
                 You can contact me via{' '}
-                <a target="_blank" rel="noreferrer" href="https://t.me/Grim_679">
+                <a target="_blank" rel="noreferrer" href="https://t.me/Grim_679" className="link">
                     telegram
                 </a>{' '}
                 and check out my{' '}
-                <a target="_blank" rel="noreferrer" href="https://github.com/Grimdvl">
+                <a target="_blank" rel="noreferrer" href="https://github.com/Grimdvl" className="link">
                     GitHub
                 </a>
                 .

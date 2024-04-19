@@ -30,7 +30,7 @@ export const FooterComponent = () => (
                 {' '}
                 &apos;Intro to React&apos; from Masters Academy in 2024
             </a>
-            , by
+            , by{' '}
             <a className="foot__subscription-link" href="https://www.instagram.com/artemsokur69">
                 Artem Sokur
             </a>

@@ -53,3 +53,7 @@ footer::before {
   font-size: 3rem;
   color: #FFF;
 }
+
+.foot__subscription-link {
+  color: #EF4934;
+}

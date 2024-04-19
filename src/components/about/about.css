@@ -23,6 +23,18 @@
 }
 
 .about__logo-img {
-  width: 40vw;
+  width: 30vw;
+  height: 50rem;
   border-radius: 3rem;
+  object-fit: cover;
+}
+
+.intro {
+  text-decoration: underline;
+  color: #111;
+}
+
+.link {
+  text-decoration: underline;
+  color: #111;
 }
