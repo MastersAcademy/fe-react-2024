@@ -6,7 +6,7 @@ function App() {
     return (
         <>
             <div className="container">
-                <img src={image} alt="Image" className="img" />
+                <img src={image} className="img" />
 
                 <div className="text">
                     <main className="home">
