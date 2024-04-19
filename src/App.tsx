@@ -1,15 +1,15 @@
-import { AboutComponent } from './components/body/About.component.tsx';
-import { FooterComponent } from './components/footer/Footer.component.tsx';
-import { HeaderComponent } from './components/header/Header.component.tsx';
+import { About } from './components/About/About.tsx';
+import { Footer } from './components/Footer/Footer.tsx';
+import { Header } from './components/Header/Header.tsx';
 
 import './App.css';
 
 function App() {
     return (
         <>
-            <HeaderComponent />
-            <AboutComponent />
-            <FooterComponent />
+            <Header />
+            <About />
+            <Footer />
         </>
     );
 }

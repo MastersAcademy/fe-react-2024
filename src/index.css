@@ -13,13 +13,8 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646CFF;
+  color: #242424;
   text-decoration: inherit;
-}
-
-a:hover {
-  color: #535BF2;
 }
 
 body {

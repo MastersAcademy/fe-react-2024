@@ -24,6 +24,10 @@
   color: #242424;
 }
 
+.introLink {
+  text-decoration: underline;
+}
+
 .image {
   display: flex;
   align-items: center;
