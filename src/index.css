@@ -34,6 +34,8 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: #FFF;
+  color: #111;
 }
 
 h1 {
