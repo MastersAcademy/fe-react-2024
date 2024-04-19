@@ -10,7 +10,7 @@ export const AboutComponent = () => (
                     Hi! My name is Artur and I&apos;m a Junior Frontend Developer. I am already familiar with main Web Technologies like
                     React, HTML, CSS, JavaScript and Git version control system. <br />
                     <br /> This page was developed during the course{' '}
-                    <a href="https://www.mastersacademy.education/javascript-it" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.mastersacademy.education/frontend-react-it" target="_blank" rel="noopener noreferrer">
                         &apos;Intro to React&apos;
                     </a>{' '}
                     from Masters Academy in 2024. <br />
