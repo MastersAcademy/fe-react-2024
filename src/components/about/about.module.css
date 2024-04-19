@@ -1,0 +1,34 @@
+@media screen and (max-width: 350px) {
+
+  .about h2 {
+    font-size: 18px;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+  }
+
+  .about p {
+    font-size: 14px;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .about h2 {
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+  }
+
+  .about p {
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+  }
+}
+
