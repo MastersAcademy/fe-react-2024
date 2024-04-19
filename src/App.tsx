@@ -1,4 +1,4 @@
-import { About } from './components/about/About.tsx';
+import { About } from './components/About/About.tsx';
 import { Footer } from './components/footer/Footer.tsx';
 import { Header } from './components/header/Header.tsx';
 
