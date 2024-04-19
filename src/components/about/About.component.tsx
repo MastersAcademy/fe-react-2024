@@ -18,7 +18,7 @@ export const About = () => (
             </p>
             <p>
                 This project not only honed my technical abilities but also gave me a chance to contribute to a meaningful social cause and
-                create a noteworthy project for my portfolio. You can contact me via{' '}
+                create a noteworthy project for my portfolio! You can contact me via{' '}
                 <a href="https://github.com/alyona-shirpal" target="_blank" rel="noreferrer">
                     GitHub
                 </a>{' '}
