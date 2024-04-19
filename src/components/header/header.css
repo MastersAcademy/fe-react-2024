@@ -12,4 +12,138 @@ header {
 .head {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 8rem;
+}
+
+.head__theme,
+.head__navigation,
+.head__registration {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.head__theme {
+  position: relative;
+  width: 8rem;
+}
+
+.head__theme--sun, .head__theme--moon {
+  background-color: #111;
+  color: #656565;
+  font-size: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: .5s ease color;
+}
+
+.head__theme--sun.active,
+.head__theme--sun:hover,
+.head__theme--moon.active,
+.head__theme--moon:hover {
+  color: #FFF;
+}
+
+.head__theme::before {
+  position: absolute;
+  background-color: #656565;
+  content: "";
+  display: block;
+  width: .2rem;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: rotateX(-50%);
+}
+
+.head__navigation {
+  width: 17.5rem;
+}
+
+.head__navigation--about, .head__navigation--products {
+  background-color: #111;
+  color: #FFF;
+  font-size: 1.6rem;
+  line-height: 1.95rem;
+  font-weight: 500;
+  transition: .5s ease font-weight;
+  cursor: pointer;
+}
+
+
+.head__navigation--about.active,
+.head__navigation--about:hover,
+.head__navigation--products.active,
+.head__navigation--products:hover {
+  font-weight: 700;
+}
+
+.head__cart--button {
+  position: relative;
+  background-color: #111;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 2.4rem;
+  z-index: 1;
+}
+
+.head__cart--button::after {
+  content: "1";
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: -.5rem;
+  border-radius: 50%;
+  background-color: #EF4934;
+  color: #111;
+}
+
+.head__registration {
+  width: 22rem;
+}
+
+.head__registration--log, .head__registration--sign {
+  font-size: 1.6rem;
+  line-height: 1.95rem;
+  border-radius: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head__registration--log > .bx , .head__registration--sign > .bx {
+  font-size: 2.4rem;
+}
+
+.head__registration--log {
+  width: 9.6rem;
+  background-color: #333;
+  color: #FFF;
+  transition: .5s ease background-color;
+}
+
+.head__registration--log:hover {
+  background-color: #585858;
+}
+
+.head__registration--sign {
+  background-color: #EF4934;
+  color: #FFF;
+  width: 11.3rem;
+  transition: .5s ease background-color;
+}
+
+.head__registration--sign:hover {
+  background-color: #D43824;
 }

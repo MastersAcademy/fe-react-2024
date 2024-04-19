@@ -11,25 +11,21 @@ export const HeaderComponent = () => (
         </div>
 
         <div className="head__theme">
-            <div className="head__theme--sun">
-                <button className="head__theme--button">
-                    <i className="bx bx-sun"></i>
-                </button>
-            </div>
-            <div className="head__theme--moon">
-                <button className="head__theme--button">
-                    <i className="bx bx-moon"></i>
-                </button>
-            </div>
+            <button className="head__theme--sun active">
+                <i className="bx bx-sun"></i>
+            </button>
+            <button className="head__theme--moon">
+                <i className="bx bx-moon"></i>
+            </button>
         </div>
 
         <div className="head__navigation">
-            <button className="head__navigation--about">About</button>
+            <button className="head__navigation--about active">About</button>
             <button className="head__navigation--products">Products</button>
         </div>
 
-        <div className="head--cart">
-            <button className="head--cart--button">
+        <div className="head__cart">
+            <button className="head__cart--button">
                 <i className="bx bx-cart"></i>
             </button>
         </div>
