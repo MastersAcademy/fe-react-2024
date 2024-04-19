@@ -1,6 +1,6 @@
 import redRock from '@/assets/red rock.png';
 
-import Link from '../Link/Link';
+import Link from '../link/Link';
 
 import styles from './about.module.css';
 export const About = () => (
