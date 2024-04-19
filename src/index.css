@@ -26,6 +26,7 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: #000;
 }
 
 h1 {
@@ -67,5 +68,56 @@ button:focus-visible {
 
   button {
     background-color: #F9F9F9;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+p {
+  font-size: 22px;
+  color: #FFF;
+}
+
+section {
+  padding: 40px;
+}
+
+.offset-right-xs {
+  margin-right: 80px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.w-6 {
+  width: 50%;
+}
+
+.padding-120 {
+  padding-top: 120px;
+}
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .offset-mobile-none {
+    margin: 0;
+  }
+
+  .padding-mobile-none {
+    padding-top: 0;
+  }
+
+  .w-12 {
+    width: 100%;
   }
 }
