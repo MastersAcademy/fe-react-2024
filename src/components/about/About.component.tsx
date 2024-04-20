@@ -18,7 +18,19 @@ export const AboutComponent = () => {
                     This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own
                     small project for the portfolio.
                 </p>
-                <p className={aboutDescriptionClass}>You can contact me via [social network name] and check out my GitHub.</p>
+                <p className={aboutDescriptionClass}>
+                    You can contact me via{' '}
+                    <a href="https://www.t.me/rogerosha" className="link">
+                        {' '}
+                        telegram
+                    </a>
+                    and/or check out my{' '}
+                    <a href="https://www.github.com/rogerosha" className="link">
+                        {' '}
+                        GitHub
+                    </a>
+                    .
+                </p>
             </div>
         </div>
     );
