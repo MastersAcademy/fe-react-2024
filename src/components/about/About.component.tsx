@@ -8,11 +8,11 @@ export const AboutComponent = () => {
             <div className={styles['about-text']}>
                 <h2 className={styles['about-title']}>About me</h2>
                 <p className={aboutDescriptionClass}>
-                    Hi! My name is Katya and I&amp;apos;m a Junior Frontend Developer. I am already familiar with main Web Technologies like
+                    Hi! My name is Katya and I&apos;m a Junior Frontend Developer. I am already familiar with main Web Technologies like
                     React, HTML, CSS, JavaScript and Git version control system.
                 </p>
                 <p className={aboutDescriptionClass}>
-                    This page was developed during the course &amp;lsquo;Intro to React&amp;rsquo; from Masters Academy in 2024.
+                    This page was developed during the course &lsquo;Intro to React&rsquo; from Masters Academy in 2024.
                 </p>
                 <p className={aboutDescriptionClass}>
                     This is a social project from MOCG company where I got an opportunity to work with Frontend mentors and to create my own
