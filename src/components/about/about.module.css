@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 30px;
   gap: 30px;
+  max-width: 500px;
 }
 
 .about-image {
@@ -21,7 +22,7 @@
 .about-title {
   font-size: 27px;
   font-weight: 600;
-  line-height: 33px;
+  line-height: 32px;
   margin: 0;
 }
 
@@ -29,4 +30,29 @@
   font-size: 16px;
   line-height: 20px;
   margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .about-container {
+    flex-direction: row-reverse;
+    max-width: 1280px;
+  }
+
+  .about-image {
+    width: 500px;
+    height: 489px;
+    margin-top: 100px;
+    border-radius: 40px;
+  }
+
+  .about-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .about-description {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
