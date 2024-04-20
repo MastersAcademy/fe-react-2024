@@ -8,8 +8,7 @@ export const About = () => (
             <h1 className={styles.aboutTextHeader}>About Me</h1>
             <p className={styles.aboutTextPar}>
                 Hi! My name is Alyona, and I&apos;m primarily a Backend Developer who is currently exploring the world of frontend
-                development. I have a strong foundation in backend technologies and have recently started learning React to broaden my skill
-                set.
+                development.
             </p>
             <p className={styles.aboutTextPar}>
                 This page was developed during the course&nbsp;

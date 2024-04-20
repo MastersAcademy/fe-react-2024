@@ -24,13 +24,17 @@
 }
 
 .aboutLink {
-  color: #FFF;
+  color: var(--white-color);
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
 
-@media screen and (max-width: 390px) {
+.aboutLink:hover {
+  color: var(--orange-color);
+}
+
+@media screen and (min-width: 200px) and (max-width: 747px) {
 
   .aboutWrapper {
     display: flex;
@@ -66,14 +70,31 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
+@media screen and (min-width: 747px) and (max-width: 1070px) {
 
-  .aboutLink {
-    color: #000;
+  .aboutText {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .aboutTextPar {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .aboutTextHeader {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .aboutImage {
+    width: 100%;
+    min-width: 300px;
+    height: 500px;
   }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1550px) {
 
   .aboutWrapper {
     display: flex;

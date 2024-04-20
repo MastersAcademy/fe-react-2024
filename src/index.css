@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+@import "assets/variables.css";
 
 :root {
   font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -75,8 +76,12 @@ html {
     background-color: #FFF;
   }
 
+  a {
+    color: var(--black-color);
+  }
+
   a:hover {
-    color: #747BFF;
+    color: var(--orange-color);
   }
 
   button {
