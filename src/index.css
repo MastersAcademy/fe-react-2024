@@ -11,8 +11,6 @@
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --mobile-max-width: 390px;
-  --desktop-min-width: 1281px;
 }
 
 a {
