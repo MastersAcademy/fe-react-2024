@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+
+.content {
+  max-width: 1280px;
+  min-width: 390px;
+}
+
+.main__block {
+  display: flex;
+  justify-content: center;
+  background-color: #FFF;
+  width: 100vw;
+}
+
+.main__row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #CCC;
+  border-top: none;
+}
+
+@media (min-width: 1280px) {
+
+  .main__row {
+    flex-direction: row;
+  }
+}
+
+.about__block {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 25px;
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+
+  .about__block {
+    width: 50%;
+    margin: 60px 50px;
+  }
+}
+
+
+.about__title {
+  color: #111;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: left;
+}
+
+.about__text {
+  color: #111;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+@media (min-width: 1280px) {
+
+  .about__text {
+    text-align: justify;
+  }
+}
+
+.about__img {
+  width: 50%;
+}
+
+@media (max-width: 1280px) {
+
+  .about__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/*.about__link {*/
+/*  color: #EF4934;*/
+/*  text-decoration: none;*/
+/*}*/
