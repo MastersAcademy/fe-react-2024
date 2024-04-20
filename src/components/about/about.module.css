@@ -1,0 +1,65 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 53px;
+}
+
+.picture {
+  border-radius: 30px;
+  width: 330px;
+  height: 294px;
+  object-fit: cover;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.description {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media (min-width: 1290px) {
+
+  .about {
+    padding-top: 60px;
+    padding-bottom: unset;
+    position: relative;
+    min-height: 777px;
+  }
+
+  .content {
+    width: 575px;
+    height: 510px;
+    top: 140px;
+    left: 53px;
+    gap: 60px;
+  }
+
+  .title {
+    margin-top: unset;
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  .description {
+    margin-top: 60px;
+    font-size: 22px;
+    height: 100%;
+  }
+
+  .picture {
+    border-radius: unset;
+    top: 0;
+    right: 0;
+    width: 550px;
+    position: absolute;
+    height: 100%;
+  }
+}
