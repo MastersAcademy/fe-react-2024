@@ -88,7 +88,13 @@ header {
   cursor: pointer;
   font-size: 2.4rem;
   z-index: 1;
+  transition: .5s ease transform;
 }
+
+.head__cart--button:hover {
+  transform: rotate(-30deg);
+}
+
 
 .head__cart--button::after {
   content: "1";
@@ -146,4 +152,33 @@ header {
 
 .head__registration--sign:hover {
   background-color: #D43824;
+}
+
+.head--humburger {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  display: none;
+}
+
+.head--humburger::after {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  content: "";
+  display: blocks;
+  background-color: #FFF;
+  height: .2rem;
+  width: 3rem;
+}
+
+.head--humburger::before {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  content: "";
+  display: blocks;
+  background-color: #FFF;
+  height: .2rem;
+  width: 3rem;
 }

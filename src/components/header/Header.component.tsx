@@ -40,5 +40,7 @@ export const HeaderComponent = () => (
                 Sign up
             </button>
         </div>
+
+        <div className="head--humburger"></div>
     </section>
 );

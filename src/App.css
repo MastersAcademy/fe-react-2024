@@ -51,6 +51,14 @@ header, footer {
 
 @media (max-width: 991px) {
 
+  header {
+    padding: 0 5%;
+  }
+
+  .head--humburger {
+    display: block;
+  }
+
   .about {
     flex-direction: column;
   }
@@ -61,6 +69,18 @@ header, footer {
 
   .about__logo-img {
     width: 70vw;
+  }
+
+  .head__theme {
+    display: none;
+  }
+
+  .head__navigation {
+    display: none;
+  }
+
+  .head__registration {
+    display: none;
   }
 }
 
