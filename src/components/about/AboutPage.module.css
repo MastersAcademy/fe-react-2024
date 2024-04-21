@@ -4,6 +4,12 @@
 
 @media (max-width: 391px) {
 
+  .aboutImage {
+    width: 330px;
+    height: 294px;
+    border-radius: 30px;
+  }
+
   .aboutTitle {
     font-size: 27px;
     font-weight: 600;
@@ -25,26 +31,11 @@
   }
 }
 
-@media (max-width: 391px) and (max-width: 1279px) {
-
-  .aboutTitle {
-    font-size: 27px;
-    font-weight: 600;
-  }
-
-  .introText {
-    margin: 30px;
-    font-size: 16px;
-    font-weight: 400;
-  }
-
-  .introFlex {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 @media (min-width: 1280px) {
+
+  .aboutImage {
+    width: 50%;
+  }
 
   .aboutTitle {
     font-size: 36px;
@@ -60,7 +51,7 @@
   .introFlex {
     display: flex;
     justify-content: space-between;
-    gap: 100px;
+    flex-direction: row-reverse;
     margin: 0;
   }
 }

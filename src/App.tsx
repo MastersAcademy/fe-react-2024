@@ -5,7 +5,7 @@ import styles from './App.module.css';
 function App() {
     return (
         <>
-            <main className={styles}>
+            <main className={styles.body}>
                 <AboutPage />
             </main>
         </>
