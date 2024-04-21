@@ -8,7 +8,8 @@
         "module": "ESNext",
         "skipLibCheck": true,
         "strict": true,
-
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react-jsx",
         /* Bundler mode */
         "moduleResolution": "node",
         "allowImportingTsExtensions": true,
