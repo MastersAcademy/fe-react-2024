@@ -20,7 +20,7 @@
 }
 
 .image {
-  background-image: url("./assets/img-about.jpg");
+  background-image: url("../../assets/img-about.jpg");
   background-size: cover;
   background-position: center center;
   height: 100%;
@@ -43,19 +43,19 @@
 
 /*HELPER*/
 
-.mt-60 {
+.mt_60 {
   margin-top: 60px;
 }
 
-.mt-30 {
+.mt_30 {
   margin-top: 30px;
 }
 
-.pt-60 {
+.pt_60 {
   padding-top: 60px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 800px) {
 
   .main {
     min-height: 100%;
@@ -80,6 +80,7 @@
   .image {
     width: 90%;
     min-height: 400px;
+    margin-top: 20px;
     margin-bottom: 30px;
   }
 

@@ -1,4 +1,4 @@
-import About from './About';
+import About from './components/about/About.component.tsx';
 
 function App() {
     return (
