@@ -7,9 +7,9 @@ function About() {
         <>
             <main>
                 <section>
-                    <div className={styles.introFlex}>
+                    <div className={styles.aboutFlex}>
                         <img className={styles.aboutImage} src={AboutImage} alt="about" />
-                        <div className={styles.introText}>
+                        <div className={styles.aboutText}>
                             <h1 className={styles.aboutTitle}>About Me</h1>
                             <p>
                                 Hi! My name is [Name] and I&apos;m a Junior Frontend Developer. I am already familiar with main Web
