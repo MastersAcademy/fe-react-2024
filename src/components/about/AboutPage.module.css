@@ -5,10 +5,11 @@
 @media (max-width: 391px) {
 
   .aboutImage {
-    width: 330px;
-    height: auto;
+    width: auto;
+    height: 294px;
+    object-fit: cover;
     border-radius: 30px;
-    margin-left: 30px;
+    margin: 30px 30px 0;
   }
 
   .aboutTitle {
@@ -17,8 +18,7 @@
   }
 
   .aboutText {
-    margin-left: 30px;
-    margin-top: 30px;
+    margin: 0 30px;
     font-size: 16px;
     font-weight: 400;
   }
