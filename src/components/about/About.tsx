@@ -11,7 +11,7 @@ function About() {
             <HeaderComponent />
             <main className="main__block">
                 <div className="main__row content">
-                    <div className="about__block">
+                    <section className="about__block">
                         <h2 className="about__title">About me</h2>
                         <div>
                             <p className="about__text">
@@ -36,7 +36,7 @@ function About() {
                                 &apos; and check out my GitHub.
                             </p>
                         </div>
-                    </div>
+                    </section>
                     <img src={aboutImg} alt="About img" className="about__img" />
                 </div>
             </main>
