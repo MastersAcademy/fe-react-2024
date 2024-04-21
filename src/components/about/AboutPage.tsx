@@ -10,7 +10,7 @@ function About() {
                     <div className={styles.introFlex}>
                         <div className={styles.introText}>
                             <h1 className={styles.aboutTitle}>About Me</h1>
-                            <img className={styles.aboutImage} src={AboutImage} alt="about" />
+                            <img src={AboutImage} alt="about" />
                             <p>
                                 Hi! My name is [Name] and I&apos;m a Junior Frontend Developer. I am already familiar with main Web
                                 Technologies like React, HTML, CSS, JavaScript and Git version control system. This page was developed
