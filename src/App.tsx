@@ -7,7 +7,7 @@ function App() {
         <>
             <main className="about-me">
                 <img className="about-me-image" src={aboutImage} alt="About me" />
-                <div className="about-me-text">
+                <article className="about-me-text">
                     <h1 className="about-me-header">About me </h1>
                     <p className="about-me-paragraph">
                         Hi! My name is Vladyslav Brusentsov and I`m a Junior Frontend Developer. I am already familiar with main Web
@@ -25,7 +25,7 @@ function App() {
                         <br />
                         You can contact me via Telegram: @Arconiel and check out my <a href="https://github.com/vBrusentsov">GitHub.</a>
                     </p>
-                </div>
+                </article>
             </main>
         </>
     );
