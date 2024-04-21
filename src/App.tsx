@@ -6,7 +6,7 @@ function App() {
     return (
         <>
             <main className="about-me">
-                <img className="about-me-image" src={aboutImage} alt="About image" />
+                <img className="about-me-image" src={aboutImage} alt="About me" />
                 <div className="about-me-text">
                     <h1 className="about-me-header">About me </h1>
                     <p className="about-me-paragraph">
