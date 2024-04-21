@@ -12,7 +12,7 @@ function About() {
             <main className="main__block">
                 <div className="main__row content">
                     <div className="about__block">
-                        <h2 className="about__title">About</h2>
+                        <h2 className="about__title">About me</h2>
                         <div>
                             <p className="about__text">
                                 Hi! My name is Bogdan and I&apos;m a Junior Frontend Developer. I am already familiar with main Web
@@ -26,14 +26,14 @@ function About() {
                                 create my own small project for the portfolio.
                             </p>
                             <p className="about__text">
-                                You can contact me via
+                                You can contact me via &apos;
                                 <a
                                     href="https://www.linkedin.com/in/%D0%B1%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D1%8F%D1%86%D0%B5%D0%BD%D1%82%D1%8E%D0%BA-841247270/"
                                     className="about__link"
                                 >
                                     LinkedIn profile
-                                </a>{' '}
-                                and check out my GitHub.
+                                </a>
+                                &apos; and check out my GitHub.
                             </p>
                         </div>
                     </div>
