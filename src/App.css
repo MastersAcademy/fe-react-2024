@@ -60,7 +60,7 @@ header, footer {
   }
 
   .about {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .about__descr {
