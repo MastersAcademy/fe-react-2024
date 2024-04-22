@@ -1,5 +1,6 @@
 import maLogo from '@/assets/ma.svg';
 
+import Buttons from '../button/Buttons.tsx';
 import Link from '../link/Link.tsx';
 
 import './header.css';
@@ -13,12 +14,12 @@ export const Header = () => (
         </div>
 
         <div className="head__theme">
-            <Link href="#" className="head__theme--sun active">
+            <Buttons className="head__theme--sun active">
                 <i className="bx bx-sun"></i>
-            </Link>
-            <Link href="#" className="head__theme--moon">
+            </Buttons>
+            <Buttons className="head__theme--moon">
                 <i className="bx bx-moon"></i>
-            </Link>
+            </Buttons>
         </div>
 
         <div className="head__navigation">
@@ -31,20 +32,20 @@ export const Header = () => (
         </div>
 
         <div className="head__cart">
-            <Link href="#" className="head__cart--button">
+            <Buttons className="head__cart--button">
                 <i className="bx bx-cart"></i>
-            </Link>
+            </Buttons>
         </div>
 
         <div className="head__registration">
-            <Link href="#" className="head__registration--log">
+            <Buttons className="head__registration--log">
                 <i className="bx bx-log-in"></i>
                 Login
-            </Link>
-            <Link href="#" className="head__registration--sign">
+            </Buttons>
+            <Buttons className="head__registration--sign">
                 <i className="bx bx-user-plus"></i>
                 Sign up
-            </Link>
+            </Buttons>
         </div>
 
         <div className="head--humburger"></div>
