@@ -5,9 +5,9 @@
 @media (max-width: 391px) {
 
   .aboutImage {
-    width: auto;
-    height: 294px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 12/9;
     border-radius: 30px;
     margin: 30px 30px 0;
   }
@@ -37,6 +37,7 @@
 
   .aboutImage {
     width: 50%;
+    height: auto;
   }
 
   .aboutTitle {
@@ -45,6 +46,7 @@
   }
 
   .aboutText {
+    width: 50%;
     font-size: 22px;
     font-weight: 400;
     margin: 60px 0 0 53px;
