@@ -65,6 +65,7 @@ header, footer {
 
   .about__descr {
     width: 70vw;
+    margin-top: 2rem;
   }
 
   .about__logo-img {
