@@ -12,7 +12,7 @@ function About() {
                         <div className={styles.aboutText}>
                             <h1 className={styles.aboutTitle}>About Me</h1>
                             <p>
-                                Hi! My name is Igor and I&apos;m a Junior Frontend Developer. I am already familiar with main Web
+                                Hi! My name is Igor Orel and I&apos;m a Junior Frontend Developer. I am already familiar with main Web
                                 <br />
                                 Technologies like React, HTML, CSS, JavaScript and Git version control system.
                             </p>
