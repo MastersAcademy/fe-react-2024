@@ -1,6 +1,6 @@
-import { AboutComponent } from './components/about/About.component.tsx';
-import { FooterComponent } from './components/footer/Footer.component.tsx';
-import { HeaderComponent } from './components/header/Header.component.tsx';
+import { About } from './components/about/About.tsx';
+import { Footer } from './components/footer/Footer.tsx';
+import { Header } from './components/header/Header.tsx';
 
 import './App.css';
 
@@ -8,13 +8,13 @@ function App() {
     return (
         <>
             <header>
-                <HeaderComponent />
+                <Header />
             </header>
             <main>
-                <AboutComponent />
+                <About />
             </main>
             <footer>
-                <FooterComponent />
+                <Footer />
             </footer>
         </>
     );

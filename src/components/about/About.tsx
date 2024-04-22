@@ -1,8 +1,10 @@
 import aboutImg from '@/assets/aboutImg.png';
 
+import Link from '../link/Link.tsx';
+
 import './about.css';
 
-export const AboutComponent = () => (
+export const About = () => (
     <section className="about">
         <div className="about__descr">
             <h1 className="about__descr-title">About Me</h1>
@@ -12,9 +14,9 @@ export const AboutComponent = () => (
             </p>
             <p className="about__descr-text">
                 This page was developed during the course{' '}
-                <a className="intro" href="https://www.mastersacademy.education/frontend-react-it" target="_blank" rel="noreferrer">
+                <Link href="https://www.mastersacademy.education/frontend-react-it" className="intro">
                     &apos;Intro to React&apos;
-                </a>{' '}
+                </Link>{' '}
                 from Masters Academy in 2024.
             </p>
             <p className="about__descr-text">
@@ -23,18 +25,18 @@ export const AboutComponent = () => (
             </p>
             <p className="about__descr-text">
                 You can contact me via{' '}
-                <a target="_blank" rel="noreferrer" href="https://t.me/Grim_679" className="link">
+                <Link href="https://t.me/Grim_679" className="link">
                     telegram
-                </a>{' '}
+                </Link>{' '}
                 and check out my{' '}
-                <a target="_blank" rel="noreferrer" href="https://github.com/Grimdvl" className="link">
+                <Link href="https://github.com/Grimdvl" className="link">
                     GitHub
-                </a>
+                </Link>
                 .
             </p>
         </div>
         <div className="about__logo">
-            <img className="about__logo-img" src={aboutImg} alt="Artem Sokur" />
+            <img className="about__logo-img" src={aboutImg} alt="orange stairs" />
         </div>
     </section>
 );
