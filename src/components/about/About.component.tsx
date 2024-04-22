@@ -5,7 +5,7 @@ import styles from './about.module.css';
 export function AboutComponent() {
     return (
         <div className={styles.about}>
-            <div className={styles.content}>
+            <section className={styles.content}>
                 <img src={picture} alt="About" className={styles.picture} />
                 <div className={styles.content}>
                     <h1 className={styles.title}>About me</h1>
@@ -36,7 +36,7 @@ export function AboutComponent() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }
