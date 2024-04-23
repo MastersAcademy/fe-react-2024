@@ -1,6 +1,5 @@
 .about {
-  padding-top: 60px;
-  padding-bottom: 53px;
+  padding: 100px 53px;
 }
 
 .picture {
@@ -8,10 +7,6 @@
   width: 330px;
   height: 294px;
   object-fit: cover;
-}
-
-.content {
-  margin-top: 30px;
 }
 
 .title {
@@ -28,8 +23,7 @@
 @media (min-width: 1290px) {
 
   .about {
-    padding-top: 60px;
-    padding-bottom: unset;
+    padding: 140px 53px;
     position: relative;
     min-height: 777px;
   }
@@ -37,8 +31,6 @@
   .content {
     width: 575px;
     height: 510px;
-    top: 140px;
-    left: 53px;
     gap: 60px;
   }
 
