@@ -1,11 +1,5 @@
-interface LinkProps {
-    href: string;
-    className: string;
-    children: React.ReactNode;
-}
-
-const Link = ({ href, className, children }: LinkProps) => (
-    <a href={href} className={className} target="_blank" rel="noreferrer">
+const Link = ({ target = '_blank', children, ...restProps }: React.ComponentProps<'a'>) => (
+    <a target={target} {...restProps} rel="noreferrer">
         {children}
     </a>
 );
