@@ -3,6 +3,12 @@ body {
   flex-direction: column;
   align-content: center;
   min-width: 390px;
+  background: #FFF;
+  color: #111;
+}
+
+a {
+  color: #111;
 }
 
 .about-me {
