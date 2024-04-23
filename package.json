@@ -9,7 +9,7 @@
     "lint:ts": "npx eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:css": "npx stylelint --config .stylelintrc --allow-empty-input ./src/**/*.css",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
