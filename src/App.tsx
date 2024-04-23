@@ -1,19 +1,21 @@
-import reactLogo from '@/assets/react.svg';
-
-import { HeaderComponent } from './components/header/Header.component.tsx';
+import { About } from './components/about/About.tsx';
+import { Footer } from './components/footer/Footer.tsx';
+import { Header } from './components/header/Header.tsx';
 
 import './App.css';
 
 function App() {
     return (
         <>
-            <HeaderComponent />
-            <main className="home">
-                <h1>
-                    <img src={reactLogo} alt="React logo" />
-                    Home page
-                </h1>
+            <header>
+                <Header />
+            </header>
+            <main>
+                <About />
             </main>
+            <footer>
+                <Footer />
+            </footer>
         </>
     );
 }

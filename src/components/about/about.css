@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.about__descr {
+  max-width: 60rem;
+}
+
+.about__descr-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+}
+
+.about__descr-text {
+  line-height: 3.2rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 2rem auto;
+}
+
+.about__logo-img {
+  width: 30vw;
+  height: 50rem;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+
+.intro {
+  text-decoration: underline;
+  color: #111;
+}
+
+.link {
+  text-decoration: underline;
+  color: #111;
+}
