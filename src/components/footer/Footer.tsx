@@ -5,9 +5,9 @@ import styles from './footer.module.css';
 export const Footer = () => (
     <footer className={styles.footer}>
         <div className={styles.footerIcons}>
-            <FooterIcon icon="src/assets/fb.png" url="https://www.facebook.com/" className={styles.fbIcon} />
-            <FooterIcon icon="src/assets/linkedin.png" url="https://www.linkedin.com/in/artur-kobylatsky/" className={styles.linkIcon} />
-            <FooterIcon icon="src/assets/insta.png" url="https://www.instagram.com/art_k_z/" className={styles.instIcon} />
+            <FooterIcon icon="src/assets/facebook.png" url="https://www.facebook.com/" className={styles.fbIcon} />
+            <FooterIcon icon="src/assets/link.png" url="https://www.linkedin.com/in/artur-kobylatsky/" className={styles.linkIcon} />
+            <FooterIcon icon="src/assets/instagram.png" url="https://www.instagram.com/art_k_z/" className={styles.instIcon} />
         </div>
         <div className={styles.footerText}>
             <p>

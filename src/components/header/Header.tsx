@@ -7,11 +7,11 @@ export const Header = () => (
     <header className={styles.header}>
         <div className={styles.headerBox}>
             <div className={styles.headSection}>
-                <Image src="src\assets\logo.png" alt="logo" className="headerLogo"></Image>
+                <Image src="src\assets\logoMA.png" alt="logo" className="headerLogo"></Image>
                 <div className={styles.colorSwitch}>
-                    <Image src="src\assets\sun.png" alt="sunPic" className={styles.headerSun}></Image>
-                    <Image src="src\assets\divider.png" alt="dividerPic" className={styles.headerDivider}></Image>
-                    <Image src="src\assets\moon.png" alt="moonPic" className={styles.headerMoon}></Image>
+                    <Image src="src\assets\light.png" alt="sunPic" className={styles.headerSun}></Image>
+                    <Image src="src\assets\divide.png" alt="dividerPic" className={styles.headerDivider}></Image>
+                    <Image src="src\assets\dark.png" alt="moonPic" className={styles.headerMoon}></Image>
                 </div>
             </div>
             <div className={styles.navSection}>
@@ -30,17 +30,17 @@ export const Header = () => (
             </div>
             <div className={styles.headSection}>
                 <div className={styles.cart}>
-                    <Image src="src\assets\cart.png" alt="cartPic" className="headerCart"></Image>
+                    <Image src="src\assets\ewgs4t34tegd.png" alt="cartPic" className="headerCart"></Image>
                 </div>
                 <div className={styles.burgerMenu}>
                     <div className={styles.burgerLine}></div>
                     <div className={styles.burgerLine}></div>
                 </div>
                 <div className={styles.buttons}>
-                    <Button disabled className={styles.loginBut} imgSrc="src\assets\Log_Out.png" imgHeight={24} imgWidth={24}>
+                    <Button disabled className={styles.loginBut} imgSrc="src\assets\logout.png" imgHeight={24} imgWidth={24}>
                         Login
                     </Button>
-                    <Button disabled className={styles.singupBut} imgSrc="src\assets\User_Add.png" imgHeight={24} imgWidth={24}>
+                    <Button disabled className={styles.singupBut} imgSrc="src\assets\useradd.png" imgHeight={24} imgWidth={24}>
                         Sing up
                     </Button>
                 </div>
