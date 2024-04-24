@@ -26,11 +26,25 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: #000;
+  box-sizing: border-box;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+p {
+  font-size: 22px;
+  color: #FFF;
+  margin-top: 0;
 }
 
 button {
@@ -52,6 +66,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.home {
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {
