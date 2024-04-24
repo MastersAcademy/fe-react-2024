@@ -1,0 +1,10 @@
+.footerSocialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.footerSocialIcons a:hover svg path {
+  fill: #D43824;
+}

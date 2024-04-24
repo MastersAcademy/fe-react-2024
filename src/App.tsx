@@ -6,6 +6,8 @@ import { HeaderComponent } from './components/header/Header.component.tsx';
 import './App.css';
 
 function App() {
+    const name: string = `Roman Orlovskyi`;
+
     return (
         <>
             <HeaderComponent />
@@ -15,7 +17,7 @@ function App() {
                     Home page
                 </h1>
             </main>
-            <FooterComponent />
+            <FooterComponent name={name} />
         </>
     );
 }
