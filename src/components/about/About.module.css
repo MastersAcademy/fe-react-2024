@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  column-gap: 100px;
+  padding: 50px;
+  height: 100%;
+}
+
+.imageMainWrap {
+  flex: 1 0 auto;
+  align-self: center;
+}
+
+.imageWrap {
+  max-width: 500px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 736px) {
+
+  .wrapper {
+    flex-direction: column-reverse;
+    padding: 30px;
+  }
+
+  .wrapper p {
+    font-size: 16px;
+    line-height: 20px
+  }
+}
