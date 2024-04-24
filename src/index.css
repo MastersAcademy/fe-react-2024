@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat.ttf");
+  font-weight: 100 900;
+  font-stretch: 25% 100%;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,6 +33,8 @@ p {
 }
 
 body {
+  font-family: Montserrat, serif;
+  font-weight: 400;
   margin: 0;
   align-items: center;
   min-width: 320px;
