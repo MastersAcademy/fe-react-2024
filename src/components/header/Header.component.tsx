@@ -20,7 +20,7 @@ export const HeaderComponent = () => (
                     <HeaderNavigationComponent />
                 </div>
                 <div className={styles.headerColumn}>
-                    <div className={styles.headerColumnContainer}>
+                    <div className={`${styles.headerColumnContainer} ${styles.headerColumnRight}`}>
                         <HeaderCartComponent />
                         <HeaderAccountComponent />
                     </div>

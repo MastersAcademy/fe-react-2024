@@ -16,3 +16,7 @@
   display: flex;
   align-items: center;
 }
+
+.headerColumnRight {
+  justify-content: flex-end;
+}
