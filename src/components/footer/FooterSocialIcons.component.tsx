@@ -1,6 +1,6 @@
-import FacebookIconSVG from '@/assets/facebook.svg?react';
-import InstagramIconSVG from '@/assets/instagram.svg?react';
-import LinkedinIconSVG from '@/assets/linkedin.svg?react';
+import FacebookIconSVG from '@/assets/icons/socials/facebook.svg?react';
+import InstagramIconSVG from '@/assets/icons/socials/instagram.svg?react';
+import LinkedinIconSVG from '@/assets/icons/socials/linkedin.svg?react';
 
 import styles from './footer-social-icons.module.css';
 
