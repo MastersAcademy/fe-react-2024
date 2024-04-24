@@ -6,4 +6,5 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
     plugins: [react(), tsconfigPaths()],
     base: '/fe-react-2024/',
+    server: { host: '0.0.0.0' }
 });

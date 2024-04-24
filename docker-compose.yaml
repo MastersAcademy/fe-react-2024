@@ -1,0 +1,16 @@
+services:
+    frontend:
+        build: .
+        image: frontend_react_2024
+        container_name: frontend
+        command: npm run dev
+        restart: always
+        ports:
+            - 5173:5173
+        volumes:
+            - .:/app
+            - data-node_modules:/app/node_modules
+
+volumes:
+    data-node_modules:
+        driver: local
