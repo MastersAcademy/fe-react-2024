@@ -1,5 +1,17 @@
 .footer {
-  padding: 40px 0;
   text-align: center;
-  border-top: 2px solid #333;
+}
+
+.footer a {
+  color: #EF4934;
+}
+
+.footer a:hover {
+  color: #D43824;
+}
+
+.footerDivider {
+  width: 1148px;
+  margin: 0 auto 40px;
+  border: 1px solid #333;
 }

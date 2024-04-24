@@ -1,4 +1,18 @@
 .header {
-  font-size: 34px;
-  text-align: center;
+  padding: 17px 0;
+}
+
+.headerColumnWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.headerColumn {
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.headerColumnContainer {
+  display: flex;
+  align-items: center;
 }

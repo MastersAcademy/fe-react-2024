@@ -1,0 +1,9 @@
+.headerAccount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loginButton {
+  background: #585858 !important;
+}
