@@ -4,7 +4,7 @@ import aboutStyles from './about.module.css';
 
 export const AboutMeComponent = () => (
     <div className={aboutStyles.container}>
-        <img className={aboutStyles.image} src={aboutImage} alt="About Image" />
+        <img className={aboutStyles.image} src={aboutImage} alt="Space img" />
         <div className={aboutStyles.text}>
             <h1 className={aboutStyles.title}>About Me</h1>
             <div className={aboutStyles.body1}>
