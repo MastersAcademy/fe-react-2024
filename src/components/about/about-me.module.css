@@ -1,0 +1,29 @@
+.aboutMe {
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 0 120px;
+}
+
+.aboutMeColumn {
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.aboutMe h1 {
+  font-size: 28px;
+  margin: 0 0 40px;
+}
+
+.aboutMe p {
+  margin-bottom: 20px;
+}
+
+.aboutMeImgContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.aboutMeImgContainer img {
+  max-width: 500px;
+  border-radius: 40px;
+}
