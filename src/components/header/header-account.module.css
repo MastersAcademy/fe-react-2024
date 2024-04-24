@@ -5,5 +5,9 @@
 }
 
 .loginButton {
+  background: #333 !important;
+}
+
+.loginButton:hover {
   background: #585858 !important;
 }

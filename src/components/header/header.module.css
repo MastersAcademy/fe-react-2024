@@ -20,3 +20,7 @@
 .headerColumnRight {
   justify-content: flex-end;
 }
+
+.header a {
+  font-weight: 500;
+}
