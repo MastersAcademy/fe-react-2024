@@ -1,0 +1,71 @@
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  max-width: 500px;
+}
+
+a {
+  color: #111;
+}
+
+.aboutMeImage {
+  display: flex;
+  width: 100%;
+  height: 294px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.aboutMeText {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMeHeader {
+  margin: 0;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 20px;
+}
+
+.aboutMeParagraph {
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@media only screen and (min-width: 1250px) {
+
+  .aboutMe {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    max-width: 1250px;
+  }
+
+  .aboutMeImage {
+    width: 50%;
+    height: 100vh;
+    margin: -30px;
+    border-radius: 0;
+  }
+
+  .aboutMeText {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .aboutMeParagraph {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px
+  }
+
+  .aboutMeText {
+    display: flex;
+    flex-direction: column;
+  }
+}
