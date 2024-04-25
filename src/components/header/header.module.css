@@ -1,4 +1,131 @@
-.header {
-  font-size: 34px;
-  text-align: center;
+
+@media (min-width: 390px) {
+
+  .container {
+    display: flex;
+    width: 390px;
+    height: 70px;
+    background: #111;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 30px;
+    margin-right: 202px;
+    margin-top: 15px;
+  }
+
+  .cartIcon {
+    margin-left: 32px;
+    margin-right: 14px;
+  }
+
+  .burgerIcon {
+    margin-right: 30px;
+  }
+
+  .switchers {
+    display: none;
+  }
+
+
+  .navigation {
+    display: none;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .signUp {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+
+  .container {
+    display: flex;
+    width: 1280px;
+    height: 80px;
+    background: #111;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 53px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .switchers {
+    display: flex;
+    margin-left: 49px;
+    margin-right: 426px;
+  }
+
+  .switcher {
+    margin: 10px 5px;
+  }
+
+  .separator {
+    margin: 10px
+  }
+
+  .navigation {
+    display: flex;
+    width: 175px;
+    justify-content: space-between;
+  }
+
+  .navItem {
+    font-family: Montserrat, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #FFF
+  }
+
+  .boldNavItem {
+    font-weight: 700;
+  }
+
+  .cartIcon {
+    margin-left: 124px;
+    margin-right: 32px;
+  }
+
+  .burgerIcon {
+    display: none;
+  }
+
+  .login {
+    display: flex;
+    background: #333;
+    width: 96px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    padding: 5px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .signUp {
+    display: flex;
+    background: #EF4934;
+    width: 113px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    margin-left: 10px;
+    padding: 5px;
+  }
 }
