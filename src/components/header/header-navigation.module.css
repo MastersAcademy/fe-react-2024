@@ -9,3 +9,10 @@
 .headerNav a:hover {
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+
+  .headerNav {
+    display: none;
+  }
+}

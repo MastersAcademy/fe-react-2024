@@ -11,3 +11,10 @@
 .loginButton:hover {
   background: #585858 !important;
 }
+
+@media (max-width: 768px) {
+
+  .headerAccount {
+    display: none;
+  }
+}

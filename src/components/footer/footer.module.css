@@ -1,6 +1,5 @@
 .footer {
   text-align: center;
-  padding: 0 0 40px;
 }
 
 .footer a {
@@ -15,4 +14,16 @@
   width: 1148px;
   margin: 0 auto 40px;
   border: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 0 30px;
+  }
+
+  .footerDivider {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
 }

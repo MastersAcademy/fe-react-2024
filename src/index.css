@@ -69,6 +69,7 @@ button:focus-visible {
 
 .page-wrapper {
   width: 1174px;
+  padding: 0 0 40px;
 }
 
 .button {
@@ -81,6 +82,22 @@ button:focus-visible {
 
 .button:hover {
   background: #D43824;
+}
+
+main {
+  padding: 60px 0 120px;
+}
+
+@media (max-width: 768px) {
+
+  .page-wrapper {
+    width: 100%;
+    padding: 0 0 30px;
+  }
+
+  main {
+    padding: 10px 30px 30px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
