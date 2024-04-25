@@ -42,12 +42,13 @@ a {
     flex-direction: row-reverse;
     gap: 100px;
     max-width: 1250px;
+    padding: 60px;
   }
 
   .aboutMeImage {
     width: 50%;
     height: 100vh;
-    margin: -30px;
+    margin: -60px;
     border-radius: 0;
   }
 
