@@ -1,10 +1,11 @@
-import cartIcon from '../../assets/cart.png';
-import dividerIcon from '../../assets/divider.png';
-import logoMA from '../../assets/logoMA.png';
-import logoutIcon from '../../assets/logout.png';
-import moonIcon from '../../assets/moon.png';
-import sunIcon from '../../assets/sun.png';
-import useraddIcon from '../../assets/useradd.png';
+import cartIcon from '@assets/cart.svg';
+import dividerIcon from '@assets/divider.svg';
+import logoutIcon from '@assets/Log_Out.svg';
+import logoMA from '@assets/logoMA.svg';
+import moonIcon from '@assets/moon.svg';
+import sunIcon from '@assets/sun.svg';
+import useraddIcon from '@assets/useradd.svg';
+
 import Button from '../Button/Button.tsx';
 import Image from '../Image/Image.tsx';
 import Link from '../Link/Link.tsx';
@@ -14,11 +15,11 @@ export const Header = () => (
     <header className={styles.header}>
         <div className={styles.headerBox}>
             <div className={styles.headSection}>
-                <Image src={logoMA} alt="logo" className="headerLogo"></Image>
+                <Image src={logoMA} alt="logo" className="headerLogo" />
                 <div className={styles.colorSwitch}>
-                    <Image src={sunIcon} alt="sunPic" className={styles.headerSun}></Image>
-                    <Image src={dividerIcon} alt="dividerPic" className={styles.headerDivider}></Image>
-                    <Image src={moonIcon} alt="moonPic" className={styles.headerMoon}></Image>
+                    <Image src={sunIcon} className={styles.headerSun} />
+                    <Image src={dividerIcon} alt="dividerPic" className={styles.headerDivider} />
+                    <Image src={moonIcon} alt="moonPic" className={styles.headerMoon} />
                 </div>
             </div>
             <div className={styles.navSection}>
@@ -44,10 +45,10 @@ export const Header = () => (
                     <div className={styles.burgerLine}></div>
                 </div>
                 <div className={styles.buttons}>
-                    <Button disabled className={styles.loginBut} imgSrc={useraddIcon} imgHeight={24} imgWidth={24}>
+                    <Button disabled className={styles.loginBut} imgSrc={logoutIcon} imgHeight={24} imgWidth={24}>
                         Login
                     </Button>
-                    <Button disabled className={styles.singupBut} imgSrc={logoutIcon} imgHeight={24} imgWidth={24}>
+                    <Button disabled className={styles.singupBut} imgSrc={useraddIcon} imgHeight={24} imgWidth={24}>
                         Sing up
                     </Button>
                 </div>

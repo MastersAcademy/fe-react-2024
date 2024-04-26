@@ -1,18 +1,15 @@
+import type { ComponentProps } from 'react';
 import React from 'react';
 
-interface ButtonProps {
-    onClick?: () => void;
-    disabled?: boolean;
-    className?: string;
+interface ButtonProps extends ComponentProps<'button'> {
     imgSrc?: string;
     imgAlt?: string;
     imgWidth?: number;
     imgHeight?: number;
-    children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, disabled, className, children, imgSrc, imgAlt, imgWidth, imgHeight }) => (
-    <button onClick={onClick} disabled={disabled} className={`default-button ${className}`}>
+const Button: React.FC<ButtonProps> = ({ onClick, disabled, className, children, imgSrc, imgAlt, imgWidth, imgHeight, ...rest }) => (
+    <button onClick={onClick} disabled={disabled} className={`default-button ${className}`} {...rest}>
         {imgSrc && <img src={imgSrc} alt={imgAlt} style={{ width: imgWidth, height: imgHeight }} />}
         {children}
     </button>

@@ -1,6 +1,7 @@
-import facebookIcon from '../../assets/facebook.png';
-import instagmramIcon from '../../assets/instagram.png';
-import linkedinIcon from '../../assets/link.png';
+import facebookIcon from '@assets/fb.svg';
+import instagmramIcon from '@assets/insta.svg';
+import linkedinIcon from '@assets/linkedin.svg';
+
 import FooterIcon from '../FooterIcon/FooterIcon.tsx';
 import Link from '../Link/Link';
 

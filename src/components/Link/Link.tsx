@@ -1,13 +1,7 @@
-interface LinkProps {
-    href: string;
-    target: string;
-    rel: string;
-    children: React.ReactNode;
-    className?: string;
-}
+import type { ComponentProps } from 'react';
 
-const Link = ({ href, target, rel, children, className }: LinkProps) => (
-    <a href={href} target={target} rel={rel} className={`default-link ${className}`}>
+const Link = ({ href, target, rel, children, className, ...restProps }: ComponentProps<'a'>) => (
+    <a href={href} target={target} rel={rel} className={`default-link ${className}`} {...restProps}>
         {children}
     </a>
 );
