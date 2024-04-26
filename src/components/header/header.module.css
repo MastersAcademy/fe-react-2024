@@ -1,4 +1,19 @@
 .header {
+  display: flex;
+  position: relative;
+  height: 80px;
+  width: 100%;
   font-size: 34px;
   text-align: center;
+  background-color: #111;
+}
+
+.header__menu {
+  display: flex;
+  width: 100%;
+}
+
+.left__side {
+  display: flex;
+  flex: 1 0 50%;
 }
