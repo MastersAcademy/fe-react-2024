@@ -1,6 +1,7 @@
 import { HeaderAccountComponent } from './HeaderAccount.component.tsx';
 import { HeaderCartComponent } from './HeaderCart.component.tsx';
 import { HeaderLogoComponent } from './HeaderLogo.component.tsx';
+import { HeaderMobileMenuComponent } from './HeaderMobileMenu.component.tsx';
 import { HeaderModeSwitcherComponent } from './HeaderModeSwitcher.component.tsx';
 import { HeaderNavigationComponent } from './HeaderNavigation.component.tsx';
 
@@ -23,6 +24,7 @@ export const HeaderComponent = () => (
                     <div className={`${styles.headerColumnContainer} ${styles.headerColumnRight}`}>
                         <HeaderCartComponent />
                         <HeaderAccountComponent />
+                        <HeaderMobileMenuComponent />
                     </div>
                 </div>
             </div>

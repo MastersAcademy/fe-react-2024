@@ -15,3 +15,10 @@
   min-width: 14px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+
+  .headerCart {
+    margin-right: 15px;
+  }
+}
