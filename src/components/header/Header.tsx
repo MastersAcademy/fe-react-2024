@@ -45,10 +45,10 @@ export const Header = () => (
                     <div className={styles.burgerLine}></div>
                 </div>
                 <div className={styles.buttons}>
-                    <Button disabled className={styles.loginBut} imgSrc={logoutIcon} imgHeight={24} imgWidth={24}>
+                    <Button disabled className={styles.loginBut} imgSrc={logoutIcon}>
                         Login
                     </Button>
-                    <Button disabled className={styles.singupBut} imgSrc={useraddIcon} imgHeight={24} imgWidth={24}>
+                    <Button disabled className={styles.singupBut} imgSrc={useraddIcon}>
                         Sing up
                     </Button>
                 </div>
