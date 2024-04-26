@@ -23,4 +23,4 @@ echo "***************************************************"
 echo "\033[0m"
 
 cd "$(git rev-parse --show-toplevel)" || exit
-docker-compose run --rm frontend npx branch-name-lint .branchlintrc.json
+npx branch-name-lint .branchlintrc.json
