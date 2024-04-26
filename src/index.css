@@ -28,6 +28,8 @@ body {
   min-height: 100vh;
   background: #000;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -66,10 +68,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-.home {
-  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {
