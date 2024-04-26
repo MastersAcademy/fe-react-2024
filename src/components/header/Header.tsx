@@ -6,7 +6,7 @@ import moonIcon from '@assets/moon.svg';
 import sunIcon from '@assets/sun.svg';
 import useraddIcon from '@assets/useradd.svg';
 
-import Button from '../Button/Button.tsx';
+import { Button } from '../Button/Button.tsx';
 import Image from '../Image/Image.tsx';
 import Link from '../Link/Link.tsx';
 
