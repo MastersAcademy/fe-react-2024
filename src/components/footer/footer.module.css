@@ -11,7 +11,7 @@
 }
 
 .footerDivider {
-  width: 1148px;
+  max-width: 1148px;
   margin: 0 auto 40px;
   border: 1px solid #333;
 }
