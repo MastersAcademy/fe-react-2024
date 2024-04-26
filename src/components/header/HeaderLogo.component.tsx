@@ -4,6 +4,8 @@ import styles from './header-logo.module.css';
 
 export const HeaderLogoComponent = () => (
     <div className={styles.headerLogo}>
-        <LogoIconSVG />
+        <a href="/">
+            <LogoIconSVG />
+        </a>
     </div>
 );
