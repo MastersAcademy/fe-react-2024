@@ -1,4 +1,4 @@
-import cartIcon from '@assets/cart.svg';
+import CartIcon from '@assets/cart.svg?react';
 import dividerIcon from '@assets/divider.svg';
 import logoutIcon from '@assets/Log_Out.svg';
 import logoMA from '@assets/logoMA.svg';
@@ -38,7 +38,7 @@ export const Header = () => (
             </div>
             <div className={styles.headSection}>
                 <div className={styles.cart}>
-                    <Image src={cartIcon} alt="cartPic" className="headerCart"></Image>
+                    <CartIcon />
                 </div>
                 <div className={styles.burgerMenu}>
                     <div className={styles.burgerLine}></div>
