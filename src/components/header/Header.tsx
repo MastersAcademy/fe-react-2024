@@ -35,8 +35,8 @@ export const Header = () => (
                     <CartIcon />
                 </div>
                 <div className={styles.burgerMenu}>
-                    <div className={styles.burgerLine}></div>
-                    <div className={styles.burgerLine}></div>
+                    <div className={styles.burgerLine} />
+                    <div className={styles.burgerLine} />
                 </div>
                 <div className={styles.buttons}>
                     <Button disabled className={styles.loginBut} imgSrc={logoutIcon}>
