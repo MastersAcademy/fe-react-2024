@@ -1,15 +1,27 @@
 import React from 'react';
 
-interface FooterIconProps {
-    icon: string;
-    url: string;
-    className?: string;
-}
+import FbIcon from '@assets/fb.svg?react';
+import InstIcon from '@assets/insta.svg?react';
+import LinkIcon from '@assets/linkedin.svg?react';
 
-const FooterIcon: React.FC<FooterIconProps> = ({ icon, url, className }) => (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-        <img src={icon} alt="icon" className={`default-image ${className}`} />
-    </a>
+import Link from '../Link/Link.tsx';
+
+import styles from './footericon.module.css';
+
+const FooterIcon: React.FC = ({ ...restProps }) => (
+    <div className={styles.footerIcons}>
+        <Link href="https://www.facebook.com/">
+            <FbIcon />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/artur-kobylatsky/">
+            <LinkIcon />
+        </Link>
+
+        <Link href="https://www.instagram.com/art_k_z/">
+            <InstIcon />
+        </Link>
+    </div>
 );
 
-export default FooterIcon;
+export { FooterIcon };

@@ -11,13 +11,6 @@
   color: #242424;
 }
 
-.footerIcons {
-  display: flex;
-  gap: 30px;
-  margin-top: 39px;
-  margin-bottom: 10px;
-}
-
 .footerText {
   font-size: 22px;
   font-weight: 400;
@@ -38,11 +31,5 @@
   .footer {
     width: 85%;
     font-size: 16px;
-  }
-
-  .footerIcons {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 30px;
   }
 }
