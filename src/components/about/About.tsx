@@ -1,5 +1,6 @@
 import aboutImg from '@/assets/about.jpg';
 
+import { FooterComponent } from '../footer/Footer.component';
 import { HeaderComponent } from '../header/Header.component.tsx';
 
 import './About.css';
@@ -40,6 +41,7 @@ function About() {
                     <img src={aboutImg} alt="About img" className="about__img" />
                 </div>
             </main>
+            <FooterComponent />
         </>
     );
 }
