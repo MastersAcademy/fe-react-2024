@@ -1,0 +1,13 @@
+.colorSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 49px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 767px) {
+
+  .colorSwitch {
+    display: none;
+  }
+}

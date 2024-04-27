@@ -1,6 +1,139 @@
 .header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  font-size: 34px;
+  height: 80px;
+  background-color: #111;
+  font-size: 16px;
   text-align: center;
-  color: #242424;
+  color: #F2F2F2;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.headerBox {
+  width: calc(90%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navSection {
+  margin-left: 220px;
+}
+
+.navList {
+  display: inline-block;
+  color: #F2F2F2;
+}
+
+.navList .li {
+  color: #F2F2F2;
+  transition: font-weight .3s ease;
+}
+
+.navList li {
+  display: inline;
+  margin-right: 49px;
+}
+
+.li:hover {
+  font-weight: 700;
+}
+
+.cart {
+  margin-right: 32px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loginBut,
+.singupBut {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.loginBut {
+  width: 96px;
+  height: 34px;
+  border-radius: 40px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  background-color: #333;
+  color: #F2F2F2;
+}
+
+.singupBut {
+  width: 113px;
+  height: 34px;
+  border-radius: 40px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  background-color: #EF4934;
+  color: #F2F2F2;
+}
+
+.burgerMenu {
+  display: none;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+
+  .navSection {
+    margin: 0;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 767px) {
+
+  .headerBox {
+    width: 90%;
+  }
+
+  .cart {
+    margin-right: 14px;
+  }
+
+  .navSection,
+  .buttons {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: block;
+  }
+
+  .burgerLine {
+    width: 22.5px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: #F2F2F2;
+    margin: 6px 0;
+    transition: all .3s ease;
+  }
 }

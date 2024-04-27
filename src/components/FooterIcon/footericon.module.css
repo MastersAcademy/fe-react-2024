@@ -1,0 +1,15 @@
+.footerIcons {
+  display: flex;
+  gap: 30px;
+  margin-top: 39px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1px) and (max-width: 767px) {
+
+  .footerIcons {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+}
