@@ -9,6 +9,8 @@ import sunIcon from '../../assets/icons/sun_icon.svg';
 import styles from './header.module.css';
 
 const headerLink = 'https://www.mastersacademy.education/';
+const aboutLink = '#';
+const productLink = '#';
 
 export const HeaderComponent = () => (
     <header className={styles.header}>
@@ -30,12 +32,12 @@ export const HeaderComponent = () => (
             <div className={styles.right__side}>
                 <ul className={styles.menu__list}>
                     <li>
-                        <a className={styles.menu__list} href="#">
+                        <a className={styles.menu__list} href={aboutLink}>
                             About
                         </a>
                     </li>
                     <li>
-                        <a className={styles.menu__list} href="#">
+                        <a className={styles.menu__list} href={productLink}>
                             Products
                         </a>
                     </li>
