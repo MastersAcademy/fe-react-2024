@@ -4,10 +4,7 @@
   gap: 40px;
   padding: 30px;
   max-width: 500px;
-}
-
-a {
-  color: #111;
+  margin: 0 auto;
 }
 
 .aboutMeImage {
@@ -33,6 +30,10 @@ a {
 .aboutMeParagraph {
   font-weight: 400;
   line-height: 20px;
+}
+
+.aboutMeParagraph a {
+  color: #111;
 }
 
 @media only screen and (min-width: 1250px) {
