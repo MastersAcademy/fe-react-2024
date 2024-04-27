@@ -167,6 +167,7 @@
 
 .signup__button {
   background-color: #EF4934;
+  border: none;
 }
 
 .signup__button:hover {
