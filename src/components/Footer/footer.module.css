@@ -1,0 +1,15 @@
+.footerFlex {
+  margin: 143px 165px 41px;
+}
+
+.footerText {
+  text-align: center;
+  padding-top: 28px;
+}
+
+.footerSocial {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}

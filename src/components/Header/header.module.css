@@ -1,0 +1,41 @@
+.containerFlex {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+  padding: 17px 52px;
+}
+
+.headerFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuFlex {
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.headerKart {
+  text-align: center;
+}
+
+.btn {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnLogin {
+  border-radius: 40px;
+  color: #FFF;
+  background-color: #333;
+}
+
+.btnSignUp {
+  border-radius: 40px;
+  color: #FFF;
+  background-color: #EF4934;
+}
