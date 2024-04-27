@@ -1,12 +1,10 @@
 import CartIcon from '@assets/cart.svg?react';
-import dividerIcon from '@assets/divider.svg';
 import logoutIcon from '@assets/Log_Out.svg';
 import logoMA from '@assets/logoMA.svg';
-import moonIcon from '@assets/moon.svg';
-import sunIcon from '@assets/sun.svg';
 import useraddIcon from '@assets/useradd.svg';
 
 import { Button } from '../Button/Button.tsx';
+import { ColorSwitch } from '../ColorSwitch/ColorSwitch.tsx';
 import Image from '../Image/Image.tsx';
 import Link from '../Link/Link.tsx';
 
@@ -16,11 +14,7 @@ export const Header = () => (
         <div className={styles.headerBox}>
             <div className={styles.headSection}>
                 <Image src={logoMA} alt="logo" className="headerLogo" />
-                <div className={styles.colorSwitch}>
-                    <Image src={sunIcon} className={styles.headerSun} />
-                    <Image src={dividerIcon} alt="dividerPic" className={styles.headerDivider} />
-                    <Image src={moonIcon} alt="moonPic" className={styles.headerMoon} />
-                </div>
+                <ColorSwitch />
             </div>
             <div className={styles.navSection}>
                 <ul className={styles.navList}>

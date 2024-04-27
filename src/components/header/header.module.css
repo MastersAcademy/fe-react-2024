@@ -27,13 +27,6 @@
   align-items: center;
 }
 
-.colorSwitch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 49px;
-}
-
 .navSection {
   margin-left: 220px;
 }
@@ -126,7 +119,6 @@
     margin-right: 14px;
   }
 
-  .colorSwitch,
   .navSection,
   .buttons {
     display: none;
