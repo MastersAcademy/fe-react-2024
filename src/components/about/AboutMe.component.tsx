@@ -21,7 +21,8 @@ export const AboutMeComponent = () => (
                     small project for the portfolio.
                 </p>
                 <p>
-                    You can contact me via <a href="https://www.facebook.com/profile.php?id=100011329003177">FaceBook</a> and check out my{' '}
+                    You can contact me via <a href="https://www.facebook.com/profile.php?id=100011329003177">FaceBook</a> and check out
+                    my&nbsp;
                     <a href="https://github.com/SerhiiTrokhymets">GitHub</a>.
                 </p>
             </div>
