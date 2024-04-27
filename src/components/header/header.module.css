@@ -1,0 +1,136 @@
+.headerWrapper {
+  display: flex;
+  background: #111;
+  width: 100%;
+}
+
+.menuSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.burgerButton {
+  display: none;
+}
+
+.authWrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.authButton {
+  height: 34px;
+  background: #333;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border-radius: 40px;
+}
+
+.authButton:focus {
+  background: var(--orange-color);
+}
+
+.pages {
+  display: flex;
+}
+
+.link {
+  padding: 0;
+}
+
+.activeButton {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.themeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pipe {
+  height: 20px;
+  border: 1px solid #656565;
+}
+
+.themeButton {
+  padding: 0;
+}
+
+@media screen and (min-width: 200px) and (max-width: 748px) {
+
+  .headerWrapper {
+    height: 70px;
+    padding: 15px 30px;
+    justify-content: space-between;
+  }
+
+  .burgerButton {
+    display: block;
+    padding: 0;
+  }
+
+  .authWrapper {
+    display: none;
+  }
+
+  .pages {
+    display: none;
+  }
+
+  .themeWrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 748px) and (max-width: 1050px) {
+
+  .headerWrapper {
+    height: 80px;
+    padding: 17px 20px;
+    justify-content: space-between;
+  }
+
+  .rightHeader {
+    width: 78%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftHeader {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+
+  .headerWrapper {
+    height: 80px;
+    padding: 17px 53px;
+    justify-content: space-between;
+  }
+
+  .rightHeader {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftHeader {
+    display: flex;
+    gap: 50px;
+  }
+}

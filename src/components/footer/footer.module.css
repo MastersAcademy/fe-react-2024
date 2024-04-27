@@ -1,0 +1,39 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerLine {
+  width: 80%;
+  border-top: 1px solid #656565;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 20px;
+}
+
+.footerText {
+  padding: 0 25px 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.footerLink {
+  color: var(--orange-color);
+}
+
+.footerLink:hover {
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 200px) and (max-width: 748px) {
+
+  .footerWrapper {
+    height: 166px;
+  }
+}
+

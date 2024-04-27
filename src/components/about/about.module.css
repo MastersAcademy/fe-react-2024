@@ -34,6 +34,10 @@
   color: var(--orange-color);
 }
 
+.imageWrapper {
+  display: flex;
+}
+
 @media screen and (min-width: 200px) and (max-width: 747px) {
 
   .aboutWrapper {
