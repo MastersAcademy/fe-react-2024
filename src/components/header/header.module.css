@@ -51,20 +51,6 @@
   color: #FFF;
 }
 
-/*.header__link::after {*/
-/*  content: "";*/
-/*  position: absolute;*/
-/*  bottom: -5px;*/
-/*  left: 0;*/
-/*  width: 100%;*/
-/*  border-bottom: 2px solid #FFF;*/
-/*  opacity: 0;*/
-/*}*/
-
-/*.header__link:hover::after {*/
-/*  opacity: 1;*/
-/*}*/
-
 .wrap_button {
   width: 25px;
   display: flex;
@@ -169,7 +155,7 @@
   padding: 5px 10px;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 870px) {
 
   .header__box {
     display: grid;
