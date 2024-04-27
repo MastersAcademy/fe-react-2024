@@ -1,30 +1,27 @@
 
-@media (min-width: 390px) {
+.container {
+  width: 390px;
+  height: 166px;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
-  .container {
-    width: 390px;
-    height: 166px;
-    align-items: center;
-    margin-bottom: 30px;
-  }
+.divider {
+  display: flex;
+  justify-content: center;
+}
 
-  .divider {
-    display: flex;
-    justify-content: center;
-  }
+.author {
+  font-family: Montserrat, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
 
-  .author {
-    font-family: Montserrat, serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-    margin: 0;
-  }
-
-  .redColor {
-    color: #EF4934;
-  }
+.redColor {
+  color: #EF4934;
 }
 
 @media (min-width: 1280px) {

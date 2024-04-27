@@ -1,13 +1,10 @@
 
-@media (min-width: 390px) {
-
-  .iconsSet {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
+.iconsSet {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 1280px) {
