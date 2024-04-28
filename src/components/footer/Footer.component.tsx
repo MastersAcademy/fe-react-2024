@@ -19,7 +19,6 @@ export const Footer: React.FC = () => (
                 <InstaIcon />
             </a>
         </div>
-
         <p className={styles.footerText}>
             Made with 💗 on course&nbsp;
             <a className={styles.footerLink} href="https://www.mastersacademy.education/frontend-react-it">

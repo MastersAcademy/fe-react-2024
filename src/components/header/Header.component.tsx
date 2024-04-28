@@ -10,8 +10,8 @@ import { SunIcon } from '@/assets/icons/Sun.tsx';
 
 import styles from './header.module.css';
 export const Header: React.FC = () => {
-    const [activePage, setActivePage] = useState('');
-    const [activeTheme, setActiveTheme] = useState('');
+    const [activePage, setActivePage] = useState<string>('');
+    const [activeTheme, setActiveTheme] = useState<string>('');
 
     const handlePageChange = (page: string) => {
         setActivePage(page);
@@ -28,27 +28,24 @@ export const Header: React.FC = () => {
                     <LogoIcon />
                 </div>
                 <div className={styles.themeWrapper}>
-                    <button className={styles.themeButton} onClick={() => handleThemeChange('sun')}>
-                        <SunIcon color={activeTheme === 'sun' ? '#FFF' : '#656565'} />
+                    <button className={styles.themeButton} onClick={() => handleThemeChange('light')}>
+                        <SunIcon color={activeTheme === 'light' ? '#FFF' : '#656565'} />
                     </button>
 
                     <div className={styles.pipe}></div>
 
-                    <button className={styles.themeButton} onClick={() => handleThemeChange('moon')}>
-                        <MoonIcon color={activeTheme === 'moon' ? '#FFF' : '#656565'} />
+                    <button className={styles.themeButton} onClick={() => handleThemeChange('dark')}>
+                        <MoonIcon color={activeTheme === 'dark' ? '#FFF' : '#656565'} />
                     </button>
                 </div>
             </div>
 
             <div className={styles.rightHeader}>
                 <div className={styles.pages}>
-                    <button className={activePage === 'about' ? styles.activeButton : 'link'} onClick={() => handlePageChange('about')}>
+                    <button className={activePage === 'about' ? styles.activeButton : ''} onClick={() => handlePageChange('about')}>
                         About
                     </button>
-                    <button
-                        className={activePage === 'products' ? styles.activeButton : 'link'}
-                        onClick={() => handlePageChange('products')}
-                    >
+                    <button className={activePage === 'products' ? styles.activeButton : ''} onClick={() => handlePageChange('products')}>
                         Products
                     </button>
                 </div>
@@ -65,7 +62,7 @@ export const Header: React.FC = () => {
                         <button className={styles.authButton}>
                             <LoginIcon /> Login
                         </button>
-                        <button className={styles.authButton}>
+                        <button className={styles.signUpButton}>
                             <SignUpIcon /> Sign up
                         </button>
                     </div>
