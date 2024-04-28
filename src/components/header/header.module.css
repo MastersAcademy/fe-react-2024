@@ -123,6 +123,10 @@
     display: flex;
     gap: 20px;
   }
+
+  .menuSide {
+    gap: 20px;
+  }
 }
 
 @media screen and (min-width: 1050px) {

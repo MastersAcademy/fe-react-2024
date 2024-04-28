@@ -7,19 +7,12 @@ import { LogoIcon } from '@/assets/icons/Logo.tsx';
 import { MoonIcon } from '@/assets/icons/Moon.tsx';
 import { SignUpIcon } from '@/assets/icons/SignUp.tsx';
 import { SunIcon } from '@/assets/icons/Sun.tsx';
+import type { ActivePage, ActiveTheme } from '@/types/states.ts';
 
 import styles from './header.module.css';
 export const Header: React.FC = () => {
-    const [activePage, setActivePage] = useState<string>('');
-    const [activeTheme, setActiveTheme] = useState<string>('');
-
-    const handlePageChange = (page: string) => {
-        setActivePage(page);
-    };
-
-    const handleThemeChange = (theme: string) => {
-        setActiveTheme(theme);
-    };
+    const [activePage, setActivePage] = useState<ActivePage>('about');
+    const [activeTheme, setActiveTheme] = useState<ActiveTheme>('dark');
 
     return (
         <header className={styles.headerWrapper}>
@@ -28,13 +21,13 @@ export const Header: React.FC = () => {
                     <LogoIcon />
                 </div>
                 <div className={styles.themeWrapper}>
-                    <button className={styles.themeButton} onClick={() => handleThemeChange('light')}>
+                    <button className={styles.themeButton} onClick={() => setActiveTheme('light')}>
                         <SunIcon theme={activeTheme} />
                     </button>
 
                     <div className={styles.pipe}></div>
 
-                    <button className={styles.themeButton} onClick={() => handleThemeChange('dark')}>
+                    <button className={styles.themeButton} onClick={() => setActiveTheme('dark')}>
                         <MoonIcon theme={activeTheme} />
                     </button>
                 </div>
@@ -44,13 +37,13 @@ export const Header: React.FC = () => {
                 <div className={styles.pages}>
                     <button
                         className={activePage === 'about' ? styles.activeButton : styles.defaultLink}
-                        onClick={() => handlePageChange('about')}
+                        onClick={() => setActivePage('about')}
                     >
                         About
                     </button>
                     <button
                         className={activePage === 'products' ? styles.activeButton : styles.defaultLink}
-                        onClick={() => handlePageChange('products')}
+                        onClick={() => setActivePage('products')}
                     >
                         Products
                     </button>
