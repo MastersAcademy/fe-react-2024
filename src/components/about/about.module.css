@@ -39,6 +39,13 @@
   display: flex;
 }
 
+@media (prefers-color-scheme: light) {
+
+  .aboutLink {
+    color: var(--black-color);
+  }
+}
+
 @media screen and (min-width: 200px) and (max-width: 747px) {
 
   .aboutWrapper {

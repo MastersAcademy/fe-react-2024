@@ -52,6 +52,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  color: var(--white-color)
 }
 
 .themeWrapper {
@@ -68,6 +69,13 @@
 
 .themeButton {
   padding: 0;
+}
+
+@media (prefers-color-scheme: light) {
+
+  .defaultLink {
+    color: var(--white-color)
+  }
 }
 
 @media screen and (min-width: 200px) and (max-width: 748px) {

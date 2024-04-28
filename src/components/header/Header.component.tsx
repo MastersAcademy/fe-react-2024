@@ -29,23 +29,29 @@ export const Header: React.FC = () => {
                 </div>
                 <div className={styles.themeWrapper}>
                     <button className={styles.themeButton} onClick={() => handleThemeChange('light')}>
-                        <SunIcon color={activeTheme === 'light' ? '#FFF' : '#656565'} />
+                        <SunIcon theme={activeTheme} />
                     </button>
 
                     <div className={styles.pipe}></div>
 
                     <button className={styles.themeButton} onClick={() => handleThemeChange('dark')}>
-                        <MoonIcon color={activeTheme === 'dark' ? '#FFF' : '#656565'} />
+                        <MoonIcon theme={activeTheme} />
                     </button>
                 </div>
             </div>
 
             <div className={styles.rightHeader}>
                 <div className={styles.pages}>
-                    <button className={activePage === 'about' ? styles.activeButton : ''} onClick={() => handlePageChange('about')}>
+                    <button
+                        className={activePage === 'about' ? styles.activeButton : styles.defaultLink}
+                        onClick={() => handlePageChange('about')}
+                    >
                         About
                     </button>
-                    <button className={activePage === 'products' ? styles.activeButton : ''} onClick={() => handlePageChange('products')}>
+                    <button
+                        className={activePage === 'products' ? styles.activeButton : styles.defaultLink}
+                        onClick={() => handlePageChange('products')}
+                    >
                         Products
                     </button>
                 </div>

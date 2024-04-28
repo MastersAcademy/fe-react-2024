@@ -45,7 +45,7 @@ button {
   font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
   border: none;
   outline: none;
-  background: none;
+  background: transparent;
 }
 
 html {
@@ -79,9 +79,5 @@ html {
 
   a:hover {
     color: var(--orange-color);
-  }
-
-  button {
-    background-color: #F9F9F9;
   }
 }
