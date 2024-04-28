@@ -63,15 +63,15 @@
 }
 
 @media only screen and (min-width: 1250px) {
-  
+
   .header {
     padding: 0 52px;
   }
-  
+
   .burgerMenuButton {
     display: none;
   }
-  
+
   .themesMenuContainer {
     display: flex;
     flex-direction: row;
