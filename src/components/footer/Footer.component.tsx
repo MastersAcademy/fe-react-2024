@@ -12,7 +12,7 @@ export const FooterComponent = () => (
         <>
             <IconsComponent />
         </>
-        <h2 className={footerStyles.author}>
+        <h2 className={footerStyles.description}>
             Made with 💗 on course{' '}
             <a href="https://www.mastersacademy.education/frontend-for-beginners-it" className={footerStyles.redColor}>
                 &apos;Intro to React&apos; from Masters Academy in 2024
