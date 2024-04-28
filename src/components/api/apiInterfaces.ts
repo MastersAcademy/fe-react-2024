@@ -3,9 +3,9 @@ export interface Product {
     title: string;
     price: number;
     description: string;
-    images: Array<string>;
-    creationAt: Date;
-    updatedAt: Date;
+    images: string[];
+    creationAt: string;
+    updatedAt: string;
     category: Category;
 }
 
@@ -13,9 +13,9 @@ export interface Category {
     id: number;
     name: string;
     image: string;
-    creationAt: Date;
-    updatedAt: Date;
+    creationAt: string;
+    updatedAt: string;
 }
 
-export interface Products extends Array<Product> {}
-export interface Categories extends Array<Category> {}
+export type Products = Product[];
+export type Categories = Category[];
