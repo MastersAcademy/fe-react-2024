@@ -28,7 +28,7 @@ export const About = () => (
             </p>
         </div>
 
-        <div>
+        <div className={styles.imageWrapper}>
             <img className={styles.aboutImage} src={aboutImage} alt="about" />
         </div>
     </div>

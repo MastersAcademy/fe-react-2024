@@ -37,24 +37,15 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
   padding: .6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1A1A1A;
   cursor: pointer;
   transition: border-color .25s;
-}
-
-button:hover {
-  border-color: #646CFF;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-family: Montserrat, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  border: none;
+  outline: none;
+  background: transparent;
 }
 
 html {
@@ -67,6 +58,12 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+
+.main-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (prefers-color-scheme: light) {
@@ -82,9 +79,5 @@ html {
 
   a:hover {
     color: var(--orange-color);
-  }
-
-  button {
-    background-color: #F9F9F9;
   }
 }
