@@ -10,13 +10,13 @@
 .title {
   font-size: 27px;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--main-font-family);
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .description {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--main-font-family);
 }
 
 .image {
@@ -52,7 +52,7 @@
   .description {
     font-size: 22px;
     font-weight: 400;
-    font-family: "Montserrat", serif;
+    font-family: var(--main-font-family);
     line-height: 32px;
   }
 

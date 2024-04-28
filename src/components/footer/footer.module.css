@@ -12,7 +12,7 @@
 }
 
 .author {
-  font-family: Montserrat, serif;
+  font-family: var(--main-font-family);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -21,7 +21,7 @@
 }
 
 .redColor {
-  color: #EF4934;
+  color: var(--red);
 }
 
 @media (min-width: 1280px) {

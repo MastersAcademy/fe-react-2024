@@ -3,7 +3,7 @@
   display: flex;
   width: 390px;
   height: 70px;
-  background: #111;
+  background: var(--deep-black);
   align-items: center;
 }
 
@@ -45,7 +45,7 @@
     display: flex;
     width: 1280px;
     height: 80px;
-    background: #111;
+    background: var(--deep-black);
     align-items: center;
   }
 
@@ -76,12 +76,12 @@
   }
 
   .navItem {
-    font-family: Montserrat, serif;
+    font-family: var(--main-font-family);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    color: #FFF
+    color: var(--white)
   }
 
   .boldNavItem {
@@ -99,7 +99,7 @@
 
   .login {
     display: flex;
-    background: #333;
+    background: var(--dark-charcoal);
     width: 96px;
     height: 34px;
     align-items: center;
@@ -116,7 +116,7 @@
 
   .signUp {
     display: flex;
-    background: #EF4934;
+    background: var(--red);
     width: 113px;
     height: 34px;
     align-items: center;

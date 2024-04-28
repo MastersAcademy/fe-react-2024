@@ -9,6 +9,11 @@
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --main-font-family: "Montserrat", sans-serif;
+  --red: #EF4934;
+  --dark-charcoal: #333;
+  --deep-black: #111;
+  --white: #FFF;
 }
 
 a {
@@ -58,7 +63,7 @@ button:focus-visible {
 
   :root {
     color: #213547;
-    background-color: #FFF;
+    background-color: var(--white);
   }
 
   a:hover {
