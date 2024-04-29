@@ -1,14 +1,27 @@
 .containerFlex {
   display: flex;
   justify-content: space-between;
-  background-color: #111;
+  align-items: center;
+}
+
+.header {
   padding: 17px 52px;
+  background-color: #111;
 }
 
 .headerFlex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.headerSun {
+  padding: 0 7px 0 49px;
+}
+
+.headerMoon {
+  border-left: 1px solid #656565;
+  padding-left: 7px;
 }
 
 .menuFlex {
@@ -18,8 +31,14 @@
   list-style: none;
 }
 
-.headerKart {
-  text-align: center;
+.aboutMenu {
+  padding-right: 49px;
+}
+
+.kartFlex {
+  display: flex;
+  align-items: center;
+  padding-right: 32px;
 }
 
 .btn {
@@ -32,10 +51,55 @@
   border-radius: 40px;
   color: #FFF;
   background-color: #333;
+  padding: 11px 20px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.btnLogin:hover {
+  background-color: #EF4934;
 }
 
 .btnSignUp {
   border-radius: 40px;
   color: #FFF;
+  background-color: #333;
+  padding: 11px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.btnSignUp:hover {
   background-color: #EF4934;
+}
+
+.menuBtn {
+  display: none;
+}
+
+@media (max-width: 391px) {
+
+  .menuBtn {
+    display: flex;
+  }
+
+  .headerMoon, .headerSun {
+    display: none;
+  }
+
+  .btnLogin, .btnSignUp, .productMenu, .aboutMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 1279px) {
+
+  .header {
+    padding: 10px;
+  }
+
+  .containerFlex {
+    display: flex;
+  }
 }

@@ -8,7 +8,7 @@ function About() {
             <main>
                 <section>
                     <div className={styles.aboutFlex}>
-                        <img className={styles.aboutImage} src={AboutImage} alt="about" width="300" height="300" />
+                        <img className={styles.aboutImage} src={AboutImage} alt="about" width="500" height="500" />
                         <div className={styles.aboutText}>
                             <h1 className={styles.aboutTitle}>About Me</h1>
                             <p>

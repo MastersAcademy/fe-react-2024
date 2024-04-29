@@ -1,5 +1,6 @@
 .footerFlex {
-  margin: 143px 165px 41px;
+  margin: 0 70px 41px;
+  border-top: 1px solid #CCC;
 }
 
 .footerText {
@@ -8,8 +9,8 @@
 }
 
 .footerSocial {
-  list-style: none;
   display: flex;
   justify-content: center;
   gap: 30px;
+  padding-top: 20px;
 }
