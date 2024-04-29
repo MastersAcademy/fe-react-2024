@@ -14,7 +14,7 @@ export const FooterComponent = () => (
         </>
         <h2 className={footerStyles.description}>
             Made with 💗 on course{' '}
-            <a href="https://www.mastersacademy.education/frontend-for-beginners-it" className={footerStyles.redColor}>
+            <a href="https://www.mastersacademy.education/frontend-for-beginners-it" className={footerStyles.linkColor}>
                 &apos;Intro to React&apos; from Masters Academy in 2024
             </a>{' '}
             by Serhii
