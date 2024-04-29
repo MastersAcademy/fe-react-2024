@@ -1,4 +1,4 @@
-import { SocialIcon } from './socialIcon/socialIcon.component.tsx';
+import { Socials } from '../Socials/Socials.component';
 
 import styles from './footer.module.css';
 
@@ -7,7 +7,7 @@ export const FooterComponent = () => (
         <div className={styles.footer__container}>
             <hr className={styles.line}></hr>
             <div className={styles.footer__content}>
-                <SocialIcon />
+                <Socials />
                 <h3 className={styles.copyright}>
                     Made with 💗 on course{' '}
                     <span className={styles.copyright__color}>&apos;Intro to React&apos; from Masters Academy in 2024</span> by Vasyl Biliak
