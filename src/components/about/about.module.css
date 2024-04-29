@@ -1,10 +1,12 @@
 
 .container {
   margin: 30px 30px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .text {
-  width: 330px;
+  width: 100%;
 }
 
 .title {
@@ -20,8 +22,8 @@
 }
 
 .image {
-  width: 330px;
-  height: 294px;
+  width: 100%;
+  height: auto;
   border-radius: 30px;
 }
 
@@ -33,13 +35,14 @@
 
   .container {
     margin: 30px 53px 0;
-    display: flex;
     flex-direction: row-reverse;
   }
 
   .text {
     flex: 1;
-    width: 575px;
+    width: auto;
+    max-width: 50%;
+    margin-right: 30px;
   }
 
   .title {
@@ -57,8 +60,9 @@
   }
 
   .image {
-    width: 500px;
-    height: 489px;
-    margin: 85px 52px 144px 100px;
+    width: auto;
+    height: 100%;
+    max-width: 50%;
+    margin: 85px 0 144px 50px;
   }
 }
