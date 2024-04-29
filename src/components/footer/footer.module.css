@@ -65,3 +65,7 @@
   color: #EF4934;
   text-decoration: none;
 }
+
+.facebook__icon {
+  background-image: url("#facebook");
+}
