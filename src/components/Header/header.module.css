@@ -59,7 +59,7 @@
 
 .header__login_btn,
 .header_btn__user_add {
-  width: 96px;
+  width: 113px;
   height: 34px;
   display: flex;
   align-items: center;
@@ -85,6 +85,7 @@
   font-weight: 500;
   font-size: 16px;
   color: #FFF;
+  font-family: Montserrat, sans-serif;
 }
 
 .user_add_img {
@@ -92,7 +93,10 @@
   height: 24px;
 }
 
-.user_add_img .login_img .header_btn {
+.header__login_btn,
+.header_btn__user_add,
+.login_img .header_btn,
+.wrap_toggle {
   cursor: pointer;
 }
 
@@ -144,7 +148,6 @@
     grid-template-columns: 1fr;
     gap: 5px;
   }
-
 
   .about {
     display: grid;
