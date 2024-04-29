@@ -1,7 +1,8 @@
 import aboutImg from '@/assets/about.jpg';
+import { linkedinProfile } from '@/links.tsx';
 
-import { FooterComponent } from '../footer/Footer.component';
-import { HeaderComponent } from '../header/Header.component.tsx';
+import { Footer } from '../footer/Footer.component';
+import { Header } from '../header/Header.component.tsx';
 
 import './About.css';
 import '../../reset.css';
@@ -9,7 +10,7 @@ import '../../reset.css';
 function About() {
     return (
         <>
-            <HeaderComponent />
+            <Header />
             <main className="main__block">
                 <div className="main__row content">
                     <section className="about__block">
@@ -28,10 +29,7 @@ function About() {
                             </p>
                             <p className="about__text">
                                 You can contact me via &apos;
-                                <a
-                                    href="https://www.linkedin.com/in/%D0%B1%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D1%8F%D1%86%D0%B5%D0%BD%D1%82%D1%8E%D0%BA-841247270/"
-                                    className="about__link"
-                                >
+                                <a href={linkedinProfile} className="about__link">
                                     LinkedIn profile
                                 </a>
                                 &apos; and check out my GitHub.
@@ -41,7 +39,7 @@ function About() {
                     <img src={aboutImg} alt="About img" className="about__img" />
                 </div>
             </main>
-            <FooterComponent />
+            <Footer />
         </>
     );
 }

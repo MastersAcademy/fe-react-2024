@@ -46,6 +46,7 @@
 .footer__icon {
   width: 25px;
   height: 25px;
+  fill: #EF4934;
 }
 
 .footer__icon:hover {

@@ -1,31 +1,30 @@
-import headerLogo from '../../assets/header_logo.svg';
-import basket from '../../assets/icons/basket.svg';
-import burger from '../../assets/icons/burger.svg';
-import moonIcon from '../../assets/icons/moon_icon.svg';
-import out from '../../assets/icons/out.svg';
-import signUp from '../../assets/icons/sign_up.svg';
-import sunIcon from '../../assets/icons/sun_icon.svg';
+import HeaderLogo from '@/assets/header_logo.svg?react';
+import Basket from '@/assets/icons/basket.svg?react';
+import Burger from '@/assets/icons/burger.svg?react';
+import MoonIcon from '@/assets/icons/moon_icon.svg?react';
+import Out from '@/assets/icons/out.svg?react';
+import SignUp from '@/assets/icons/sign_up.svg?react';
+import SunIcon from '@/assets/icons/sun_icon.svg?react';
+import { headerLink } from '@/links.tsx';
+import { aboutLink } from '@/links.tsx';
+import { productLink } from '@/links.tsx';
 
 import styles from './header.module.css';
 
-const headerLink = 'https://www.mastersacademy.education/';
-const aboutLink = '#';
-const productLink = '#';
-
-export const HeaderComponent = () => (
+export const Header = () => (
     <header className={styles.header}>
         <nav className={`${styles.content} ${styles.header__menu}`}>
             <span className={styles.burger}>
-                <img src={burger} alt="burger" />
+                <Burger />
             </span>
             <div className={styles.left__side}>
                 <a href={headerLink}>
-                    <img src={headerLogo} alt="header_logo" className={styles.header__logo} />
+                    <HeaderLogo />
                 </a>
                 <article className={styles.icons__block}>
-                    <img src={sunIcon} alt="sun_icon" className={styles.header__icon} />
+                    <SunIcon />
                     <span className={styles.separator}></span>
-                    <img src={moonIcon} alt="moon_icon" className={styles.header__icon} />
+                    <MoonIcon />
                 </article>
             </div>
 
@@ -45,16 +44,16 @@ export const HeaderComponent = () => (
 
                 <article className={styles.flex}>
                     <span className={styles.basket__button}>
-                        <img src={basket} alt="basket" className={styles.header__icon} />
+                        <Basket />
                     </span>
                     <div className={styles.buttons__block}>
                         <button className={`${styles.header__button} ${styles.login__button}`}>
-                            <img className={styles.header__icon} src={out} alt="out" />
+                            <Out />
                             Login
                         </button>
 
                         <button className={`${styles.header__button} ${styles.signup__button}`}>
-                            <img className={styles.header__icon} src={signUp} alt="signup" />
+                            <SignUp />
                             Sign up
                         </button>
                     </div>

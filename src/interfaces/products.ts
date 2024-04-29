@@ -1,12 +1,12 @@
-import type { CategoryInterface } from '@/interfaces/category.ts';
+import type { Category } from '@/interfaces/category.ts';
 
-export interface ProductInterface {
+export interface Product {
     id: number;
     title: string;
     price: number;
     description: number;
     images: string[];
-    creationAt: string;
-    updatedAt: string;
-    category: CategoryInterface;
+    creationAt: Date;
+    updatedAt: Date;
+    category: Category;
 }
