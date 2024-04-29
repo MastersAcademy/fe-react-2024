@@ -29,11 +29,13 @@ export const HeaderComponent = () => (
             <div className={`${headerStyles.navItem} ${headerStyles.boldNavItem}`}>About</div>
             <div className={headerStyles.navItem}>Products</div>
         </div>
-        <div className={headerStyles.cartIcon}>
-            <img src={cartSVG} alt="Cart" />
-        </div>
-        <div className={headerStyles.burgerIcon}>
-            <img src={burgerSVG} alt="Cart" />
+        <div className={headerStyles.icons}>
+            <div className={headerStyles.cartIcon}>
+                <img src={cartSVG} alt="Cart" />
+            </div>
+            <div className={headerStyles.burgerIcon}>
+                <img src={burgerSVG} alt="Cart" />
+            </div>
         </div>
         <button className={headerStyles.login}>
             <div className={headerStyles.content}>
