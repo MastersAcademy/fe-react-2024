@@ -1,7 +1,6 @@
 import React from 'react';
 
-interface AGroup extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
-export const LinkTag: React.ComponentType<AGroup> = ({ href, className, children, ...rest }) => (
+export const LinkTag = ({ href, className, children, ...rest }: React.ComponentProps<'a'>) => (
     <a href={href} className={className} {...rest}>
         {children}
     </a>
