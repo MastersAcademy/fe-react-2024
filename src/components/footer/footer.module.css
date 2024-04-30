@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  gap: 30px;
+  height: 166px;
+}
+
+hr {
+  display: flex;
+  width: 100%;
+}
+
+.textFooter {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.textFooter a {
+  color: #EF4934;
+  text-decoration: none;
+}
+
+.logosContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}

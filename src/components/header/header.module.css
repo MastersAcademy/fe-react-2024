@@ -1,4 +1,160 @@
 .header {
-  font-size: 34px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  background: #111;
+  padding: 0 30px;
 }
+
+.themesContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px
+}
+
+.menuAndAuthContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.authorisationPanel {
+  display: none;
+}
+
+.themesMenuContainer {
+  display: none;
+}
+
+.menuItems {
+  display: none;
+}
+
+.logoMA {
+  width: 40px;
+  height: 40px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.shoppingBasketButton {
+  display: flex;
+  max-width: 24px;
+  height: 24px;
+  background: #111;
+  align-items: center;
+  justify-content: center;
+}
+
+.burgerMenuButton {
+  display: flex;
+  max-width: 30px;
+  height: 30px;
+  background: #111;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1250px) {
+
+  .header {
+    padding: 0 52px;
+  }
+
+  .burgerMenuButton {
+    display: none;
+  }
+
+  .themesMenuContainer {
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+    max-width: 80px;
+  }
+
+  .customHr {
+    border-color: #656565;
+  }
+
+  .lightThemeButton {
+    display: flex;
+    background: #111;
+    align-items: center;
+    padding: 0 7px;
+  }
+
+  .darkThemesButton {
+    display: flex;
+    background: #111;
+    align-items: center;
+    padding: 0 7px;
+  }
+
+
+  .authorisationPanel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .loginButton {
+    display: flex;
+    background: #333;
+    height: 34px;
+    color: #FFF;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 6px;
+    border-radius: 20px;
+  }
+
+  .signupButton {
+    display: flex;
+    background: #EF4934;
+    height: 34px;
+    color: #FFF;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 6px;
+    border-radius: 20px;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-direction: row;
+    color: #FFF;
+    gap: 49px;
+    list-style: none;
+    padding: 0 124px;
+  }
+
+  .menuItemsLink {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .menuItemsLink:hover {
+    color: #FFF;
+    font-weight: 700;
+  }
+}
+
