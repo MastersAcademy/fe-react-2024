@@ -5,6 +5,8 @@ import MoonIcon from '@/assets/icons/moon_icon.svg?react';
 import Out from '@/assets/icons/out.svg?react';
 import SignUp from '@/assets/icons/sign_up.svg?react';
 import SunIcon from '@/assets/icons/sun_icon.svg?react';
+import { Button } from '@/components/button/Button.tsx';
+import { LinkTag } from '@/components/LinkTag/LinkTag.tsx';
 import { headerLink } from '@/links.tsx';
 import { aboutLink } from '@/links.tsx';
 import { productLink } from '@/links.tsx';
@@ -18,9 +20,9 @@ export const Header = () => (
                 <Burger />
             </span>
             <div className={styles.left__side}>
-                <a href={headerLink}>
+                <LinkTag href={headerLink}>
                     <HeaderLogo />
-                </a>
+                </LinkTag>
                 <article className={styles.icons__block}>
                     <SunIcon />
                     <span className={styles.separator}></span>
@@ -47,15 +49,15 @@ export const Header = () => (
                         <Basket />
                     </span>
                     <div className={styles.buttons__block}>
-                        <button className={`${styles.header__button} ${styles.login__button}`}>
+                        <Button className={`${styles.header__button} ${styles.login__button}`}>
                             <Out />
                             Login
-                        </button>
+                        </Button>
 
-                        <button className={`${styles.header__button} ${styles.signup__button}`}>
+                        <Button className={`${styles.header__button} ${styles.signup__button}`}>
                             <SignUp />
                             Sign up
-                        </button>
+                        </Button>
                     </div>
                 </article>
             </div>

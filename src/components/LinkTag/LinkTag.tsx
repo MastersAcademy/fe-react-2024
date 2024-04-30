@@ -1,11 +1,8 @@
-import type { ComponentProps } from 'react';
+import React from 'react';
 
-interface AGroup extends ComponentProps<'a'> {
-    href: string;
-    className: string;
-}
-export const LinkTag = ({ href, className }: AGroup) => (
-    <a href={href} className={className}>
-        {` `}
+interface AGroup extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
+export const LinkTag: React.ComponentType<AGroup> = ({ href, className, children, ...rest }) => (
+    <a href={href} className={className} {...rest}>
+        {children}
     </a>
 );

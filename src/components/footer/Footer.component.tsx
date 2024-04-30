@@ -16,12 +16,12 @@ export const Footer = () => (
                 <LinkTag href={fbLink} className={styles.footer__link}>
                     <FacebookIcon className={styles.footer__icon} />
                 </LinkTag>
-                <a href={linkedLink} className={styles.footer__link}>
+                <LinkTag href={linkedLink} className={styles.footer__link}>
                     <LinkedinIcon className={styles.footer__icon} />
-                </a>
-                <a href={instagramLink} className={styles.footer__link}>
+                </LinkTag>
+                <LinkTag href={instagramLink} className={styles.footer__link}>
                     <InstagramIcon className={styles.footer__icon} />
-                </a>
+                </LinkTag>
             </article>
             <div className={styles.footer__text}>
                 Made with 💗 on course&nbsp;
