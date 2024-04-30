@@ -1,6 +1,7 @@
 .about {
   display: flex;
   justify-content: space-around;
+  gap: 3rem;
   align-items: center;
   width: 100%;
 }
@@ -19,7 +20,7 @@
   line-height: 3.2rem;
   font-size: 2.2rem;
   font-weight: 400;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 .about__logo-img {
