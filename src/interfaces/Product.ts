@@ -1,13 +1,14 @@
-import type Category from './Category.ts';
+import type { Category } from './Category.ts';
 
 interface Product {
     id: number;
     title: string;
     price: number;
     description: string;
-    images: string;
-    sort: 'newest' | 'oldest' | 'highestPrice' | 'lowestPrice';
+    images: string[];
+    creationAt: Date;
+    updatedAt: Date;
     category: Category;
 }
 
-export default Product;
+export type { Product };

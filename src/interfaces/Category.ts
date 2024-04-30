@@ -1,7 +1,9 @@
 interface Category {
     id: number;
     name: string;
-    description: string;
+    image: string;
+    creationAt: Date;
+    updatedAt: Date;
 }
 
-export default Category;
+export type { Category };
