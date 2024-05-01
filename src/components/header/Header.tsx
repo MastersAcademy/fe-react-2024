@@ -9,7 +9,7 @@ import Image from '../Image/Image.tsx';
 import Link from '../Link/Link.tsx';
 
 import styles from './header.module.css';
-export const Header = () => (
+export const Header: React.FC<{ onPageChange: (page: string) => void }> = ({ onPageChange }) => (
     <header className={styles.header}>
         <div className={styles.headerBox}>
             <div className={styles.headSection}>
@@ -19,12 +19,12 @@ export const Header = () => (
             <div className={styles.navSection}>
                 <ul className={styles.navList}>
                     <li>
-                        <Link href="#" target="_blank" rel="noopener noreferrer" className={styles.li}>
+                        <Link onClick={() => onPageChange('About')} className={styles.li}>
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" target="_blank" rel="noopener noreferrer" className={styles.li}>
+                        <Link onClick={() => onPageChange('Products')} className={styles.li}>
                             Products
                         </Link>
                     </li>

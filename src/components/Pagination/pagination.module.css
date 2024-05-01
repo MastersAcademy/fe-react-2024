@@ -1,0 +1,47 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.active {
+  background-color: #F00;
+  color: #FFF;
+}
+
+.nonactive {
+  background-color: #FFF;
+  color: #000;
+}
+
+@media screen and (min-width: 1px) and (max-width: 767px) {
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    list-style-type: none;
+  }
+
+  .active {
+    height: 32px;
+    width: 32px;
+    background-color: #F00;
+    color: #FFF;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nonactive {
+    height: 32px;
+    width: 32px;
+    background-color: #FFF;
+    color: #000;
+    text-align: center;
+    padding: 0;
+  }
+}
