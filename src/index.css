@@ -13,18 +13,18 @@
 
 a {
   font-weight: 500;
-  color: #646CFF;
+  color: #EF4934;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535BF2;
+  color: #D43824;
 }
 
 body {
   margin: 0;
   align-items: center;
-  min-width: 320px;
+  min-width: 390px;
   min-height: 100vh;
 }
 

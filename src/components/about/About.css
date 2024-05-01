@@ -12,18 +12,32 @@ body {
   min-width: 390px;
 }
 
+@media (min-width: 1280px) {
+
+  .content {
+    padding: 0 30px;
+  }
+}
+
 .main__block {
   display: flex;
   justify-content: center;
   background-color: #FFF;
-  width: 100vw;
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+
+  .main__block {
+    flex-direction: row;
+    width: 100vw;
+  }
 }
 
 .main__row {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 1px solid #CCC;
   border-top: none;
   padding: 30px;
 }
@@ -114,7 +128,6 @@ body {
     width: 50%;
     height: 100%;
     max-height: none;
-    object-fit: cover;
     order: 2;
     border-radius: 0;
   }
