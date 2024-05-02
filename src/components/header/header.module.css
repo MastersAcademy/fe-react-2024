@@ -71,6 +71,28 @@
   padding: 0;
 }
 
+.cartButton {
+  display: flex;
+  position: relative;
+}
+
+.counter {
+  width: 17px;
+  height: 17px;
+  color: var(--white-color);
+  background: var(--orange-color);
+  position: absolute;
+  z-index: 999;
+  top: 4px;
+  right: 11px;
+  border-radius: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+
 @media (prefers-color-scheme: light) {
 
   .defaultLink {

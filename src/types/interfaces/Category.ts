@@ -2,6 +2,6 @@ export interface Category {
     id: number;
     name: string;
     image: string;
-    createdAt: string;
+    creationAt: string;
     updatedAt: string;
 }

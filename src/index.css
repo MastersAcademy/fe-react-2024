@@ -12,6 +12,7 @@
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --icon-color: #FFF;
 }
 
 a {
@@ -71,6 +72,7 @@ html {
   :root {
     color: #213547;
     background-color: #FFF;
+    --icon-color: #000;
   }
 
   a {

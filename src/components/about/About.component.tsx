@@ -1,8 +1,10 @@
+import React from 'react';
+
 import aboutImage from '../../public/about.png';
 
 import styles from './about.module.css';
 
-export const About = () => (
+export const About: React.FC = () => (
     <div className={styles.aboutWrapper}>
         <div className={styles.aboutText}>
             <h1 className={styles.aboutTextHeader}>About Me</h1>
