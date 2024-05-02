@@ -10,8 +10,8 @@
 }
 
 .header__logo {
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
 }
 
 .wrap_toggle {
@@ -107,8 +107,14 @@
 @media (max-width: 870px) {
 
   .header {
+    padding: 0 30px;
     height: 70px;
     grid-template-columns: 55px auto;
+  }
+
+  .header__logo {
+    width: 40px;
+    height: 40px;
   }
 
   .wrapToggler,
@@ -148,6 +154,7 @@
     grid-template-columns: 1fr;
     gap: 5px;
   }
+
 
   .about {
     display: grid;
