@@ -9,9 +9,7 @@ export const FooterComponent = () => (
                 <path d="M0 1H1148" stroke="#CCCCCC" />
             </svg>
         </div>
-        <>
-            <IconsComponent />
-        </>
+        <IconsComponent />
         <h2 className={footerStyles.description}>
             Made with 💗 on course{' '}
             <a href="https://www.mastersacademy.education/frontend-for-beginners-it" className={footerStyles.link}>
