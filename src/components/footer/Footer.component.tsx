@@ -4,11 +4,6 @@ import footerStyles from './footer.module.css';
 
 export const FooterComponent = () => (
     <div className={footerStyles.container}>
-        <div className={footerStyles.divider}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1148 2" fill="none">
-                <path d="M0 1H1148" stroke="#CCCCCC" />
-            </svg>
-        </div>
         <IconsComponent />
         <h2 className={footerStyles.description}>
             Made with 💗 on course{' '}
