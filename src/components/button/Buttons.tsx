@@ -3,6 +3,6 @@ interface ButtonProps {
     children: React.ReactNode;
 }
 
-const Button = ({ className, children }: ButtonProps) => <button className={className}>{children}</button>;
+const Buttons = ({ className, children }: ButtonProps) => <button className={className}>{children}</button>;
 
-export default Button;
+export default Buttons;
