@@ -1,9 +1,15 @@
 .productCard {
   display: flex;
+  flex-direction: column;
+  max-width: 275px;
+  max-height: 344px;
   font-size: 22px;
   color: #221F1F;
 }
 
 .productList {
   display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 }

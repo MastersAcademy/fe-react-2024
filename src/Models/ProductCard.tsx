@@ -13,9 +13,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
         <img src={product.images[0]} alt={product.title} width={200} height={200} />
         <div className="product-details">
             <h3>{product.title}</h3>
-            <p>Price: ${product.price.toFixed(2)}</p>
-            <p>Description: {product.description}</p>
-            <p>Category: {product.category.name}</p>
+            <p>${product.price.toFixed(2)}</p>
         </div>
     </div>
 );

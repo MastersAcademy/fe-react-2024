@@ -4,16 +4,17 @@ import mockData from './mocData.json';
 import type { Product } from './product';
 import ProductCard from './ProductCard';
 
+import appStyles from '../App.module.css';
 import styles from './Product.module.css';
 
-const ProductsList: React.FC = () => (
-    <div className={styles.productList}>
-        <div className={styles.productCard}>
+const ProductsList = () => (
+    <section className={appStyles.container}>
+        <div className={`${styles.productList}`}>
             {mockData.map((product: Product) => (
                 <ProductCard key={product.id} product={product} />
             ))}
         </div>
-    </div>
+    </section>
 );
 
 export default ProductsList;
