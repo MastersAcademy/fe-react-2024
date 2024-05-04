@@ -31,8 +31,20 @@
   list-style: none;
 }
 
+.productMenu {
+  border: none;
+  font-size: 16px;
+  background-color: #111;
+  color: #FFF;
+}
+
 .aboutMenu {
+  padding-left: 300px;
   padding-right: 49px;
+  font-size: 16px;
+  border: none;
+  background-color: #111;
+  color: #FFF;
 }
 
 .kartFlex {

@@ -2,14 +2,38 @@
   display: flex;
   flex-direction: column;
   max-width: 275px;
-  max-height: 344px;
+  height: auto;
   font-size: 22px;
   color: #221F1F;
+  border-radius: 20px;
+  border: 1px solid #CCC;
+  margin-bottom: 15px;
 }
 
 .productList {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.flexPrice {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.productDetails {
+  margin: 0;
+}
+
+.productTitle {
+  margin: 0;
+  font-size: 22px;
+  padding-left: 15px;
+}
+
+.productImage {
+  border-radius: 20px;
+  padding: 20px 15px;
 }
