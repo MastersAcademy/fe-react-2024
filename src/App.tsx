@@ -1,4 +1,5 @@
-import AboutPage from './components/about/AboutPage.tsx';
+import ProductList from '@/Models/ProductList';
+
 import Footer from './components/Footer/footer.component';
 import Header from './components/Header/header.component.tsx';
 
@@ -9,7 +10,8 @@ function App() {
         <>
             <Header />
             <main className={styles.body}>
-                <AboutPage />
+                {/* <AboutPage />*/}
+                <ProductList />
             </main>
             <Footer />
         </>

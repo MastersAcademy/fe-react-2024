@@ -1,0 +1,9 @@
+.productCard {
+  display: flex;
+  font-size: 22px;
+  color: #221F1F;
+}
+
+.productList {
+  display: flex;
+}
