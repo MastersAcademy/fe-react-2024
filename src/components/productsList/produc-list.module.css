@@ -1,0 +1,80 @@
+.mainCard {
+  display: flex;
+  justify-content: center;
+}
+
+.cardContainer {
+  display: grid;
+  max-width: 1250px;
+  width: 90%;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-grow: 1;
+  max-width: 275px;
+  width: 100%;
+  align-self: stretch;
+  flex-direction: column;
+  border: 1px solid #CCC;
+  border-radius: 20px;
+  padding: 20px 15px;
+  gap: 20px;
+}
+
+.productImages {
+  display: flex;
+  max-width: 201px;
+  max-height: 205px;
+  border-radius: 20px;
+}
+
+.productTitle {
+  display: flex;
+  margin: 0;
+  max-width: 245px;
+  word-break: break-word;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productPrice {
+  display: flex;
+  margin: 0;
+}
+
+.add_product_to_card {
+  display: flex;
+  margin: 0;
+}
+
+@media only screen and (min-width: 700px) {
+
+  .cardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media only screen and (min-width: 900px) {
+
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
