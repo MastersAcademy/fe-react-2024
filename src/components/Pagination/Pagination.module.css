@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pageItem {
+  border: #1A1A1A;
+  border-radius: 1px;
+}
+
+
+.pageLink {
+  color: #1A1A1A;
+}
+
+.activeLink {
+  background: var(--red);
+}

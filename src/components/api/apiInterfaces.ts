@@ -1,4 +1,4 @@
-export interface Product {
+interface Product {
     id: number;
     title: string;
     price: number;
@@ -17,5 +17,4 @@ export interface Category {
     updatedAt: string;
 }
 
-export type Products = Product[];
-export type Categories = Category[];
+export default Product;
