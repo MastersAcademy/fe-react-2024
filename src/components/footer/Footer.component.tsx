@@ -3,7 +3,8 @@ import { IconsComponent } from '@/components/icons/Icons.component.tsx';
 import footerStyles from './footer.module.css';
 
 export const FooterComponent = () => (
-    <div className={footerStyles.container}>
+    <div className="mainContentWrapper">
+        <div className={footerStyles.divider}></div>
         <IconsComponent />
         <h2 className={footerStyles.description}>
             Made with 💗 on course{' '}

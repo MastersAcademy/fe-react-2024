@@ -91,6 +91,10 @@
     font-weight: 700;
   }
 
+  .button {
+    background-color: var(--deep-black);
+  }
+
   .cartIcon {
     margin-left: 10px;
     margin-right: 10px;

@@ -75,3 +75,8 @@ button:focus-visible {
     background-color: #F9F9F9;
   }
 }
+
+.mainContentWrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+}
