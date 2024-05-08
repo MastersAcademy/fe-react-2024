@@ -8,21 +8,15 @@ import { ProductsList } from '@/components/ProductsList/ProductsList.component.t
 import './App.css';
 
 function App() {
+    const ABOUT_ME: string = 'AboutMe';
+    const PRODUCT_LIST: string = `ProductList`;
+
     const [activePage, setActivePage] = useState('AboutMe');
-    const renderComponent = () => {
-        switch (activePage) {
-            case 'AboutMe': {
-                return <AboutMeComponent />;
-            }
-            case 'ProductList': {
-                return <ProductsList />;
-            }
-        }
-    };
+    const renderComponent = () => (activePage === ABOUT_ME ? <AboutMeComponent /> : <ProductsList />);
 
     return (
         <>
-            <HeaderComponent setActivePage={setActivePage} />
+            <HeaderComponent setActivePage={setActivePage} aboutPageName={ABOUT_ME} productPageName={PRODUCT_LIST} />
             <main className="mainContentWrapper">{renderComponent()}</main>
             <FooterComponent />
         </>

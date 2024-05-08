@@ -11,12 +11,11 @@ import headerStyles from './header.module.css';
 
 interface NameComponentProps {
     setActivePage: (page: string) => void;
+    aboutPageName: string;
+    productPageName: string;
 }
 
-export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage }) => {
-    const ABOUT_ME: string = 'AboutMe';
-    const PRODUCT_LIST: string = `ProductList`;
-
+export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, aboutPageName, productPageName }) => {
     const handleButton = (name: string) => {
         setActivePage(name);
     };
@@ -39,12 +38,12 @@ export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage })
             </div>
             <div className={headerStyles.navigation}>
                 <button
-                    onClick={() => handleButton(ABOUT_ME)}
+                    onClick={() => handleButton(aboutPageName)}
                     className={`${headerStyles.navItem} ${headerStyles.boldNavItem} ${headerStyles.button}`}
                 >
                     About
                 </button>
-                <button onClick={() => handleButton(PRODUCT_LIST)} className={`${headerStyles.navItem} ${headerStyles.button}`}>
+                <button onClick={() => handleButton(productPageName)} className={`${headerStyles.navItem} ${headerStyles.button}`}>
                     Products
                 </button>
             </div>
