@@ -11,7 +11,7 @@
 }
 
 .container:hover {
-  background-color: var(--grey);
+  background-color: var(--light-grey);
 }
 
 .image {
