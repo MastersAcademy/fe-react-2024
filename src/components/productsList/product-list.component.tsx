@@ -16,8 +16,8 @@ export const ProductsListComponent: FC<ProductListComponentPropsInterface> = ({ 
                     <p className={styles.productTitle}>{product.title}</p>
                     <div className={styles.priceContainer}>
                         <p className={styles.productPrice}>{product.price} ₴</p>
-                        <button>
-                            <img className={styles.add_product_to_card} src={addToCardImage} alt="add·product·to·card" />
+                        <button className={styles.addToCardButton}>
+                            <img className={styles.addProductToCard} src={addToCardImage} alt="add·product·to·card" />
                         </button>
                     </div>
                 </li>
