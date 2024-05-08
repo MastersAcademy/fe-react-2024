@@ -52,10 +52,15 @@ button {
 }
 
 button:hover {
-  border-color: #646CFF;
+  border-color: transparent;
 }
 
 button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
