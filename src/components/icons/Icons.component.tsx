@@ -2,18 +2,33 @@ import facebook from '../../assets/facebook.svg';
 import instagram from '../../assets/instagram.svg';
 import linkedin from '../../assets/linkedin.svg';
 
-import styles from './icons.module.css';
+interface SocialIconProps {
+    iconName: string;
+    iconUrl: string;
+}
 
-export const IconsComponent = () => (
-    <div className={styles.iconsSet}>
-        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-            <img src={facebook} alt="Facebook" />
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-            <img src={linkedin} alt="LinkedIn" />
-        </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            <img src={instagram} alt="Instagram" />
-        </a>
-    </div>
-);
+interface IconMapping {
+    [key: string]: string;
+}
+
+const AVAILABLE_ICON_MAPPING: IconMapping = {
+    facebook,
+    instagram,
+    linkedin,
+};
+
+export const IconsComponent: React.FC<SocialIconProps> = ({ iconName, iconUrl }) => {
+    function renderIcon() {
+        const source = AVAILABLE_ICON_MAPPING[iconName];
+        const altText = iconName.toUpperCase();
+        if (source !== undefined) {
+            return (
+                <a href={iconUrl} target="_blank" rel="noreferrer">
+                    <img src={source} alt={altText} />
+                </a>
+            );
+        }
+    }
+
+    return <div>{renderIcon()}</div>;
+};
