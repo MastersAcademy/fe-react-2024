@@ -1,14 +1,16 @@
 .pagination {
   display: flex;
   flex-direction: row;
-  gap: 25px;
+  gap: 5px;
   list-style-type: none;
   padding: 0;
+  min-width: 100px;
 }
 
 .pageItem {
   border: #1A1A1A;
   border-radius: 1px;
+  font-size: 12px;
 }
 
 
@@ -18,4 +20,17 @@
 
 .activeLink {
   background: var(--red);
+}
+
+@media (min-width: 1280px) {
+
+  .pagination {
+    gap: 15px;
+  }
+
+  .pageItem {
+    border: #1A1A1A;
+    border-radius: 1px;
+    font-size: 14px;
+  }
 }

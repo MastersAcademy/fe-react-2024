@@ -18,13 +18,13 @@ export const ProductsList = () => {
     const paginate = (pageNumber: SetStateAction<number>) => setCurrentPage(pageNumber);
 
     return (
-        <div className={styles.container}>
-            <div className={styles.products}>
+        <ul className={styles.container}>
+            <li className={styles.products}>
                 {currentProducts.map((item) => (
                     <ProductCard key={item.id} product={item} />
                 ))}
-            </div>
+            </li>
             <Pagination productsPerPage={productsPerPage} totalProducts={response.length} paginate={paginate} />
-        </div>
+        </ul>
     );
 };

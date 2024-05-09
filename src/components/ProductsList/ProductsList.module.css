@@ -2,14 +2,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: #000;
   margin-top: 100px;
+  padding: 0;
 }
 
 
 .products {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+
+@media (min-width: 1280px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    margin-top: 100px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
 }
