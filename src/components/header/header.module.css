@@ -31,7 +31,10 @@
 }
 
 .navigation {
-  display: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  margin-left: auto;
 }
 
 .login {
@@ -40,6 +43,16 @@
 
 .signUp {
   display: none;
+}
+
+.button {
+  background-color: var(--deep-black);
+  color: var(--white);
+  padding: 0;
+}
+
+.boldNavItem {
+  font-weight: 700;
 }
 
 @media (min-width: 1280px) {
@@ -70,11 +83,9 @@
   }
 
   .navigation {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 175px;
-    margin-left: auto;
   }
 
   .navItem {
@@ -84,10 +95,6 @@
     font-weight: 500;
     line-height: normal;
     color: var(--white);
-  }
-
-  .boldNavItem {
-    font-weight: 700;
   }
 
   .button {
