@@ -18,7 +18,7 @@ const AVAILABLE_ICON_MAPPING: IconMapping = {
 };
 
 export const IconsComponent: React.FC<SocialIconProps> = ({ iconName, iconUrl }) => {
-    function renderIcon() {
+    const renderIcon = () => {
         const source = AVAILABLE_ICON_MAPPING[iconName];
         const altText = iconName.toUpperCase();
         if (source !== undefined) {
@@ -28,7 +28,7 @@ export const IconsComponent: React.FC<SocialIconProps> = ({ iconName, iconUrl })
                 </a>
             );
         }
-    }
+    };
 
     return <div>{renderIcon()}</div>;
 };
