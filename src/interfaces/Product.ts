@@ -9,7 +9,6 @@ interface Product {
     category: Category;
     creationAt: Date | string;
     updatedAt: Date | string;
-    sort: 'newest' | 'oldest' | 'highestPrice' | 'lowestPrice';
 }
 
 export type { Product };
