@@ -82,5 +82,7 @@ button:focus-visible {
 }
 
 .mainContentWrapper {
-  padding: 60px 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
 }
