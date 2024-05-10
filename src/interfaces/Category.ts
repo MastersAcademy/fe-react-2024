@@ -2,8 +2,8 @@ interface Category {
     id: number;
     name: string;
     image: string;
-    creationAt: Date;
-    updatedAt: Date;
+    creationAt: Date | string;
+    updatedAt: Date | string;
 }
 
 export type { Category };
