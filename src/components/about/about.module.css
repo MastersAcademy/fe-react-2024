@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .text {
@@ -38,6 +39,7 @@
   .container {
     margin: 53px 53px 0;
     flex-direction: row-reverse;
+    align-items: flex-start;
   }
 
   .text {
