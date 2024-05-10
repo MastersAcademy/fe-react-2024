@@ -4,6 +4,7 @@ import footerStyles from './footer.module.css';
 
 export const FooterComponent = () => (
     <div className={footerStyles.container}>
+        <div className={footerStyles.divider}></div>
         <div className={footerStyles.iconsContainer}>
             <IconsComponent iconName={'facebook'} iconUrl={'https://www.facebook.com'} />
             <IconsComponent iconName={'instagram'} iconUrl={'https://www.instagram.com'} />
