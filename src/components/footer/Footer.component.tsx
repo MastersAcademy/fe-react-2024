@@ -17,7 +17,6 @@ function Footer() {
                 <div className={styles.description}>
                     <p>
                         {' '}
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
                         Made with 💗 on course
                         <a href="https://www.mastersacademy.education/frontend-for-beginners-it">
                             {' '}
