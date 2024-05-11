@@ -12,9 +12,10 @@ import styles from './header.module.css';
 interface HeaderProps {
     toggleAbout: () => void;
     toggleProducts: () => void;
+    cartCount: number;
 }
 
-function Header({ toggleAbout, toggleProducts }: HeaderProps) {
+function Header({ toggleAbout, toggleProducts, cartCount }: HeaderProps) {
     return (
         <>
             <header className={styles.header}>
@@ -35,19 +36,20 @@ function Header({ toggleAbout, toggleProducts }: HeaderProps) {
                             </button>
                         </div>
 
-                        <ul className={styles.btn}>
-                            <li className={styles.kartFlex}>
+                        <div className={styles.btn}>
+                            <button className={styles.kartFlex}>
                                 <img src={Cart} alt="Cart" />
-                            </li>
-                            <li className={styles.btnLogin}>
+                                {cartCount > 0 && <span className={styles.counter}>{cartCount}</span>}
+                            </button>
+                            <div className={styles.btnLogin}>
                                 <img src={logOut} alt="logOut" />
                                 Login
-                            </li>
-                            <li className={styles.btnSignUp}>
+                            </div>
+                            <div className={styles.btnSignUp}>
                                 <img src={userAdd} alt="userAdd" />
                                 Sign Up
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         <img className={styles.menuBtn} src={menuBtn} alt="menu" />
                     </section>
                 </div>

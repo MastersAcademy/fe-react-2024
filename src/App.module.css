@@ -3,3 +3,11 @@
   max-width: 1175px;
   margin: 0 auto;
 }
+
+@media (min-width: 391px) and (max-width: 1279px) {
+
+  .container {
+    width: 897px;
+    margin: 0 auto;
+  }
+}

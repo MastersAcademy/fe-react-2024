@@ -9,6 +9,21 @@
   background-color: #111;
 }
 
+.counter {
+  height: 17px;
+  width: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #EF4934;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 8px;
+  right: -8px;
+}
+
 .headerFlex {
   display: flex;
   justify-content: space-between;
@@ -51,6 +66,10 @@
   display: flex;
   align-items: center;
   padding-right: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
 }
 
 .btn {
@@ -113,5 +132,14 @@
 
   .containerFlex {
     display: flex;
+  }
+
+  .btnSignUp {
+    border-radius: 40px;
+    color: #FFF;
+    background-color: #333;
+    padding: 11px 20px;
+    display: flex;
+    align-items: center;
   }
 }
