@@ -18,11 +18,7 @@ function Footer() {
                     <p>
                         {' '}
                         Made with 💗 on course
-                        <a href="https://www.mastersacademy.education/frontend-for-beginners-it">
-                            {' '}
-                            {/* eslint-disable-next-line react/no-unescaped-entities */}
-                            'Intro to React'
-                        </a>{' '}
+                        <a href="https://www.mastersacademy.education/frontend-for-beginners-it">`Intro to React`</a>
                         from Masters Academy in 2024, by Andriy Voloshchuk
                     </p>
                 </div>
