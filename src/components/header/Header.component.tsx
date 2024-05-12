@@ -1,3 +1,7 @@
+import React from 'react';
+
+import type { HeaderNavigationComponent } from '@/interface/header-nvigation-component-interface.ts';
+
 import burgerMenu from '../../assets/BurgerMenu.svg';
 import darkTheme from '../../assets/DarkThemes.svg';
 import lightTheme from '../../assets/LightThemes.svg';
@@ -8,7 +12,7 @@ import signupLogo from '../../assets/SignupLogo.svg';
 
 import styles from './header.module.css';
 
-export const HeaderComponent = () => (
+export const HeaderComponent: React.FC<HeaderNavigationComponent> = ({ navigationComponent }) => (
     <header className={styles.header}>
         <div className={styles.themesContainer}>
             <img className={styles.logoMA} src={logoMA} alt="Logo MA" />
@@ -25,12 +29,26 @@ export const HeaderComponent = () => (
         <div className={styles.menuAndAuthContainer}>
             <ul className={styles.menuItems}>
                 <li className={styles.menuItemsAbout}>
-                    <a className={styles.menuItemsLink} href="/#">
+                    <a
+                        className={styles.menuItemsLink}
+                        href="/#"
+                        onClick={(element: React.MouseEvent<HTMLAnchorElement>) => {
+                            element.preventDefault();
+                            navigationComponent('About');
+                        }}
+                    >
                         About
                     </a>
                 </li>
                 <li className={styles.menuItemsAbout}>
-                    <a className={styles.menuItemsLink} href="/#">
+                    <a
+                        className={styles.menuItemsLink}
+                        href="/#"
+                        onClick={(element: React.MouseEvent<HTMLAnchorElement>) => {
+                            element.preventDefault();
+                            navigationComponent('ProductList');
+                        }}
+                    >
                         Products
                     </a>
                 </li>
