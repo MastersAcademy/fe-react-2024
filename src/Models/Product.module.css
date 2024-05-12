@@ -40,7 +40,7 @@
 }
 
 .productImage {
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 20px 15px;
 }
 
@@ -62,8 +62,8 @@
   font-size: 10px;
   font-weight: 700;
   position: absolute;
-  top: 8px;
-  right: -8px;
+  top: 17px;
+  right: 2px;
 }
 
 @media (max-width: 391px) {

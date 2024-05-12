@@ -1,5 +1,3 @@
-import React from 'react';
-
 import mockData from './mocData.json';
 import type { Product } from './product';
 import ProductCard from './ProductCard';

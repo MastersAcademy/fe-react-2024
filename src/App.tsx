@@ -19,10 +19,16 @@ function App() {
         setIsShowAbout(false);
     };
 
+    const [cartCount, setCartCount] = useState(0);
+
+    const addToCart = () => {
+        setCartCount((previousCount) => previousCount + 1);
+    };
+
     return (
         <>
-            <Header toggleAbout={toggleAbout} toggleProducts={toggleProducts} />
-            {isShowAbout ? <AboutPage /> : <ProductList />}
+            <Header toggleAbout={toggleAbout} toggleProducts={toggleProducts} cartCount={cartCount} />
+            {isShowAbout ? <AboutPage /> : <ProductList addToCart={addToCart} />}
             <Footer />
         </>
     );
