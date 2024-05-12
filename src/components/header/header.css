@@ -63,7 +63,7 @@ header {
   width: 17.5rem;
 }
 
-.head__navigation--about, .head__navigation--products {
+.head__navigation--link {
   background-color: #111;
   color: #FFF;
   font-size: 1.6rem;
@@ -74,10 +74,8 @@ header {
 }
 
 
-.head__navigation--about.active,
-.head__navigation--about:hover,
-.head__navigation--products.active,
-.head__navigation--products:hover {
+.head__navigation--link.active,
+.head__navigation--link:hover {
   font-weight: 700;
 }
 
