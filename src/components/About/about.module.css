@@ -1,5 +1,6 @@
 .about {
-  padding: 100px 30px;
+  padding: 30px;
+  min-height: calc(100vh - 150px);
 }
 
 .content {
@@ -25,7 +26,7 @@
   font-size: 16px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 540px) {
 
   .picture {
     max-width: 500px;
@@ -35,7 +36,8 @@
 @media (min-width: 1020px) {
 
   .about {
-    padding: 140px 53px;
+    padding: 80px 53px 0;
+    min-height: calc(100vh - 290px);
   }
 
   .content {

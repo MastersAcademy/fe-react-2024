@@ -1,0 +1,169 @@
+.header {
+  padding: 0 53px;
+  display: grid;
+  grid-template-columns: 55px 1fr auto;
+  align-items: center;
+  font-size: 34px;
+  text-align: center;
+  background-color: #000;
+  height: 80px;
+}
+
+.header__logo {
+  width: 46px;
+  height: 46px;
+}
+
+.wrap_toggle {
+  align-items: center;
+  margin-left: 43px;
+}
+
+.switcherMode {
+  display: flex;
+}
+
+.header__links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__links > *:nth-child(1) {
+  margin-right: 50px;
+}
+
+.header__links > *:nth-child(5) {
+  margin-left: 15px;
+}
+
+.header__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.cart__link {
+  margin: 0 10px 0 50px;
+}
+
+.cart_img {
+  width: 24px;
+  height: 24px;
+}
+
+.header__login_btn,
+.header_btn__user_add {
+  width: 113px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  gap: 6px;
+  background-color: #333;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.header_btn__user_add {
+  background: #EF4934;
+}
+
+.header_btn__text {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFF;
+  font-family: Montserrat, sans-serif;
+}
+
+.user_add_img {
+  width: 24px;
+  height: 24px;
+}
+
+.header__login_btn,
+.header_btn__user_add,
+.login_img .header_btn,
+.wrap_toggle {
+  cursor: pointer;
+}
+
+.header__menu_btn {
+  display: none;
+}
+
+@media (max-width: 870px) {
+
+  .header {
+    padding: 0 30px;
+    height: 70px;
+    grid-template-columns: 55px auto;
+  }
+
+  .header__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .wrapToggler,
+  .header__link,
+  .header__login_btn,
+  .header_btn__user_add,
+  .wrap_toggle {
+    display: none;
+  }
+
+  .header__links {
+    gap: 14px;
+  }
+
+  .cart__link {
+    gap: 0;
+    margin: 0;
+  }
+
+  .header__menu_btn {
+    grid-column: 2;
+    display: grid;
+    margin-left: 0;
+  }
+
+  .menu_img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header__links > *:nth-child(3) {
+    margin-right: 6px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .about__img {
+    width: 98%;
+    height: auto;
+  }
+}
