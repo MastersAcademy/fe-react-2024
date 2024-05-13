@@ -12,7 +12,6 @@ function App() {
                         <span>About me</span>
                         <br />
                         <br />
-                        <br />
                         <p>
                             Hi! My name is Andriy Voloshtchuk and I`m a Junior Frontend Developer. I am already familiar with main Web
                             Technologies like React, HTML, CSS, JavaScript and Git version control system.
