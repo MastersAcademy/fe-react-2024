@@ -3,7 +3,7 @@ import React from 'react';
 import BurgerMenu from '../../assets/burger-menu.png';
 import Card from '../../assets/card.png';
 import DarkTheme from '../../assets/DarkThemes.svg';
-import Login from '../../assets/door.png';
+import LogOut from '../../assets/door.png';
 import LightTheme from '../../assets/LightThemes.svg';
 import LogoMOCG from '../../assets/logoMOCG.png';
 import Signup from '../../assets/sign_up.png';
@@ -66,9 +66,9 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
                 <button className={styles.Card}>
                     <img className={styles.cardIcon} src={Card} alt="Card" />
                 </button>
-                <button className={styles.loginButton}>
-                    <img className={styles.loginLogo} src={Login} alt="Login" />
-                    <p>Login</p>
+                <button className={styles.logOutButton}>
+                    <img className={styles.loginLogo} src={LogOut} alt="Log out" />
+                    <p>Log out</p>
                 </button>
                 <button className={styles.signupButton}>
                     <img className={styles.signupLogo} src={Signup} alt="Signup" />

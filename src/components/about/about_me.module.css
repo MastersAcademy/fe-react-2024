@@ -6,6 +6,7 @@
   min-width: 330px;
   min-height: 400px;
   justify-content: space-between;
+  margin: auto;
 }
 
 .aboutMeImage {
@@ -52,13 +53,6 @@
     align-items: center;
   }
 
-  .aboutMeImage {
-    width: 500px;
-    height: 489px;
-    margin: -20px;
-    border-radius: 0;
-  }
-
   .aboutMeText {
     color: #111;
     margin: 0;
@@ -69,7 +63,7 @@
 
   .aboutMeDescription {
     color: #111;
-    width: 90%;
+    width: 100%;
     font-weight: 400;
     font-size: 22px;
     line-height: 32px

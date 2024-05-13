@@ -22,7 +22,7 @@
   gap: 10px;
 }
 
-.loginButton {
+.logOutButton {
   display: none;
 }
 
@@ -118,7 +118,7 @@
     justify-content: space-around;
   }
 
-  .loginButton {
+  .logOutButton {
     display: flex;
     background: #333;
     height: 34px;
