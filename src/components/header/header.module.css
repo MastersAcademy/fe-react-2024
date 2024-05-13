@@ -12,14 +12,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 50px
+  gap: 10px
 }
 
 .menuAndAuthContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 32px;
+  gap: 10px;
 }
 
 .loginButton {
