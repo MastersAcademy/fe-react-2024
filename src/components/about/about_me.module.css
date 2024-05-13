@@ -1,19 +1,19 @@
 .aboutMe {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 40px;
   padding: 30px;
-  max-width: 500px;
-  margin: 0 auto;
+  min-width: 330px;
+  min-height: 400px;
+  justify-content: space-between;
 }
 
 .aboutMeImage {
-  display: flex;
-  width: 100%;
-  height: 294px;
-  object-fit: cover;
-  border-radius: 30px;
+  width: 84%;
+  max-width: 500px;
+  max-height: 489px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .aboutMeText {
@@ -55,7 +55,7 @@
   .aboutMeImage {
     width: 500px;
     height: 489px;
-    margin: -60px;
+    margin: -20px;
     border-radius: 0;
   }
 
@@ -69,6 +69,7 @@
 
   .aboutMeDescription {
     color: #111;
+    width: 90%;
     font-weight: 400;
     font-size: 22px;
     line-height: 32px
