@@ -1,4 +1,5 @@
 .header {
+  width: 97.2vw;
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
@@ -133,9 +134,10 @@
 
   .signupButton {
     display: flex;
-    background: #EF4934;
+    background: transparent;
     height: 34px;
-    color: #FFF;
+    color: #585858;
+    border-color: #585858;
     padding: 0 10px;
     align-items: center;
     font-weight: 500;
