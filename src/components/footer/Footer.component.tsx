@@ -1,6 +1,8 @@
 import React from 'react';
 
 import faceBookIcons from '../../assets/facebook.png';
+import linkedIn from '../../assets/in.png';
+import instagram from '../../assets/inst.png';
 
 import FooterIcon from './FooterIcon.tsx';
 
@@ -13,8 +15,8 @@ function Footer() {
                 <hr />
                 <div className={styles.icon}>
                     <FooterIcon icon={faceBookIcons} url="https://www.facebook.com/master.of.code.team/" />
-                    <FooterIcon icon="../fe-react-2024/src/assets/in.png" url="https://www.linkedin.com/company/master-of-code/" />
-                    <FooterIcon icon="../fe-react-2024/src/assets/inst.png" url="https://www.instagram.com/master.of.code.team/" />
+                    <FooterIcon icon={linkedIn} url="https://www.linkedin.com/company/master-of-code/" />
+                    <FooterIcon icon={instagram} url="https://www.instagram.com/master.of.code.team/" />
                 </div>
                 <div className={styles.description}>
                     <p>
