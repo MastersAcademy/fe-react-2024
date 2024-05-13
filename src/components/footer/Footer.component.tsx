@@ -1,5 +1,7 @@
 import React from 'react';
 
+import faceBookIcons from '../../assets/facebook.png';
+
 import FooterIcon from './FooterIcon.tsx';
 
 import styles from './footer.module.css';
@@ -10,7 +12,7 @@ function Footer() {
             <div className={styles.main}>
                 <hr />
                 <div className={styles.icon}>
-                    <FooterIcon icon="../fe-react-2024/src/assets/facebook.png" url="https://www.facebook.com/master.of.code.team/" />
+                    <FooterIcon icon={faceBookIcons} url="https://www.facebook.com/master.of.code.team/" />
                     <FooterIcon icon="../fe-react-2024/src/assets/in.png" url="https://www.linkedin.com/company/master-of-code/" />
                     <FooterIcon icon="../fe-react-2024/src/assets/inst.png" url="https://www.instagram.com/master.of.code.team/" />
                 </div>
