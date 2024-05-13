@@ -54,7 +54,7 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
                             href="/#"
                             onClick={(element: React.MouseEvent<HTMLAnchorElement>) => {
                                 element.preventDefault();
-                                toggleComponent('ProductList');
+                                toggleComponent('Products');
                             }}
                         >
                             Products
