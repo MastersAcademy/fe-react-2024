@@ -38,3 +38,15 @@ hr {
   color: #EF4934;
 }
 
+@media only screen and (min-width: 1250px) {
+
+  .footer {
+    position: static;
+    justify-content: center;
+    padding: 0 30px;
+    gap: 30px;
+    height: 166px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
