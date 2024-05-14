@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import { AboutMeComponents } from '@/components/about/About_me.component.tsx';
 import Footer from '@/components/footer/Footer.component.tsx';
+import { ProductsListComponent } from '@/components/productList/Product_list.component.tsx';
+import { mockData } from '@/mock_data.ts';
 
 import { HeaderComponent } from './components/header/Header.component.tsx';
 
@@ -14,7 +16,7 @@ function App() {
     return (
         <>
             <HeaderComponent toggleComponent={toggleComponent} />
-            {currentComponent === 'About' && <AboutMeComponents />}
+            {currentComponent === 'About' ? <AboutMeComponents /> : <ProductsListComponent products={mockData} />}
             <Footer />
         </>
     );
