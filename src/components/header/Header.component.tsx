@@ -3,10 +3,10 @@ import React from 'react';
 import BurgerMenu from '../../assets/burger-menu.png';
 import Card from '../../assets/card.png';
 import DarkTheme from '../../assets/DarkThemes.svg';
-import LogOut from '../../assets/door.png';
 import LightTheme from '../../assets/LightThemes.svg';
+import Login from '../../assets/login.png';
 import LogoMOCG from '../../assets/logoMOCG.png';
-import Signup from '../../assets/sign_up.png';
+import Signup from '../../assets/signup.png';
 
 import styles from './header.module.css';
 
@@ -35,40 +35,32 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
                 </button>
             </div>
             <div className={styles.aboutProdct}>
-                <ul className={styles.menuItems}>
-                    <li className={styles.menuItemsAbout}>
-                        <a
-                            className={styles.menuItemsLink}
-                            href="/#"
-                            onClick={(element: React.MouseEvent<HTMLAnchorElement>) => {
-                                element.preventDefault();
-                                toggleComponent('About');
-                            }}
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li className={styles.menuItemsAbout}>
-                        <a
-                            className={styles.menuItemsLink}
-                            href="/#"
-                            onClick={(element: React.MouseEvent<HTMLAnchorElement>) => {
-                                element.preventDefault();
-                                toggleComponent('Products');
-                            }}
-                        >
-                            Products
-                        </a>
-                    </li>
-                </ul>
+                <button
+                    className={styles.aboutMe}
+                    onClick={(event) => {
+                        event.preventDefault();
+                        toggleComponent('About');
+                    }}
+                >
+                    About
+                </button>
+                <button
+                    className={styles.products}
+                    onClick={(event) => {
+                        event.preventDefault();
+                        toggleComponent('Products');
+                    }}
+                >
+                    Products
+                </button>
             </div>
             <div className={styles.buttonContainer}>
                 <button className={styles.Card}>
                     <img className={styles.cardIcon} src={Card} alt="Card" />
                 </button>
                 <button className={styles.logOutButton}>
-                    <img className={styles.loginLogo} src={LogOut} alt="Log out" />
-                    <p>Log out</p>
+                    <img className={styles.loginLogo} src={Login} alt="Login" />
+                    <p>Login</p>
                 </button>
                 <button className={styles.signupButton}>
                     <img className={styles.signupLogo} src={Signup} alt="Signup" />
