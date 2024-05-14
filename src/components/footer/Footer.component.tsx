@@ -1,8 +1,8 @@
 import React from 'react';
 
-import faceBookIcons from '../../assets/facebook.png';
-import linkedIn from '../../assets/in.png';
-import instagram from '../../assets/inst.png';
+import faceBookIcons from '../../assets/facebook.svg';
+import linkedIn from '../../assets/in.svg';
+import instagram from '../../assets/insta.svg';
 
 import FooterIcon from './FooterIcon.tsx';
 

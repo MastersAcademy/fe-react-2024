@@ -35,22 +35,11 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
                 </button>
             </div>
             <div className={styles.aboutProdct}>
-                <button
-                    className={styles.aboutMe}
-                    onClick={(event) => {
-                        event.preventDefault();
-                        toggleComponent('About');
-                    }}
-                >
+                <button className={styles.aboutMe} onClick={() => toggleComponent('About')}>
                     About
                 </button>
-                <button
-                    className={styles.products}
-                    onClick={(event) => {
-                        event.preventDefault();
-                        toggleComponent('Products');
-                    }}
-                >
+
+                <button className={styles.products} onClick={() => toggleComponent('Products')}>
                     Products
                 </button>
             </div>

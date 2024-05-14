@@ -11,10 +11,11 @@
 
 hr {
   display: flex;
-  width: 100%;
+  width: 89vw;
 }
 
 .icon {
+  bottom: -20%;
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -23,7 +24,7 @@ hr {
 
 .description {
   text-align: center;
-  margin: 0 auto;
+  margin: 55px auto 0;
 }
 
 .description p {
@@ -48,5 +49,11 @@ hr {
     height: 166px;
     align-items: center;
     flex-shrink: 0;
+  }
+
+  .hr {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
   }
 }
