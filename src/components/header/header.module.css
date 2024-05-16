@@ -22,6 +22,14 @@
   gap: 10px;
 }
 
+.aboutMe {
+  display: none;
+}
+
+.products {
+  display: none;
+}
+
 .logOutButton {
   display: none;
 }
@@ -122,15 +130,32 @@
     padding: 0 7px;
   }
 
-  .aboutProduct {
-    display: flex;
-  }
-
   .menuAndAuthContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .aboutProdct {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-right: 120px;
+  }
+
+  .aboutMe,
+  .products {
+    display: flex;
+    background: #111;
+    padding: 20px;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    border-radius: 20px;
   }
 
   .logOutButton {
@@ -149,10 +174,10 @@
 
   .signupButton {
     display: flex;
-    background: transparent;
+    background: #EF4934;
     height: 34px;
-    color: #585858;
-    border-color: #585858;
+    color: #F1F1F1;
+    border-color: transparent;
     padding: 0 10px;
     align-items: center;
     font-weight: 500;

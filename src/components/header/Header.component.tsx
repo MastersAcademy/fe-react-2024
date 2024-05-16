@@ -3,10 +3,10 @@ import React from 'react';
 import BurgerMenu from '../../assets/burger-menu.png';
 import Card from '../../assets/card.png';
 import DarkTheme from '../../assets/DarkThemes.svg';
-import LogOut from '../../assets/door.png';
 import LightTheme from '../../assets/LightThemes.svg';
+import LogOut from '../../assets/login.png';
 import LogoMOCG from '../../assets/logoMOCG.png';
-import Signup from '../../assets/sign_up.png';
+import Signup from '../../assets/signup.png';
 
 import styles from './header.module.css';
 
@@ -36,32 +36,13 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
                 </button>
             </div>
             <div className={styles.aboutProdct}>
-                <ul className={styles.menuItems}>
-                    <li className={styles.menuItemsAbout}>
-                        <a
-                            className={styles.menuItemsLink}
-                            href="/#"
-                            onClick={(element: React.MouseEvent<HTMLAnchorElement>) => {
-                                element.preventDefault();
-                                toggleComponent('About');
-                            }}
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li className={styles.menuItemsAbout}>
-                        <a
-                            className={styles.menuItemsLink}
-                            href="/#"
-                            onClick={(element: React.MouseEvent<HTMLAnchorElement>) => {
-                                element.preventDefault();
-                                toggleComponent('Products');
-                            }}
-                        >
-                            Products
-                        </a>
-                    </li>
-                </ul>
+                <button className={styles.aboutMe} onClick={() => toggleComponent('About')}>
+                    About
+                </button>
+
+                <button className={styles.products} onClick={() => toggleComponent('Products')}>
+                    Products
+                </button>
             </div>
             <div className={styles.buttonContainer}>
                 <button className={styles.Card}>
