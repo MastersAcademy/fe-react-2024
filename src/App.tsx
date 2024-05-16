@@ -13,7 +13,7 @@ function App() {
         PRODUCT_LIST = 'ProductList',
     }
 
-    const [activePage, setActivePage] = useState<PageType>(PageType.ABOUT_ME);
+    const [activePage, setActivePage] = useState(PageType.ABOUT_ME);
     const [totalCartCounter, setTotalCartCounter] = useState(0);
     const renderComponent = () =>
         activePage === PageType.ABOUT_ME ? (
