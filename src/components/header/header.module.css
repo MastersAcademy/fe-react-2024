@@ -58,13 +58,24 @@
 }
 
 .Card {
-  display: flex;
-  max-width: 24px;
-  height: 24px;
-  background: #111;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
+
+.cartIndicator {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background-color: #EF4934;
+  color: #111;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
 
 .burgerMenuButton {
   display: flex;
