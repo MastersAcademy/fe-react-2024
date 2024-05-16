@@ -1,4 +1,4 @@
-.containerFlex {
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,6 +7,14 @@
 .header {
   padding: 17px 52px;
   background-color: #111;
+}
+
+.headerLogo {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .counter {
@@ -25,47 +33,59 @@
 }
 
 .headerFlex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  max-width: 158px;
 }
 
-.headerSun {
-  padding: 0 7px 0 49px;
+.headerTheme {
+  position: relative;
+  gap: 15px;
 }
 
-.headerMoon {
-  border-left: 1px solid #656565;
-  padding-left: 7px;
+.headerTheme::after {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: #656565;
 }
 
-.menuFlex {
-  color: #FFF;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+.navigation {
+  width: 100%;
+  max-width: 600px;
 }
 
-.productMenu {
+.navigationBtn {
+  gap: 10px;
+}
+
+.navigationProduct {
   border: none;
   font-size: 16px;
   background-color: #111;
   color: #FFF;
 }
 
-.aboutMenu {
-  padding-left: 300px;
-  padding-right: 49px;
+.navigationAbout {
   font-size: 16px;
   border: none;
   background-color: #111;
   color: #FFF;
 }
 
-.kartFlex {
+.navigationCart {
   display: flex;
   align-items: center;
-  padding-right: 32px;
+  gap: 32px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 32px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -99,6 +119,7 @@
   padding: 11px 20px;
   display: flex;
   align-items: center;
+  width: max-content;
 }
 
 .btnSignUp:hover {
@@ -112,7 +133,7 @@
 @media (max-width: 391px) {
 
   .menuBtn {
-    display: flex;
+    display: block;
   }
 
   .headerMoon, .headerSun {

@@ -1,4 +1,3 @@
-import appStyles from '@/App.module.css';
 import Cart from '@/assets/icons/cart.svg';
 import logOut from '@/assets/icons/Log_Out.svg';
 import headerLogo from '@/assets/icons/logo.svg';
@@ -18,41 +17,44 @@ interface HeaderProps {
 function Header({ toggleAbout, toggleProducts, cartCount }: HeaderProps) {
     return (
         <>
-            <header className={styles.header}>
-                <div className={appStyles.container}>
-                    <section className={styles.containerFlex}>
-                        <div className={styles.headerFlex}>
-                            <img src={headerLogo} alt="header" width={46} />
-                            <img className={styles.headerSun} src={headerSun} alt="header" width={24} />
-                            <img className={styles.headerMoon} src={headerMoon} alt="header" width={24} />
-                        </div>
+            <header className={`${styles.header} ${styles.flex}`}>
+                <div className={`${styles.headerFlex} ${styles.flex}`}>
+                    <img src={headerLogo} alt="header" width={46} />
+                    <div className={`${styles.headerTheme} ${styles.flex}`}>
+                        <img className={styles.headerSun} src={headerSun} alt="header" width={24} />
+                        <img className={styles.headerMoon} src={headerMoon} alt="header" width={24} />
+                    </div>
+                </div>
 
-                        <div className={styles.menuFlex}>
-                            <button className={styles.aboutMenu} onClick={toggleAbout}>
-                                About
-                            </button>
-                            <button className={styles.productMenu} onClick={toggleProducts}>
-                                Products
-                            </button>
-                        </div>
+                <div className={`${styles.navigation} ${styles.flex}`}>
+                    <div className={`${styles.navigationBtn} ${styles.flex}`}>
+                        <button className={styles.navigationAbout} onClick={toggleAbout}>
+                            About
+                        </button>
+                        <button className={styles.navigationProduct} onClick={toggleProducts}>
+                            Products
+                        </button>
+                    </div>
 
-                        <div className={styles.btn}>
-                            <button className={styles.kartFlex}>
-                                <img src={Cart} alt="Cart" className={styles.cartIcon} />
-                                {cartCount > 0 && <span className={styles.counter}>{cartCount}</span>}
-                            </button>
-                            <div className={styles.btnLogin}>
+                    <div className={styles.navigationCart}>
+                        <button className={styles.cart}>
+                            <img src={Cart} alt="Cart" className={styles.cartIcon} />
+                            {cartCount > 0 && <span className={styles.counter}>{cartCount}</span>}
+                        </button>
+
+                        <div className={styles.flex}>
+                            <button className={styles.btnLogin}>
                                 <img src={logOut} alt="logOut" />
                                 Login
-                            </div>
-                            <div className={styles.btnSignUp}>
+                            </button>
+                            <button className={styles.btnSignUp}>
                                 <img src={userAdd} alt="userAdd" />
                                 Sign Up
-                            </div>
+                            </button>
                         </div>
-                        <img className={styles.menuBtn} src={menuBtn} alt="menu" />
-                    </section>
+                    </div>
                 </div>
+                <img className={styles.menuBtn} src={menuBtn} alt="menu" />
             </header>
         </>
     );

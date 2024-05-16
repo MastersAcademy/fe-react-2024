@@ -8,3 +8,12 @@ body {
   min-width: 390px;
   min-height: 100vh;
 }
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  appearance: none;
+  border: none;
+}
