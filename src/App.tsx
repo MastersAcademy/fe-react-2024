@@ -8,15 +8,17 @@ import { ProductsList } from '@/components/ProductsList/ProductsList.component.t
 import './App.css';
 
 function App() {
-    const ABOUT_ME: string = 'AboutMe';
-    const PRODUCT_LIST: string = `ProductList`;
+    enum PageType {
+        ABOUT_ME = 'AboutMe',
+        PRODUCT_LIST = 'ProductList',
+    }
 
-    const [activePage, setActivePage] = useState('AboutMe');
-    const renderComponent = () => (activePage === ABOUT_ME ? <AboutMeComponent /> : <ProductsList />);
+    const [activePage, setActivePage] = useState<PageType>(PageType.ABOUT_ME);
+    const renderComponent = () => (activePage === PageType.ABOUT_ME ? <AboutMeComponent /> : <ProductsList />);
 
     return (
         <>
-            <HeaderComponent setActivePage={setActivePage} aboutPageName={ABOUT_ME} productPageName={PRODUCT_LIST} />
+            <HeaderComponent setActivePage={setActivePage} aboutPageName={PageType.ABOUT_ME} productPageName={PageType.PRODUCT_LIST} />
             <main className="mainContentWrapper">{renderComponent()}</main>
             <FooterComponent />
         </>
