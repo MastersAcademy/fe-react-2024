@@ -44,6 +44,21 @@
   line-height: 25px;
 }
 
+.cartIndicator {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #EF4934;
+  color: #111;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
 .priceContainer {
   color: #111;
   display: flex;
@@ -60,9 +75,11 @@
 }
 
 .addToCardButton {
-  display: flex;
-  background: transparent;
-  padding: 4px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .addProductToCard {

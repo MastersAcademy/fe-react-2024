@@ -11,12 +11,26 @@ import './App.css';
 
 function App() {
     const [currentComponent, setCurrentComponent] = useState('About');
-
+    const [cart, setCart] = useState<{ [key: number]: boolean }>({});
     const toggleComponent = (componentName: string) => setCurrentComponent(componentName);
+
+    const handleAddToCartClick = (productId: number) => {
+        setCart((previousCart) => ({
+            ...previousCart,
+            [productId]: !previousCart[productId],
+        }));
+    };
+
+    const totalItemsInCart = Object.values(cart).filter(Boolean).length;
+
     return (
         <>
-            <HeaderComponent toggleComponent={toggleComponent} />
-            {currentComponent === 'About' ? <AboutMeComponents /> : <ProductsListComponent products={mockData} />}
+            <HeaderComponent toggleComponent={toggleComponent} totalItemsInCart={totalItemsInCart} />
+            {currentComponent === 'About' ? (
+                <AboutMeComponents />
+            ) : (
+                <ProductsListComponent products={mockData} onAddToCartClick={handleAddToCartClick} cart={cart} />
+            )}
             <Footer />
         </>
     );

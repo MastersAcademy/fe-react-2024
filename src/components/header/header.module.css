@@ -100,6 +100,21 @@
     padding: 0 7px;
   }
 
+  .totalItemsInCart {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #EF4934;
+    color: #111;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+
   .darkThemesButton {
     display: flex;
     background: #111;

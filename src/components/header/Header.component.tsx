@@ -12,9 +12,10 @@ import styles from './header.module.css';
 
 interface HeaderComponentProps {
     toggleComponent: (componentName: string) => void;
+    totalItemsInCart: number;
 }
 
-export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponent }) => (
+export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponent, totalItemsInCart }) => (
     <header className={styles.header}>
         <div className={styles.themesContainer}>
             <img className={styles.logoMOCG} src={LogoMOCG} alt="Logo MA" />
@@ -65,6 +66,7 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
             <div className={styles.buttonContainer}>
                 <button className={styles.Card}>
                     <img className={styles.cardIcon} src={Card} alt="Card" />
+                    {totalItemsInCart > 0 && <span className={styles.cartIndicator}>{totalItemsInCart}</span>}
                 </button>
                 <button className={styles.logOutButton}>
                     <img className={styles.loginLogo} src={LogOut} alt="Log out" />
