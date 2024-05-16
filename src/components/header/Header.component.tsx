@@ -5,6 +5,7 @@ import Card from '../../assets/card.png';
 import DarkTheme from '../../assets/DarkThemes.svg';
 import LightTheme from '../../assets/LightThemes.svg';
 import LogOut from '../../assets/login.png';
+
 import LogoMOCG from '../../assets/logoMOCG.png';
 import Signup from '../../assets/signup.png';
 
@@ -50,8 +51,8 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
                     {totalItemsInCart > 0 && <span className={styles.cartIndicator}>{totalItemsInCart}</span>}
                 </button>
                 <button className={styles.logOutButton}>
-                    <img className={styles.loginLogo} src={LogOut} alt="Log out" />
-                    <p>Log out</p>
+                    <img className={styles.loginLogo} src={Login} alt="Login" />
+                    <p>Login</p>
                 </button>
                 <button className={styles.signupButton}>
                     <img className={styles.signupLogo} src={Signup} alt="Signup" />
