@@ -46,7 +46,7 @@ export const Header = () => (
 
                 <article className={styles.flex}>
                     <span className={styles.basket__button}>
-                        <Basket />
+                        <Basket className={styles.basket} />
                     </span>
                     <div className={styles.buttons__block}>
                         <Button className={`${styles.header__button} ${styles.login__button}`}>

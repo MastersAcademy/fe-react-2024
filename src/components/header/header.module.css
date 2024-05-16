@@ -186,6 +186,10 @@
   cursor: pointer;
 }
 
+.basket {
+  stroke: #FFF;
+}
+
 @media (min-width: 1280px) {
 
   .basket__button {

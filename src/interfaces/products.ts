@@ -4,7 +4,7 @@ export interface Product {
     id: number;
     title: string;
     price: number;
-    description: number;
+    description: string;
     images: string[];
     creationAt: Date;
     updatedAt: Date;
