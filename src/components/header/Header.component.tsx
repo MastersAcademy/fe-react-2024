@@ -4,8 +4,7 @@ import BurgerMenu from '../../assets/burger-menu.png';
 import Card from '../../assets/card.png';
 import DarkTheme from '../../assets/DarkThemes.svg';
 import LightTheme from '../../assets/LightThemes.svg';
-import LogOut from '../../assets/login.png';
-
+import Login from '../../assets/login.png';
 import LogoMOCG from '../../assets/logoMOCG.png';
 import Signup from '../../assets/signup.png';
 
