@@ -18,17 +18,13 @@ const AVAILABLE_ICON_MAPPING: IconMapping = {
 };
 
 export const IconsComponent: React.FC<SocialIconProps> = ({ iconName, iconUrl }) => {
-    const renderIcon = () => {
-        const source = AVAILABLE_ICON_MAPPING[iconName];
-        const altText = iconName.toUpperCase();
-        if (source !== undefined) {
-            return (
-                <a href={iconUrl} target="_blank" rel="noreferrer">
-                    <img src={source} alt={altText} />
-                </a>
-            );
-        }
-    };
+    const source = AVAILABLE_ICON_MAPPING[iconName];
+    const altText = iconName.toUpperCase();
 
-    return <div>{renderIcon()}</div>;
+    return (
+        <a href={iconUrl} target="_blank" rel="noreferrer">
+            {' '}
+            <img src={source} alt={altText} />{' '}
+        </a>
+    );
 };
