@@ -1,0 +1,59 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  gap: 30px;
+  height: 166px;
+}
+
+hr {
+  display: flex;
+  width: 89vw;
+}
+
+.icon {
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+}
+
+.description {
+  text-align: center;
+  margin: 55px auto 0;
+}
+
+.description p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #111;
+  line-height: 20px;
+  text-align: center;
+}
+
+.description a {
+  color: #EF4934;
+}
+
+@media only screen and (min-width: 1250px) {
+
+  .footer {
+    position: static;
+    justify-content: center;
+    padding: 0 30px;
+    gap: 30px;
+    height: 166px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .hr {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+  }
+}

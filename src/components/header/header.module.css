@@ -1,4 +1,202 @@
 .header {
-  font-size: 34px;
-  text-align: center;
+  width: 97.2vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  height: 70px;
+  background: #111;
 }
+
+.themesContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px
+}
+
+.menuAndAuthContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutMe {
+  display: none;
+}
+
+.products {
+  display: none;
+}
+
+.logOutButton {
+  display: none;
+}
+
+.signupButton {
+  display: none;
+}
+
+.authorisationPanel {
+  display: none;
+}
+
+.themesMenuContainer {
+  display: none;
+}
+
+.menuItems {
+  display: none;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.Card {
+  display: flex;
+  max-width: 24px;
+  height: 24px;
+  background: #111;
+  align-items: center;
+  justify-content: center;
+}
+
+.burgerMenuButton {
+  display: flex;
+  max-width: 30px;
+  height: 30px;
+  background: #111;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1250px) {
+
+  .header {
+    padding: 0 50px;
+    width: 94.8vw;
+  }
+
+  .logoMA {
+    margin-right: auto;
+  }
+
+  .burgerMenuButton {
+    display: none;
+  }
+
+  .themesMenuContainer {
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+    max-width: 80px;
+  }
+
+  .customHr {
+    border-color: #656565;
+  }
+
+  .lightThemeButton {
+    display: flex;
+    background: #111;
+    align-items: center;
+    padding: 0 7px;
+  }
+
+  .darkThemesButton {
+    display: flex;
+    background: #111;
+    align-items: center;
+    padding: 0 7px;
+  }
+
+  .aboutProduct {
+    display: flex;
+  }
+
+  .menuAndAuthContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .aboutProdct {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-right: 120px;
+  }
+
+  .aboutMe,
+  .products {
+    display: flex;
+    background: #111;
+    padding: 20px;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+
+  .logOutButton {
+    display: flex;
+    background: #333;
+    height: 34px;
+    color: #FFF;
+    padding: 0 10px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 6px;
+    border-radius: 20px;
+  }
+
+  .signupButton {
+    display: flex;
+    background: #EF4934;
+    height: 34px;
+    color: #F1F1F1;
+    border-color: transparent;
+    padding: 0 10px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 6px;
+    border-radius: 20px;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-direction: row;
+    color: #FFF;
+    gap: 49px;
+    list-style: none;
+    padding: 0 124px;
+  }
+
+  .menuItemsLink {
+    color: #FFF;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .menuItemsLink:hover {
+    color: #FFF;
+    font-weight: 700;
+  }
+}
+
