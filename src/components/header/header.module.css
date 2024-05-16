@@ -103,10 +103,9 @@
   }
 
   .navItem {
-    font-family: var(--main-font-family);
+    font-family: var(--main-font-family), serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
     line-height: normal;
     color: var(--white);
   }

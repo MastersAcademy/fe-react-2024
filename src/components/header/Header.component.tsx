@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 import { PageType } from '../../App.tsx';
 import burgerSVG from '../../assets/burger.svg';
@@ -18,8 +19,10 @@ interface NameComponentProps {
 }
 
 export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, totalCartCounter }) => {
+    const [activeButton, setActiveButton] = useState<PageType>(PageType.ABOUT_ME);
     const handleButton = (name: PageType) => {
         setActivePage(name);
+        setActiveButton(name);
     };
 
     return (
@@ -41,11 +44,14 @@ export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, t
             <div className={headerStyles.navigation}>
                 <button
                     onClick={() => handleButton(PageType.ABOUT_ME)}
-                    className={`${headerStyles.navItem} ${headerStyles.boldNavItem} ${headerStyles.button}`}
+                    className={`${headerStyles.navItem} ${activeButton === PageType.ABOUT_ME && headerStyles.boldNavItem} ${headerStyles.button}`}
                 >
                     About
                 </button>
-                <button onClick={() => handleButton(PageType.PRODUCT_LIST)} className={`${headerStyles.navItem} ${headerStyles.button}`}>
+                <button
+                    onClick={() => handleButton(PageType.PRODUCT_LIST)}
+                    className={`${headerStyles.navItem} ${activeButton === PageType.PRODUCT_LIST && headerStyles.boldNavItem} ${headerStyles.button}`}
+                >
                     Products
                 </button>
             </div>
