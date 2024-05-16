@@ -14,11 +14,22 @@ function App() {
     }
 
     const [activePage, setActivePage] = useState<PageType>(PageType.ABOUT_ME);
-    const renderComponent = () => (activePage === PageType.ABOUT_ME ? <AboutMeComponent /> : <ProductsList />);
+    const [totalCartCounter, setTotalCartCounter] = useState(0);
+    const renderComponent = () =>
+        activePage === PageType.ABOUT_ME ? (
+            <AboutMeComponent />
+        ) : (
+            <ProductsList totalCartCounter={totalCartCounter} setTotalCartCounter={setTotalCartCounter} />
+        );
 
     return (
         <>
-            <HeaderComponent setActivePage={setActivePage} aboutPageName={PageType.ABOUT_ME} productPageName={PageType.PRODUCT_LIST} />
+            <HeaderComponent
+                setActivePage={setActivePage}
+                totalCartCounter={totalCartCounter}
+                aboutPageName={PageType.ABOUT_ME}
+                productPageName={PageType.PRODUCT_LIST}
+            />
             <main className="mainContentWrapper">{renderComponent()}</main>
             <FooterComponent />
         </>

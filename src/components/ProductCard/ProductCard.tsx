@@ -7,12 +7,20 @@ import styles from './ProductCard.module.css';
 
 interface ProductCardAttributes {
     product: Product;
+    totalCartCounter: number;
+    setTotalCartCounter: (counter: number) => void;
 }
 
-const ProductCard: React.FC<ProductCardAttributes> = ({ product }) => {
-    const [currentCounter, setCounter] = useState(0);
+const ProductCard: React.FC<ProductCardAttributes> = ({ product, totalCartCounter, setTotalCartCounter }) => {
+    const [carState, setCartSate] = useState(0);
+    const removeFromCart = () => {
+        setCartSate(0);
+        setTotalCartCounter(totalCartCounter - 1);
+    };
+
     const addToCart = () => {
-        setCounter(currentCounter + 1);
+        setCartSate(1);
+        setTotalCartCounter(totalCartCounter + 1);
     };
     return (
         <div className={styles.container}>
@@ -20,10 +28,10 @@ const ProductCard: React.FC<ProductCardAttributes> = ({ product }) => {
             <h2 className={styles.title}>{product.title}</h2>
             <div className={styles.price_container}>
                 <h2 className={styles.price}>{product.price}₴</h2>
-                <button onClick={addToCart} className={styles.button}>
+                <button onClick={carState > 0 ? removeFromCart : addToCart} className={styles.button}>
                     <div className={styles.cartContainer}>
                         <img className={styles.cart} src={cartSVG} alt="Cart" style={{ fill: 'red' }} />
-                        {currentCounter > 0 ? <span className={styles.cartCounter}>{currentCounter}</span> : ''}
+                        {carState > 0 ? <span className={styles.cartCounter}>{carState}</span> : ''}
                     </div>
                 </button>
             </div>

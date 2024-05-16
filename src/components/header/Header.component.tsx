@@ -11,11 +11,12 @@ import headerStyles from './header.module.css';
 
 interface NameComponentProps {
     setActivePage: (page: string) => void;
+    totalCartCounter: number;
     aboutPageName: string;
     productPageName: string;
 }
 
-export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, aboutPageName, productPageName }) => {
+export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, totalCartCounter, aboutPageName, productPageName }) => {
     const handleButton = (name: string) => {
         setActivePage(name);
     };
@@ -50,9 +51,10 @@ export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, a
             <div className={headerStyles.icons}>
                 <div className={headerStyles.cartIcon}>
                     <img src={cartSVG} alt="Cart" />
+                    {totalCartCounter > 0 ? <span className={headerStyles.cartCounter}>{totalCartCounter}</span> : ''}
                 </div>
                 <div className={headerStyles.burgerIcon}>
-                    <img src={burgerSVG} alt="Cart" />
+                    <img src={burgerSVG} alt="Burger" />
                 </div>
             </div>
             <button className={headerStyles.login}>
