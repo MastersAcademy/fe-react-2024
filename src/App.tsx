@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { AboutMeComponents } from '@/components/about/About_me.component.tsx';
 import Footer from '@/components/footer/Footer.component.tsx';
-import { ProductsListComponent } from '@/components/productList/Product_list.component.tsx';
+import { ProductListComponent } from '@/components/productList/Product_list.component.tsx';
 import { mockData } from '@/mock_data.ts';
 
 import { HeaderComponent } from './components/header/Header.component.tsx';
@@ -11,25 +11,40 @@ import './App.css';
 
 function App() {
     const [currentComponent, setCurrentComponent] = useState('About');
-    const [cart, setCart] = useState<{ [key: number]: boolean }>({});
+    const [selectedProducts, setSelectedProducts] = useState<number[]>([]);
+    const products = mockData;
+
     const toggleComponent = (componentName: string) => setCurrentComponent(componentName);
 
-    const handleAddToCartClick = (productId: number) => {
-        setCart((previousCart) => ({
-            ...previousCart,
-            [productId]: !previousCart[productId],
-        }));
+    const toggleProductSelection = (productId: number) => {
+        setSelectedProducts((previousSelectedProducts) => {
+            const updatedSelectedProducts = previousSelectedProducts.includes(productId)
+                ? previousSelectedProducts.filter((id) => id !== productId)
+                : [...previousSelectedProducts, productId];
+
+            localStorage.setItem('selectedProducts', JSON.stringify(updatedSelectedProducts));
+            return updatedSelectedProducts;
+        });
     };
 
-    const totalItemsInCart = Object.values(cart).filter(Boolean).length;
+    useEffect(() => {
+        const storedSelectedProducts = localStorage.getItem('selectedProducts');
+        if (storedSelectedProducts) {
+            setSelectedProducts(JSON.parse(storedSelectedProducts));
+        }
+    }, []);
 
     return (
         <>
-            <HeaderComponent toggleComponent={toggleComponent} totalItemsInCart={totalItemsInCart} />
+            <HeaderComponent toggleComponent={toggleComponent} products={products} selectedProducts={selectedProducts} />
             {currentComponent === 'About' ? (
                 <AboutMeComponents />
             ) : (
-                <ProductsListComponent products={mockData} onAddToCartClick={handleAddToCartClick} cart={cart} />
+                <ProductListComponent
+                    products={products}
+                    selectedProducts={selectedProducts}
+                    toggleProductSelection={toggleProductSelection}
+                />
             )}
             <Footer />
         </>
