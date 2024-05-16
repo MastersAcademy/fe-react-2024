@@ -1,3 +1,6 @@
+import React from 'react';
+
+import { PageType } from '../../App.tsx';
 import burgerSVG from '../../assets/burger.svg';
 import cartSVG from '../../assets/cart_icon.svg';
 import darkSVG from '../../assets/dark_mode.svg';
@@ -10,14 +13,12 @@ import singUpSVG from '../../assets/sign_up.svg';
 import headerStyles from './header.module.css';
 
 interface NameComponentProps {
-    setActivePage: (page: string) => void;
+    setActivePage: (page: PageType) => void;
     totalCartCounter: number;
-    aboutPageName: string;
-    productPageName: string;
 }
 
-export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, totalCartCounter, aboutPageName, productPageName }) => {
-    const handleButton = (name: string) => {
+export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, totalCartCounter }) => {
+    const handleButton = (name: PageType) => {
         setActivePage(name);
     };
 
@@ -39,12 +40,12 @@ export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, t
             </div>
             <div className={headerStyles.navigation}>
                 <button
-                    onClick={() => handleButton(aboutPageName)}
+                    onClick={() => handleButton(PageType.ABOUT_ME)}
                     className={`${headerStyles.navItem} ${headerStyles.boldNavItem} ${headerStyles.button}`}
                 >
                     About
                 </button>
-                <button onClick={() => handleButton(productPageName)} className={`${headerStyles.navItem} ${headerStyles.button}`}>
+                <button onClick={() => handleButton(PageType.PRODUCT_LIST)} className={`${headerStyles.navItem} ${headerStyles.button}`}>
                     Products
                 </button>
             </div>
