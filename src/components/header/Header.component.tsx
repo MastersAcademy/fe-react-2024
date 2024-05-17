@@ -5,14 +5,14 @@ import { PageType } from '../../App.tsx';
 import activeDarkSVG from '../../assets/active_dark_mode.svg';
 import activeLightSVG from '../../assets/active_light_mode.svg';
 import burgerSVG from '../../assets/burger.svg';
-import cartSVG from '../../assets/cart_icon.svg';
+import cartSVG from '../../assets/dark_theme_cart_icon.svg';
 import loginSVG from '../../assets/login.svg';
 import logoSVG from '../../assets/logo.svg';
 import passiveDarkSVG from '../../assets/passive_dark_mode.svg';
 import passiveLightSVG from '../../assets/passive_light_mode.svg';
 import separatorSVG from '../../assets/separator.svg';
 import singUpSVG from '../../assets/sign_up.svg';
-import { ThemeContext } from '../ThemeProvider.component.tsx';
+import { ThemeContext } from '../ThemeProvider/ThemeProvider.component.tsx';
 
 import headerStyles from './header.module.css';
 
