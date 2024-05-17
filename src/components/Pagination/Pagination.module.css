@@ -16,7 +16,7 @@
 
 
 .pageLink {
-  color: #1A1A1A;
+  border-color: var(--buttonBorderColor)
 }
 
 .activeLink {

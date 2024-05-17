@@ -28,6 +28,10 @@ a:hover {
   color: #535BF2;
 }
 
+p {
+  color: var(--textColor)
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -37,6 +41,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--textColor)
 }
 
 button {
@@ -46,9 +51,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1A1A1A;
   cursor: pointer;
   transition: border-color .25s;
+  background-color: var(--buttonBGColor);
+  color: var(--buttonTextColor)
 }
 
 button:hover {
@@ -65,24 +71,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-
-  :root {
-    color: #213547;
-    background-color: var(--white);
-  }
-
-  a:hover {
-    color: #747BFF;
-  }
-
-  button {
-    background-color: #F9F9F9;
-  }
-}
-
 .mainContentWrapper {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 60px;
+}
+
+.light_theme {
+  --contentBackgroundColor: var(--white);
+  --textColor: var(--deep-black);
+  --buttonBGColor: var(--white);
+  --buttonTextColor: var(--deep-black);
+  --buttonBorderColor: var(--deep-black)
+}
+
+.dark_theme {
+  --contentBackgroundColor: var(--deep-black);
+  --textColor: var(--white);
+  --buttonBGColor: var(--deep-black);
+  --buttonTextColor: var(--white);
+  --buttonBorderColor: var(--white)
 }

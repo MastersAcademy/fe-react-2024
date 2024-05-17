@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
 import React, { createContext, useState } from 'react';
 
+import styles from './ThemeProvider.module.css';
+
 export const ThemeContext = createContext({
     theme: 'light',
     setLightTheme: () => {},
@@ -20,7 +22,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
     return (
         <ThemeContext.Provider value={{ theme, setLightTheme, setDarkTheme }}>
-            <div className={`${theme}_theme`}>{children}</div>
+            <div className={`${theme}_theme ${styles.themeContainer}`}>{children}</div>
         </ThemeContext.Provider>
     );
 };
