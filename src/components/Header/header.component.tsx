@@ -38,7 +38,7 @@ function Header({ toggleAbout, toggleProducts, cartCount }: HeaderProps) {
 
                     <div className={styles.navigationCart}>
                         <button className={styles.cart}>
-                            <img src={Cart} alt="Cart" className={styles.cartIcon} />
+                            <img src={Cart} alt="Cart" className={} />
                             {cartCount > 0 && <span className={styles.counter}>{cartCount}</span>}
                         </button>
 
