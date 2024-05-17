@@ -91,6 +91,9 @@
 
   .switcher {
     margin: 10px 5px;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
   }
 
   .separator {
