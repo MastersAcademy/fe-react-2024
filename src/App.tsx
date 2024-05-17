@@ -12,6 +12,7 @@ import './App.css';
 function App() {
     const [currentComponent, setCurrentComponent] = useState('About');
     const [selectedProducts, setSelectedProducts] = useState<number[]>([]);
+
     const products = mockData;
 
     const toggleComponent = (componentName: string) => setCurrentComponent(componentName);

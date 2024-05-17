@@ -25,7 +25,7 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
 
     useEffect(() => {
         setTotalItemsInCart(selectedProducts.length);
-    }, [selectedProducts, products, toggleComponent]);
+    }, [selectedProducts]);
 
     return (
         <header className={styles.header}>
