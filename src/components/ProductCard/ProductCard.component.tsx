@@ -19,7 +19,7 @@ export function ProductCard({ onAddToCart, productData, cartData }: ProductCardP
     return (
         <div className={styles.product_card}>
             <div className={styles.wrapper}>
-                <img className={styles.img} src={productData.images[0]} alt="Product image" />
+                <img className={styles.img} src={productData.images[0]} alt="Product" />
                 <h3 className={styles.title}>{productData.title}</h3>
                 <div className={styles.inf}>
                     <div className={styles.price}>

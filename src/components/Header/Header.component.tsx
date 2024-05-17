@@ -43,11 +43,11 @@ export function HeaderComponent({ onChangeComponent, activeComponent, cartData }
                     {cartData.length > 0 && <span className={styles.product_quantity}>{cartData.length}</span>}
                 </button>
                 <button className={styles.header__login_btn}>
-                    <img src={loginImg} alt="login Img" className={styles.login_img} width="24px" height="24px" />
+                    <img src={loginImg} alt="login Img" className={styles.login_img} />
                     <span className={styles.header_btn__text}>Login</span>
                 </button>
                 <button className={styles.header_btn__user_add}>
-                    <img src={userAdd} alt="About" className={styles.user_add_img} width="24px" height="24px" />
+                    <img src={userAdd} alt="About" className={styles.user_add_img} />
                     <span className={styles.header_btn__text}> Sign up</span>
                 </button>
                 <button className={styles.header__menu_btn}>
