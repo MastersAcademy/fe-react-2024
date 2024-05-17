@@ -2,7 +2,7 @@ import Cart from '@/assets/icons/cart.svg';
 import logOut from '@/assets/icons/Log_Out.svg';
 import headerLogo from '@/assets/icons/logo.svg';
 import menuBtn from '@/assets/icons/Menu_Duo_LG.svg';
-import headerMoon from '@/assets/icons/Moon.svg';
+import headerMoon from '@/assets/icons/moon (1).svg';
 import headerSun from '@/assets/icons/sun.svg';
 import userAdd from '@/assets/icons/User_Add.svg';
 
@@ -44,11 +44,11 @@ function Header({ toggleAbout, toggleProducts, cartCount }: HeaderProps) {
 
                         <div className={styles.flex}>
                             <button className={styles.btnLogin}>
-                                <img src={logOut} alt="logOut" />
-                                Login
+                                <img src={logOut} alt="logOut" className={styles.btnImgLogout} />
+                                Log Out
                             </button>
                             <button className={styles.btnSignUp}>
-                                <img src={userAdd} alt="userAdd" />
+                                <img src={userAdd} alt="userAdd" className={styles.btnImgLogout} />
                                 Sign Up
                             </button>
                         </div>

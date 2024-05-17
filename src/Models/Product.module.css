@@ -85,3 +85,12 @@
     padding: 0;
   }
 }
+
+@media (max-width: 849px) {
+
+  .productList {
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+  }
+}

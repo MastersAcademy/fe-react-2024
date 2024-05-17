@@ -59,7 +59,7 @@
 }
 
 .navigationBtn {
-  gap: 10px;
+  gap: 48px;
 }
 
 .navigationProduct {
@@ -101,11 +101,16 @@
 .btnLogin {
   border-radius: 40px;
   color: #FFF;
+  font-size: 16px;
   background-color: #333;
-  padding: 11px 20px;
+  padding: 6px 20px;
   margin-right: 10px;
   display: flex;
   align-items: center;
+}
+
+.btnImgLogout {
+  padding-right: 10px;
 }
 
 .btnLogin:hover {
@@ -115,8 +120,9 @@
 .btnSignUp {
   border-radius: 40px;
   color: #FFF;
+  font-size: 16px;
   background-color: #333;
-  padding: 11px 20px;
+  padding: 6px 20px;
   display: flex;
   align-items: center;
   width: max-content;
@@ -153,14 +159,5 @@
 
   .containerFlex {
     display: flex;
-  }
-
-  .btnSignUp {
-    border-radius: 40px;
-    color: #FFF;
-    background-color: #333;
-    padding: 11px 20px;
-    display: flex;
-    align-items: center;
   }
 }
