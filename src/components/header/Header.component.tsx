@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 
 import { PageType } from '../../App.tsx';
@@ -10,6 +10,7 @@ import loginSVG from '../../assets/login.svg';
 import logoSVG from '../../assets/logo.svg';
 import separatorSVG from '../../assets/separator.svg';
 import singUpSVG from '../../assets/sign_up.svg';
+import { ThemeContext } from '../ThemeProvider.component.tsx';
 
 import headerStyles from './header.module.css';
 
@@ -19,6 +20,7 @@ interface NameComponentProps {
 }
 
 export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, totalCartCounter }) => {
+    const { setLightTheme, setDarkTheme } = useContext(ThemeContext);
     const [activeButton, setActiveButton] = useState<PageType>(PageType.ABOUT_ME);
     const handleButton = (name: PageType) => {
         setActivePage(name);
@@ -31,15 +33,15 @@ export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, t
                 <img src={logoSVG} alt="Logo" />
             </div>
             <div className={headerStyles.switchers}>
-                <div className={headerStyles.switcher}>
+                <button onClick={setLightTheme} className={headerStyles.switcher}>
                     <img src={lightSVG} alt="light_mode" />
-                </div>
+                </button>
                 <div className={headerStyles.separator}>
                     <img src={separatorSVG} alt="separator" />
                 </div>
-                <div className={headerStyles.switcher}>
+                <button onClick={setDarkTheme} className={headerStyles.switcher}>
                     <img src={darkSVG} alt="dark_mode" />
-                </div>
+                </button>
             </div>
             <div className={headerStyles.navigation}>
                 <button

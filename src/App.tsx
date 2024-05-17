@@ -4,6 +4,7 @@ import { AboutMeComponent } from '@/components/about/AboutMe.component.tsx';
 import { FooterComponent } from '@/components/footer/Footer.component.tsx';
 import { HeaderComponent } from '@/components/header/Header.component.tsx';
 import { ProductsList } from '@/components/ProductsList/ProductsList.component.tsx';
+import { ThemeProvider } from '@/components/ThemeProvider.component.tsx';
 
 import './App.css';
 export enum PageType {
@@ -22,11 +23,11 @@ function App() {
         );
 
     return (
-        <>
+        <ThemeProvider>
             <HeaderComponent setActivePage={setActivePage} totalCartCounter={totalCartCounter} />
             <main className="mainContentWrapper">{renderComponent()}</main>
             <FooterComponent />
-        </>
+        </ThemeProvider>
     );
 }
 
