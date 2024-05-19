@@ -8,8 +8,12 @@
   position: relative;
 }
 
-.whiteCart, .blackCart {
-  /*background-color: #EF4934;*/
+.whiteCart {
+  color: #FFF; /* Цвет корзины для белой темы */
+}
+
+.blackCart {
+  color: #111; /* Цвет корзины для черной темы */
 }
 
 .counterCart {

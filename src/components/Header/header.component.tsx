@@ -14,7 +14,7 @@ interface HeaderProps {
     toggleTheme: (newTheme: 'light' | 'dark') => void;
 }
 
-function Header({ handleChangePage, cartCount, toggleTheme }: HeaderProps) {
+function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps) {
     return (
         <>
             <header className={`${styles.header} ${styles.flex}`}>

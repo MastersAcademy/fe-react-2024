@@ -12,7 +12,7 @@ interface CartButtonProps {
 }
 
 const CartComponent: React.FC<CartButtonProps> = ({ count, onClick, theme }) => {
-    const cartButtonClassName = `${styles.cartButton} ${theme === 'light' ? styles.whiteCart : styles.blackCart}`;
+    const cartButtonClassName = `${styles.cartButton} ${theme === 'light' ? styles.whiteCart : styles.blackCart} `;
     const cartImageSource = theme === 'light' ? cartBlack : cartWhite;
 
     return (
