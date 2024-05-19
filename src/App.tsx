@@ -37,7 +37,7 @@ function App() {
     return (
         <>
             <div className={`${theme === 'dark' ? styles.darkTheme : styles.lightTheme}`}>
-                <Header handleChangePage={handleChangePage} cartCount={cartCount} toggleTheme={toggleTheme} theme={theme} />
+                <Header handleChangePage={handleChangePage} cartCount={cartCount} toggleTheme={toggleTheme} />
                 {showPage === 'ProductList' && <FiltersComponent />}
                 {showPage === 'About' ? <AboutPage /> : <ProductList addToCart={addToCart} theme={theme} />}
                 <Footer />
