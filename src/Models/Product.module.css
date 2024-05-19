@@ -10,9 +10,9 @@
   max-width: 275px;
   height: auto;
   font-size: 22px;
-  color: #221F1F;
+  color: var(--search-text);
   border-radius: 20px;
-  border: 1px solid #CCC;
+  border: 1px solid var(--card-border-color);
   margin-bottom: 15px;
 }
 
@@ -52,7 +52,6 @@
 }
 
 .counter {
-  height: 17px;
   width: 17px;
   display: flex;
   justify-content: center;
