@@ -1,9 +1,14 @@
+:root {
+  --main-font: "Montserrat", sans-serif;
+}
+
+html {
+  font-family: var(--main-font);
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 a {
