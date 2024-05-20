@@ -14,13 +14,29 @@
   height: 46px;
 }
 
-.wrap_toggle {
-  align-items: center;
+.themes {
   margin-left: 43px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.switcherMode {
+.themes__btn {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 30px;
+}
+
+.themes__btn > img {
+  filter: brightness(.6);
+  transition: filter .3s, fill .3s;
+}
+
+.themes__btn.theme_active > img,
+.themes__btn:hover > img {
+  filter: brightness(1);
 }
 
 .header__links {
@@ -67,6 +83,7 @@
 
 .product_quantity {
   position: absolute;
+  z-index: 1;
   display: grid;
   place-items: center;
   top: -5px;
@@ -144,7 +161,7 @@
     height: 40px;
   }
 
-  .wrapToggler,
+  .themes,
   .header__link,
   .header__login_btn,
   .header_btn__user_add,

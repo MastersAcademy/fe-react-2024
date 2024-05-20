@@ -1,21 +1,37 @@
 :root {
   --main-font: "Montserrat", sans-serif;
+  --active-color-icon: #111;
+  --inactive-color-icon: #656565;
 }
 
 html {
   font-family: var(--main-font);
 }
 
+[data-theme="dark"] {
+  --color-icon-svg: brightness(100);
+  --background-color: #111;
+  --text-color: #FFF;
+}
+
+[data-theme="light"] {
+  --color-icon-svg: brightness(0);
+  --active-color-icon: #FFF;
+  --background-color: #FFF;
+  --text-color: #111;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 
 button {
   all: initial;

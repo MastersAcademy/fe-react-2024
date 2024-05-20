@@ -46,3 +46,22 @@
 .price > span {
   font-size: 14px;
 }
+
+.wrapper_cart {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper_cart {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper_cart > img {
+  filter: var(--color-icon-svg);
+}
+
