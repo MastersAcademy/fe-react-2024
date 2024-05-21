@@ -1,17 +1,18 @@
 :root {
   --main-font: "Montserrat", sans-serif;
-  --active-color-icon: #111;
-  --inactive-color-icon: #656565;
-}
-
-html {
-  font-family: var(--main-font);
+  --red-el: #EF4934;
+  --white: #FFF;
 }
 
 [data-theme="dark"] {
   --color-icon-svg: brightness(100);
   --background-color: #111;
   --text-color: #FFF;
+  --grey-1: #F1F1F1;
+  --grey-2: #CCC;
+  --grey-3: #333;
+  --grey-4: #656565;
+  --background-color-alt: #111;
 }
 
 [data-theme="light"] {
@@ -19,6 +20,15 @@ html {
   --active-color-icon: #FFF;
   --background-color: #FFF;
   --text-color: #111;
+  --grey-1: #333;
+  --grey-2: #656565;
+  --grey-3: #CCC;
+  --grey-4: #E1E1E1;
+  --background-color-alt: #FFF;
+}
+
+html {
+  font-family: var(--main-font);
 }
 
 body {

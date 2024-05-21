@@ -1,0 +1,128 @@
+.filters_bar {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 275px 1fr auto;
+  align-items: center;
+  text-align: center;
+  column-gap: 20px;
+}
+
+.filters_bar__search {
+  display: flex;
+  width: 100%;
+}
+
+.filters_bar__search > input {
+  width: 100%;
+  padding-left: 10px;
+  background-color: var(--background-color-alt);
+  border: 1px solid var(--grey-4);
+  border-radius: 20px;
+}
+
+.filters_bar__btn {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: var(--red-el);
+  margin-left: -34px;
+}
+
+.filters {
+  margin-right: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter__btn {
+  border: 1px solid var(--grey-4);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.filters_btn_active {
+  background: var(--red-el);
+  color: #FFF;
+  font-weight: 700;
+}
+
+.sort_by {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.sort_by__text {
+  width: 60px;
+  color: var(--text-color);
+}
+
+.sort_by__select {
+  background: var(--red-el);
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  height: 40px;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.select_option {
+  height: 20px;
+}
+
+.sort_by__select:hover,
+.sort_by__select:active {
+  border: none;
+}
+
+.sort_by__select::before {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #FFF;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 870px) {
+
+  .filters_bar {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .filters {
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sort_by__text {
+    font-family: var(--main-font);
+    width: 100%;
+  }
+}
+

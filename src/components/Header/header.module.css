@@ -90,7 +90,7 @@
   right: -5px;
   width: 16px;
   height: 16px;
-  background: #EF4934;
+  background: var(--red-el);
   border-radius: 50%;
   font-weight: 700;
   font-size: 10px;
@@ -113,7 +113,7 @@
 }
 
 .header_btn__user_add {
-  background: #EF4934;
+  background: var(--red-el);
 }
 
 .header_btn__text {

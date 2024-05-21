@@ -1,17 +1,16 @@
 import { useState } from 'react';
 
+import cart from '@/assets/header/cart.svg';
+import darkIcon from '@/assets/header/dark_active.svg';
+import divider from '@/assets/header/divider.svg';
+import lightIcon from '@/assets/header/light_active.svg';
+import loginImg from '@/assets/header/login.svg';
+import menu from '@/assets/header/Menu_Duo_LG.svg';
+import userAdd from '@/assets/header/user_add.svg';
+import logo from '@/assets/logo.svg';
 import { Component } from '@/interfaces/Component';
 import type { Product } from '@/interfaces/Product';
 import { Theme } from '@/interfaces/Theme';
-
-import cart from '../../assets/header/cart.svg';
-import darkIcon from '../../assets/header/dark_active.svg';
-import divider from '../../assets/header/divider.svg';
-import lightIcon from '../../assets/header/light_active.svg';
-import loginImg from '../../assets/header/login.svg';
-import menu from '../../assets/header/Menu_Duo_LG.svg';
-import userAdd from '../../assets/header/user_add.svg';
-import logo from '../../assets/logo.svg';
 
 import styles from './header.module.css';
 
