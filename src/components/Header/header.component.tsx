@@ -1,10 +1,12 @@
-import Cart from '@/assets/CartIcon/cartWhite.svg';
 import logOut from '@/assets/icons/Log_Out.svg';
 import headerLogo from '@/assets/icons/logo.svg';
 import menuBtn from '@/assets/icons/Menu_Duo_LG.svg';
 import headerMoon from '@/assets/icons/moon (1).svg';
+import headerMoonLight from '@/assets/icons/MoonLight.svg';
 import headerSun from '@/assets/icons/sun.svg';
+import headerSunDark from '@/assets/icons/sunDark.svg';
 import userAdd from '@/assets/icons/User_Add.svg';
+import CartComponent from '@/components/Cart/Cart.component';
 
 import styles from './header.module.css';
 
@@ -12,9 +14,13 @@ interface HeaderProps {
     handleChangePage: (component: 'About' | 'ProductList') => void;
     cartCount: number;
     toggleTheme: (newTheme: 'light' | 'dark') => void;
+    theme: 'light' | 'dark';
 }
 
-function Header({ handleChangePage, cartCount, toggleTheme }: HeaderProps) {
+function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps) {
+    const sunLogo = theme === 'light' ? headerSun : headerSunDark;
+    const moonLogo = theme === 'light' ? headerMoon : headerMoonLight;
+
     return (
         <>
             <header className={`${styles.header} ${styles.flex}`}>
@@ -22,11 +28,11 @@ function Header({ handleChangePage, cartCount, toggleTheme }: HeaderProps) {
                     <img src={headerLogo} alt="header" width={46} />
                     <div className={`${styles.headerTheme} ${styles.flex}`}>
                         <button className={styles.headerSun} onClick={() => toggleTheme('light')}>
-                            <img src={headerSun} alt="header" width={24} />
+                            <img src={sunLogo} alt="header" width={24} />
                         </button>
 
                         <button className={styles.headerMoon} onClick={() => toggleTheme('dark')}>
-                            <img src={headerMoon} alt="header" width={24} />
+                            <img src={moonLogo} alt="header" width={24} />
                         </button>
                     </div>
                 </div>
@@ -42,10 +48,7 @@ function Header({ handleChangePage, cartCount, toggleTheme }: HeaderProps) {
                     </div>
 
                     <div className={styles.navigationCart}>
-                        <button className={styles.cart}>
-                            <img src={Cart} alt="Cart" />
-                            {cartCount > 0 && <span className={styles.counter}>{cartCount}</span>}
-                        </button>
+                        <CartComponent count={cartCount} onClick={() => {}} theme={theme} whiteCart={true} />
                         <div className={styles.flex}>
                             <button className={styles.btnLogin}>
                                 <img src={logOut} alt="logOut" className={styles.btnImgLogout} />

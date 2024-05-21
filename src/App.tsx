@@ -12,7 +12,15 @@ import styles from './App.module.css';
 function App() {
     const [showPage, setShowPage] = useState<'About' | 'ProductList'>('About');
     const [cartCount, setCartCount] = useState(0);
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            return savedTheme as 'light' | 'dark';
+        } else {
+            const isDarkModePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            return isDarkModePreferred ? 'dark' : 'light';
+        }
+    });
 
     const handleChangePage = (component: 'About' | 'ProductList') => {
         setShowPage(component);
@@ -32,12 +40,13 @@ function App() {
 
     const toggleTheme = (newTheme: 'light' | 'dark') => {
         setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
     };
 
     return (
         <>
             <div className={`${theme === 'dark' ? styles.darkTheme : styles.lightTheme}`}>
-                <Header handleChangePage={handleChangePage} cartCount={cartCount} toggleTheme={toggleTheme} />
+                <Header handleChangePage={handleChangePage} cartCount={cartCount} toggleTheme={toggleTheme} theme={theme} />
                 {showPage === 'ProductList' && <FiltersComponent />}
                 {showPage === 'About' ? <AboutPage /> : <ProductList addToCart={addToCart} theme={theme} />}
                 <Footer />
