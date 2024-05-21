@@ -8,6 +8,7 @@ import styles from './Cart.module.css';
 interface CartButtonProps {
     count: number;
     onClick: () => void;
+    theme: 'light' | 'dark';
     whiteCart?: boolean;
 }
 
