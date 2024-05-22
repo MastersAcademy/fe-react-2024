@@ -1,7 +1,37 @@
+.barContainer {
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.triageBarWrapper,
+.nameBarWrapper {
+  min-width: 330px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.searchBar {
+  width: 100%; /* Ensure the search bar takes full width */
+  display: flex;
+}
+
+.searchBar input {
+  width: 100%; /* Ensure the input inside the search bar takes full width */
+  padding: 10px;
+  font-size: 16px;
+}
+
 .mainCard {
   display: flex;
-  justify-content: center;
-  padding: 52px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  padding-top: 20px;
 }
 
 .cardContainer {
@@ -85,4 +115,31 @@
 .addProductToCard {
   display: flex;
   margin: 0;
+}
+
+@media only screen and (max-width: 1249px) {
+
+  .barContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure the container takes full width */
+  }
+
+  .searchBarWrapper,
+  .nameBarWrapper,
+  .triageBarWrapper {
+    width: 100%; /* Ensure the child elements take full width */
+    margin-bottom: 20px;
+  }
+
+  .searchBar {
+    width: 100%; /* Ensure the search bar takes full width */
+  }
+
+  .searchBar input {
+    width: 100%; /* Ensure the input inside the search bar takes full width */
+    padding: 10px;
+    font-size: 16px;
+  }
 }

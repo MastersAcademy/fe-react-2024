@@ -8,10 +8,18 @@ import { mockData } from '@/mock_data.ts';
 import { HeaderComponent } from './components/header/Header.component.tsx';
 
 import './App.css';
+import './index.css';
 
 function App() {
     const [currentComponent, setCurrentComponent] = useState('About');
     const [selectedProducts, setSelectedProducts] = useState<number[]>([]);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredName, setFilteredName] = useState('');
+    const [sortOption, setSortOption] = useState('');
+    const [isDarkTheme, setIsDarkTheme] = useState<boolean>(() => {
+        const storedTheme = localStorage.getItem('theme');
+        return storedTheme ? JSON.parse(storedTheme) : false;
+    });
 
     const products = mockData;
 
@@ -28,6 +36,14 @@ function App() {
         });
     };
 
+    const toggleTheme = () => {
+        setIsDarkTheme((previousTheme: boolean) => {
+            const isDark: boolean = !previousTheme;
+            localStorage.setItem('theme', JSON.stringify(isDark));
+            return isDark;
+        });
+    };
+
     useEffect(() => {
         const storedSelectedProducts = localStorage.getItem('selectedProducts');
         if (storedSelectedProducts) {
@@ -35,9 +51,28 @@ function App() {
         }
     }, []);
 
+    useEffect(() => {
+        document.body.style.backgroundColor = isDarkTheme ? '#111' : '#FFF';
+    }, [isDarkTheme]);
+
+    useEffect(() => {
+        const rootElement = document.documentElement;
+        if (isDarkTheme) {
+            rootElement.classList.add('dark-theme');
+        } else {
+            rootElement.classList.remove('dark-theme');
+        }
+    }, [isDarkTheme]);
+
     return (
         <>
-            <HeaderComponent toggleComponent={toggleComponent} products={products} selectedProducts={selectedProducts} />
+            <HeaderComponent
+                toggleComponent={toggleComponent}
+                products={products}
+                selectedProducts={selectedProducts}
+                onThemeToggle={toggleTheme}
+                isDarkTheme={isDarkTheme}
+            />
             {currentComponent === 'About' ? (
                 <AboutMeComponents />
             ) : (
@@ -45,6 +80,13 @@ function App() {
                     products={products}
                     selectedProducts={selectedProducts}
                     toggleProductSelection={toggleProductSelection}
+                    searchQuery={searchQuery}
+                    filteredName={filteredName}
+                    sortOption={sortOption}
+                    setSearchQuery={setSearchQuery}
+                    setFilteredName={setFilteredName}
+                    setSortOption={setSortOption}
+                    isDarkTheme={isDarkTheme} // Додавання isDarkTheme до props
                 />
             )}
             <Footer />
