@@ -18,9 +18,17 @@ interface HeaderComponentProps {
     toggleComponent: (componentName: string) => void;
     products: Product[];
     selectedProducts: number[];
+    onThemeToggle: () => void;
+    isDarkTheme: boolean;
 }
 
-export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponent, products, selectedProducts }) => {
+export const HeaderComponent: React.FC<HeaderComponentProps> = ({
+    toggleComponent,
+    products,
+    selectedProducts,
+    onThemeToggle,
+    isDarkTheme,
+}) => {
     const [totalItemsInCart, setTotalItemsInCart] = useState(0);
 
     useEffect(() => {
@@ -32,11 +40,25 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
             <div className={styles.themesContainer}>
                 <img className={styles.logoMOCG} src={LogoMOCG} alt="Logo MA" />
                 <div className={styles.themesMenuContainer}>
-                    <button className={styles.lightThemeButton}>
+                    <button
+                        className={`${styles.lightThemeButton} ${isDarkTheme ? '' : styles.active}`}
+                        onClick={() => {
+                            if (isDarkTheme) {
+                                onThemeToggle();
+                            }
+                        }}
+                    >
                         <img className={styles.lightThemeIcon} src={LightTheme} alt="Light Theme" />
                     </button>
                     <hr className={styles.customHr} />
-                    <button className={styles.darkThemesButton}>
+                    <button
+                        className={`${styles.darkThemesButton} ${isDarkTheme ? styles.active : ''}`}
+                        onClick={() => {
+                            if (!isDarkTheme) {
+                                onThemeToggle();
+                            }
+                        }}
+                    >
                         <img className={styles.darkThemeIcon} src={DarkTheme} alt="Dark Theme" />
                     </button>
                 </div>
@@ -74,3 +96,5 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = ({ toggleComponen
         </header>
     );
 };
+
+export default HeaderComponent;
