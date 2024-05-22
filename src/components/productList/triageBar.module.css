@@ -1,0 +1,92 @@
+.triageBarContainer {
+  display: flex;
+  align-items: center;
+}
+
+.triageBarContainer p {
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.triageBar {
+  border: 1px solid #CCC;
+  position: relative;
+  display: inline-block;
+  background-color: #FFF;
+  border-radius: 20px;
+  padding: 8px 10px;
+  cursor: pointer;
+  width: 196px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.triageBar.open {
+  background-color: #FFF;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.selectedOption {
+  color: #111;
+  background-color: #FFF;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectedOption.active {
+  background-color: #EF4934;
+  color: #FFF;
+  width: 100%;
+  margin: -8px -10px;
+  padding: 13px 10px;
+  border-radius: 20px;
+  z-index: 1;
+  border-right: 1px solid #CCC;
+}
+
+.options {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -1px;
+  width: calc(100% + 2px);
+  background-color: #FFF;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  border-radius: 0 0 20px 20px;
+  z-index: 0;
+  box-sizing: border-box;
+}
+
+.options li {
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.options li:hover {
+  background-color: #F5F5F5;
+}

@@ -1,0 +1,48 @@
+.searchBarContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.searchBar {
+  color: #585858;
+  background-color: #F1F1F1;
+  width: 100%;
+  padding: 10px 50px 10px 10px;
+  border-radius: 20px;
+  border: 1px solid #CCC;
+}
+
+.searchButton {
+  position: absolute;
+  right: -5px;
+  background-color: #EF4934;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchButton:hover {
+  background-color: #EF4934;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1250px) {
+
+  .searchBarContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+  }
+}
