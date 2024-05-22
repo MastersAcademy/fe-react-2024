@@ -1,5 +1,18 @@
 .container {
   max-width: 1176px;
+  margin: 0 auto;
+}
+
+.filterFlex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 53px 0;
+}
+
+.rightFlex {
+  display: flex;
+  gap: 10px;
 }
 
 .filterButton,
@@ -95,7 +108,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 391px) and (max-width: 1279px) {
 
   .container {
     width: 1176px;
@@ -103,14 +116,17 @@
   }
 
   .filterFlex {
+    width: 100%;
+    max-width: 903px;
     display: flex;
     justify-content: space-between;
-    margin: 53px 0;
+    margin: 0 auto;
+    padding-top: 10px;
   }
 
   .rightFlex {
     display: flex;
-    gap: 39px;
+    gap: 16px;
   }
 
   .filterButtonsFlex {

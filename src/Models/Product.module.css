@@ -85,11 +85,11 @@
   }
 }
 
-@media (max-width: 849px) {
+@media (min-width: 391px) and (max-width: 1279px) {
 
   .productList {
     display: flex;
     justify-content: center;
-    gap: 37px;
+    gap: 10px;
   }
 }
