@@ -119,9 +119,14 @@
     width: 100%;
     max-width: 903px;
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    justify-content: flex-end;
     padding-top: 10px;
+  }
+
+  .searchBar {
+    position: relative;
+    border-radius: 50px;
+    padding: 11px 95px 11px 20px;
   }
 
   .rightFlex {

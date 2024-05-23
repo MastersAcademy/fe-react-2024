@@ -23,7 +23,7 @@ function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps
 
     return (
         <>
-            <header className={`${styles.header} ${styles.flex}`}>
+            <header className={`${styles.header} ${styles.flex} ${styles.container}`}>
                 <div className={`${styles.headerFlex} ${styles.flex}`}>
                     <img src={headerLogo} alt="header" width={46} />
                     <div className={`${styles.headerTheme} ${styles.flex}`}>
