@@ -15,6 +15,7 @@
   --deep-black: #111;
   --white: #FFF;
   --grey: #CCC;
+  --deep-grey: #656565;
   --light-grey: #ECECEC;
 }
 
@@ -81,8 +82,9 @@ button:focus-visible {
   --contentBackgroundColor: var(--white);
   --textColor: var(--deep-black);
   --buttonBGColor: var(--white);
-  --buttonTextColor: var(--deep-black);
-  --buttonBorderColor: var(--deep-black)
+  --buttonTextColor: var(--deep-grey);
+  --buttonBorderColor: var(--deep-black);
+  --inputColor: var(--grey)
 }
 
 .dark_theme {
@@ -90,5 +92,6 @@ button:focus-visible {
   --textColor: var(--white);
   --buttonBGColor: var(--deep-black);
   --buttonTextColor: var(--white);
-  --buttonBorderColor: var(--white)
+  --buttonBorderColor: var(--white);
+  --inputColor: var(--dark-charcoal)
 }
