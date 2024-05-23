@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import { Pagination } from '../Pagination/Pagination.component.tsx';
 import { ProductCard } from '../ProductCard/ProductCard.tsx';
+import { SearchBar } from '../SearchBar/SearchBar.component';
 
 import { response } from './ProductsResponse.js';
 
@@ -25,6 +26,7 @@ export const ProductsList: React.FC<CarsCounterSetProps> = ({ totalCartCounter, 
 
     return (
         <ul className={styles.container}>
+            <SearchBar />
             <li className={styles.products}>
                 {currentProducts.map((item) => (
                     <ProductCard
