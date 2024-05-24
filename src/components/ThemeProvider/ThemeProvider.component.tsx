@@ -10,14 +10,21 @@ export const ThemeContext = createContext({
 });
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [theme, setTheme] = useState('light');
+    const activeTheme = () => {
+        const localStorageTheme = localStorage.getItem('theme');
+        const deviceTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        return localStorageTheme ?? deviceTheme;
+    };
+    const [theme, setTheme] = useState(activeTheme);
 
     const setLightTheme = () => {
         setTheme('light');
+        localStorage.setItem('theme', 'light');
     };
 
     const setDarkTheme = () => {
         setTheme('dark');
+        localStorage.setItem('theme', 'dark');
     };
 
     return (
