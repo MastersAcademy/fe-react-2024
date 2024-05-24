@@ -47,9 +47,10 @@
 }
 
 .button {
-  background-color: var(--deep-black);
-  color: var(--white);
-  padding: 0;
+  display: none;
+  /*background-color: var(--deep-black);*/
+  /*color: var(--white);*/
+  /*padding: 0;*/
 }
 
 .boldNavItem {
@@ -115,7 +116,10 @@
   }
 
   .button {
+    display: block;
     background-color: var(--deep-black);
+    color: var(--white);
+    padding: 0;
   }
 
   .cartIcon {

@@ -31,6 +31,11 @@ export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, t
         localStorage.setItem('activePage', name);
     };
 
+    const handleBurgerMenu = (name: PageType) => {
+        const localStoragePage = localStorage.getItem('activePage');
+        const pageType = localStoragePage === PageType.PRODUCT_LIST ? PageType.PRODUCT_LIST : PageType.ABOUT_ME;
+        activePage === PageType.MENU ? setActivePage(pageType) : setActivePage(name);
+    };
     return (
         <div className={headerStyles.container}>
             <div className={headerStyles.logo}>
@@ -66,7 +71,7 @@ export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, t
                     <img src={cartSVG} alt="Cart" />
                     {totalCartCounter > 0 ? <span className={headerStyles.cartCounter}>{totalCartCounter}</span> : ''}
                 </div>
-                <div className={headerStyles.burgerIcon}>
+                <div onClick={() => handleBurgerMenu(PageType.MENU)} className={headerStyles.burgerIcon}>
                     <img src={burgerSVG} alt="Burger" />
                 </div>
             </div>

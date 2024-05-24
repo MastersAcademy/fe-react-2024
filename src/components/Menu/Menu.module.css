@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  justify-content: center;
+  row-gap: 20px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  background-color: var(--contentBackgroundColor);
+}
+
+.switchers {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  color: var(--textColor);
+  font-family: var(--main-font-family), serif;
+  font-size: 22px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.boldNavItem {
+  font-weight: 700;
+}
