@@ -13,7 +13,7 @@ export enum PageType {
 }
 
 function App() {
-    const localStorageActivePage = localStorage.getItem('activePage') == 'ProductList' ? PageType.PRODUCT_LIST : PageType.ABOUT_ME;
+    const localStorageActivePage = localStorage.getItem('activePage') === 'ProductList' ? PageType.PRODUCT_LIST : PageType.ABOUT_ME;
     const [activePage, setActivePage] = useState<PageType>(localStorageActivePage);
     const [totalCartCounter, setTotalCartCounter] = useState(0);
     const renderComponent = () =>
