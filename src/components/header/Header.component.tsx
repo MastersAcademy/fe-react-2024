@@ -19,14 +19,16 @@ import headerStyles from './header.module.css';
 interface NameComponentProps {
     setActivePage: (page: PageType) => void;
     totalCartCounter: number;
+    activePage: PageType;
 }
 
-export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, totalCartCounter }) => {
+export const HeaderComponent: React.FC<NameComponentProps> = ({ setActivePage, totalCartCounter, activePage }) => {
     const { setLightTheme, setDarkTheme, theme } = useContext(ThemeContext);
-    const [activeButton, setActiveButton] = useState<PageType>(PageType.ABOUT_ME);
+    const [activeButton, setActiveButton] = useState<PageType>(activePage);
     const handleButton = (name: PageType) => {
         setActivePage(name);
         setActiveButton(name);
+        localStorage.setItem('activePage', name);
     };
 
     return (

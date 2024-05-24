@@ -13,7 +13,8 @@ export enum PageType {
 }
 
 function App() {
-    const [activePage, setActivePage] = useState<PageType>(PageType.ABOUT_ME);
+    const localStorageActivePage = localStorage.getItem('activePage') == 'ProductList' ? PageType.PRODUCT_LIST : PageType.ABOUT_ME;
+    const [activePage, setActivePage] = useState<PageType>(localStorageActivePage);
     const [totalCartCounter, setTotalCartCounter] = useState(0);
     const renderComponent = () =>
         activePage === PageType.ABOUT_ME ? (
@@ -24,7 +25,7 @@ function App() {
 
     return (
         <ThemeProvider>
-            <HeaderComponent setActivePage={setActivePage} totalCartCounter={totalCartCounter} />
+            <HeaderComponent setActivePage={setActivePage} totalCartCounter={totalCartCounter} activePage={activePage} />
             <main className="mainContentWrapper">{renderComponent()}</main>
             <FooterComponent />
         </ThemeProvider>
