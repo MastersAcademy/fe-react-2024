@@ -1,3 +1,4 @@
+import appStyles from '@/App.module.css';
 import logOut from '@/assets/icons/Log_Out.svg';
 import headerLogo from '@/assets/icons/logo.svg';
 import menuBtn from '@/assets/icons/Menu_Duo_LG.svg';
@@ -23,10 +24,10 @@ function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps
 
     return (
         <>
-            <header className={`${styles.header} ${styles.flex} ${styles.container}`}>
-                <div className={`${styles.headerFlex} ${styles.flex}`}>
+            <header className={`${styles.header} ${appStyles.flex} ${appStyles.container}`}>
+                <div className={`${styles.headerWrapper} ${appStyles.flex}`}>
                     <img src={headerLogo} alt="header" width={46} />
-                    <div className={`${styles.headerTheme} ${styles.flex}`}>
+                    <div className={`${styles.headerTheme} ${appStyles.flex}`}>
                         <button className={styles.headerSun} onClick={() => toggleTheme('light')}>
                             <img src={sunLogo} alt="header" width={24} />
                         </button>
@@ -37,8 +38,8 @@ function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps
                     </div>
                 </div>
 
-                <div className={`${styles.navigation} ${styles.flex}`}>
-                    <div className={`${styles.navigationBtn} ${styles.flex}`}>
+                <div className={`${styles.navigation} ${appStyles.flex}`}>
+                    <div className={`${styles.navigationBtn} ${appStyles.flex}`}>
                         <button className={styles.navigationAbout} onClick={() => handleChangePage('About')}>
                             About
                         </button>
@@ -49,7 +50,7 @@ function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps
 
                     <div className={styles.navigationCart}>
                         <CartComponent count={cartCount} onClick={() => {}} theme={theme} whiteCart={true} />
-                        <div className={styles.flex}>
+                        <div className={appStyles.flex}>
                             <button className={styles.btnLogin}>
                                 <img src={logOut} alt="logOut" className={styles.btnImgLogout} />
                                 Log Out

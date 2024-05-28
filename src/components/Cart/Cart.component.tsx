@@ -16,12 +16,12 @@ const CartComponent: React.FC<CartButtonProps> = ({ count, onClick, theme, white
     const cartImageSource = (whiteCart ? cartWhite : theme) === 'light' ? cartBlack : cartWhite;
 
     return (
-        <>
+        <div>
             <button className={styles.cartButton} onClick={onClick}>
-                <img src={cartImageSource} alt="cart" />
                 {count > 0 && <span className={styles.counterCart}>{count}</span>}
+                <img src={cartImageSource} alt="cart" />
             </button>
-        </>
+        </div>
     );
 };
 

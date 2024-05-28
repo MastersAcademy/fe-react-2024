@@ -1,16 +1,6 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container {
-  max-width: 1176px;
-  margin: 0 auto;
-}
-
 .header {
-  padding: 17px 52px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   background-color: #111;
 }
 
@@ -28,7 +18,7 @@
   cursor: pointer;
 }
 
-.headerFlex {
+.headerWrapper {
   width: 100%;
   max-width: 158px;
 }
@@ -141,7 +131,23 @@
   display: none;
 }
 
-@media (max-width: 391px) {
+
+@media screen and (max-width: 767px) {
+
+  .header {
+    padding: 22px;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .navigation, .headerTheme {
+    display: none;
+  }
+}
+
+/* @media (max-width: 391px) {
 
   .header {
     padding: 22px;
@@ -199,4 +205,4 @@
     font-size: 16px;
     border: none;
   }
-}
+} */

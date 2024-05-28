@@ -1,15 +1,15 @@
-.container {
-  width: 100%;
-  max-width: 1175px;
-  margin: 0 auto;
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (min-width: 391px) and (max-width: 1279px) {
-
-  .container {
-    width: 897px;
-    margin: 0 auto;
-  }
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .lightTheme {
