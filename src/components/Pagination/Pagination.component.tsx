@@ -50,17 +50,6 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, change
             }
             pages.push(totalPages);
         }
-        // if (totalPages <= 6) {
-        //     for (let i = 1; i <= totalPages; i++) {
-        //         pages.push(i);
-        //     }
-        // } else {
-        //     if (currentPage > 3) pages.push('...');
-        //     if (currentPage > 1) pages.push(currentPage - 1);
-        //     pages.push(currentPage);
-        //     if (currentPage < totalPages - 1) pages.push(currentPage + 1);
-        //     if (currentPage < totalPages - 2) pages.push('...');
-        // }
         return pages;
     };
 
