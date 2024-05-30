@@ -8,11 +8,13 @@
   display: flex;
   justify-content: space-between;
   margin: 53px 0;
+  flex-wrap: wrap;
 }
 
 .rightFlex {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .filterButton,
@@ -24,6 +26,7 @@
   background-color: var(--search-bg);
   font-size: 14px;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .sortFlex {
@@ -44,6 +47,7 @@
 }
 
 .searchBar {
+  width: 100%;
   position: relative;
   border-radius: 50px;
   padding: 11px 95px 11px 20px;
@@ -76,6 +80,30 @@
   background-color: #EF4934;
   border: none;
   padding: 10px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+
+  .filterButton,
+  .sortSelect {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .filterFlex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rightFlex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
 }
 
 @media (max-width: 391px) {

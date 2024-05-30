@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 70px 0;
+}
+
+.pageButton {
+  background-color: #FFF;
+  color: #333;
+  border: 1px solid var(--card-border-color);
+  border-radius: 10px;
+  padding: 11px 17px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pageButton:disabled {
+  background-color: #E7E2E2FF;
+  cursor: not-allowed;
+}
+
+.pageButton.active {
+  background-color: #EF4934;
+}
+
+.ellipsis {
+  padding: 10px;
+  font-size: 14px;
+}
