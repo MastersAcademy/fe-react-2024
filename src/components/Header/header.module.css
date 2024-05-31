@@ -1,16 +1,6 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container {
-  max-width: 1176px;
-  margin: 0 auto;
-}
-
 .header {
-  padding: 17px 52px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   background-color: #111;
 }
 
@@ -28,7 +18,7 @@
   cursor: pointer;
 }
 
-.headerFlex {
+.headerWrapper {
   width: 100%;
   max-width: 158px;
 }
@@ -141,7 +131,7 @@
   display: none;
 }
 
-@media (max-width: 391px) {
+@media screen and (max-width: 767px) {
 
   .header {
     padding: 22px;
@@ -151,52 +141,54 @@
     display: block;
   }
 
-  .headerMoon, .headerSun {
-    display: none;
-  }
-
-  .btnLogin, .btnSignUp, .productMenu, .aboutMenu {
+  .navigation, .headerTheme {
     display: none;
   }
 }
 
-@media (min-width: 391px) and (max-width: 1279px) {
 
-  .navigationCart {
-    gap: 10px;
-  }
+/*  .btnLogin, .btnSignUp, .productMenu, .aboutMenu {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
 
-  .navigationBtn {
-    gap: 13px;
-  }
+/*@media (min-width: 391px) and (max-width: 1279px) {*/
 
-  .containerFlex {
-    display: flex;
-  }
+/*  .navigationCart {*/
+/*    gap: 10px;*/
+/*  }*/
 
-  .btnLogin {
-    font-size: 13px;
-    padding: 6px 8px;
-    display: flex;
-    align-items: center;
-    width: max-content;
-  }
+/*  .navigationBtn {*/
+/*    gap: 13px;*/
+/*  }*/
 
-  .btnSignUp {
-    font-size: 13px;
-    padding: 6px 8px;
-    display: flex;
-    align-items: center;
-    width: max-content;
-  }
+/*  .containerFlex {*/
+/*    display: flex;*/
+/*  }*/
 
-  .navigationProduct {
-    border: none;
-    font-size: 13px;
-  }
+/*  .btnLogin {*/
+/*    font-size: 13px;*/
+/*    padding: 6px 8px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    width: max-content;*/
+/*  }*/
 
-  .navigationAbout {
-    font-size: 16px;
-    border: none;
-  }
-}
+/*  .btnSignUp {*/
+/*    font-size: 13px;*/
+/*    padding: 6px 8px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    width: max-content;*/
+/*  }*/
+
+/*  .navigationProduct {*/
+/*    border: none;*/
+/*    font-size: 13px;*/
+/*  }*/
+
+/*  .navigationAbout {*/
+/*    font-size: 16px;*/
+/*    border: none;*/
+/*  }*/
+/*}*/
