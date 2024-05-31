@@ -10,7 +10,7 @@ import ProductCard from './ProductCard';
 import appStyles from '../App.module.css';
 import styles from './Product.module.css';
 
-interface ProductListProps {
+export interface ProductListProps {
     addToCart: () => void;
     theme: 'light' | 'dark';
 }
@@ -34,7 +34,7 @@ const ProductList: React.FC<ProductListProps> = ({ addToCart, theme }) => {
                         <ProductCard key={product.id} product={product} addToCart={addToCart} theme={theme} />
                     ))}
                 </div>
-                <Pagination currentPage={currentPage} totalPages={totalPages} changePage={handlePageChange} />
+                <Pagination currentPage={currentPage} totalPages={totalPages} changePage={handlePageChange} theme={theme} />
             </section>
         </>
     );

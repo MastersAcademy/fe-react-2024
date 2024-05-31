@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import AboutPage from '@/components/about/AboutPage';
+import AboutPage from '@/pages/about/About';
+import Products from '@/pages/products/Products';
 
-import FiltersComponent from './components/Filters/Filters.component';
 import Footer from './components/Footer/footer.component';
 import Header from './components/Header/header.component.tsx';
-import ProductList from './Models/ProductList';
 
 import styles from './App.module.css';
 
@@ -32,6 +31,7 @@ function App() {
             setCartCount(Number.parseInt(storedCartCount, 10));
         }
     }, []);
+
     const addToCart = () => {
         const newCartCount = cartCount + 1;
         setCartCount(newCartCount);
@@ -47,8 +47,8 @@ function App() {
         <>
             <div className={`${theme === 'dark' ? styles.darkTheme : styles.lightTheme}`}>
                 <Header handleChangePage={handleChangePage} cartCount={cartCount} toggleTheme={toggleTheme} theme={theme} />
-                {showPage === 'ProductList' && <FiltersComponent />}
-                {showPage === 'About' ? <AboutPage /> : <ProductList addToCart={addToCart} theme={theme} />}
+                {showPage === 'About' && <AboutPage />}
+                {showPage === 'ProductList' && <Products theme={theme} addToCart={addToCart} />}
                 <Footer />
             </div>
         </>

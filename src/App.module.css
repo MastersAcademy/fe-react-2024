@@ -19,6 +19,11 @@
   --card-border-color: #CCC;
   --about-link: #111;
   --footer-border: #CCC;
+  --active-button: #EF4934;
+  --pagination-bg: #FFF;
+  --pagination-color: #000;
+  --pagination-border: #CCC;
+  --pagination-hover-bg: #656464;
 }
 
 .darkTheme {
@@ -30,4 +35,5 @@
   --card-border-color: #333;
   --about-link: #FFF;
   --footer-border: #333;
+  --active-button: #EF4934;
 }

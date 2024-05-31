@@ -1,7 +1,6 @@
 import appStyles from '@/App.module.css';
 import AboutImage from '@/assets/about_image.png';
-
-import styles from './AboutPage.module.css';
+import styles from '@/pages/about/About.module.css';
 
 function About() {
     return (

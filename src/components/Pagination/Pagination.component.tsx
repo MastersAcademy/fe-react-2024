@@ -5,10 +5,11 @@ import styles from './Pagination.module.css';
 interface PaginationProps {
     currentPage: number;
     totalPages: number;
+    theme: 'light' | 'dark';
     changePage: (page: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, changePage }) => {
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, changePage, theme }) => {
     const returnBack = () => {
         if (currentPage > 1) {
             changePage(currentPage - 1);
@@ -54,7 +55,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, change
     };
 
     return (
-        <div className={styles.pagination}>
+        <div className={`${styles.pagination} ${theme === 'dark' ? styles.darkTheme : styles.lightTheme}`}>
             <button onClick={returnBack} disabled={currentPage === 1} className={styles.pageButton}>
                 &lt;
             </button>
