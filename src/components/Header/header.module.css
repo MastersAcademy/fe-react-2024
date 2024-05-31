@@ -131,7 +131,23 @@
   display: none;
 }
 
+
 @media screen and (max-width: 767px) {
+
+  .header {
+    padding: 22px;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .navigation, .headerTheme {
+    display: none;
+  }
+}
+
+/* @media screen and (max-width: 767px) {
 
   .header {
     padding: 22px;
@@ -191,4 +207,4 @@
 /*    font-size: 16px;*/
 /*    border: none;*/
 /*  }*/
-/*}*/
+/*} */
