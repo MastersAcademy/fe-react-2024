@@ -1,0 +1,200 @@
+.container {
+  max-width: 1279px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.filterFlex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 53px 0;
+  box-sizing: border-box;
+}
+
+.rightFlex {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filterButton,
+.sortSelect {
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: var(--search-text);
+  border: 1px solid var(--search-border-color);
+  background-color: var(--search-bg);
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.activeFilterButton {
+  background-color: var(--active-button);
+}
+
+.sortFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 39px;
+}
+
+.sortBy {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 271px;
+}
+
+.searchBar {
+  width: 100%;
+  position: relative;
+  border-radius: 50px;
+  padding: 11px 95px 11px 20px;
+  color: var(--search-text);
+  border: 1px solid var(--search-border-color);
+  background-color: var(--search-bg);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.searchBar::placeholder {
+  color: var(--search-text);
+}
+
+
+.searchIcon {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+}
+
+.searchButton {
+  position: absolute;
+  top: 47%;
+  right: -1px;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  background-color: #EF4934;
+  border: none;
+  padding: 10px;
+}
+
+@media screen and (max-width: 950px) {
+
+  .filterFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+
+  .filterButton,
+  .sortSelect {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .filterFlex {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 20px;
+  }
+
+  .sortBy {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+
+  .rightFlex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 391px) {
+
+  .container {
+    width: 330px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .filterFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .sortBy {
+    font-weight: 600;
+    font-size: 10px;
+  }
+
+
+  .rightFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filterButtonsFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+}
+
+/*@media (min-width: 391px) and (max-width: 1279px) {*/
+
+/*  .container {*/
+/*    width: 1176px;*/
+/*    margin: 0 auto;*/
+/*  }*/
+
+/*  .filterFlex {*/
+/*    width: 100%;*/
+/*    max-width: 903px;*/
+/*    display: flex;*/
+/*    padding-top: 10px;*/
+/*  }*/
+
+/*  .searchBar {*/
+/*    position: relative;*/
+/*    border-radius: 50px;*/
+/*    padding: 11px 95px 11px 20px;*/
+/*  }*/
+
+/*  .rightFlex {*/
+/*    display: flex;*/
+/*    gap: 16px;*/
+/*  }*/
+
+/*  .filterButtonsFlex {*/
+/*    display: flex;*/
+/*    gap: 10px*/
+/*  }*/
+/*}*/

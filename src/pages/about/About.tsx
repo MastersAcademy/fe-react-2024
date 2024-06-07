@@ -1,12 +1,12 @@
+import appStyles from '@/App.module.css';
 import AboutImage from '@/assets/about_image.png';
-
-import styles from './AboutPage.module.css';
+import styles from '@/pages/about/About.module.css';
 
 function About() {
     return (
         <>
             <main>
-                <section>
+                <section className={appStyles.container}>
                     <div className={styles.aboutFlex}>
                         <img className={styles.aboutImage} src={AboutImage} alt="about" width="500" height="500" />
                         <div className={styles.aboutText}>

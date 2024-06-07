@@ -1,48 +1,56 @@
-import Cart from '@/assets/icons/cart.svg';
+import appStyles from '@/App.module.css';
 import logOut from '@/assets/icons/Log_Out.svg';
 import headerLogo from '@/assets/icons/logo.svg';
 import menuBtn from '@/assets/icons/Menu_Duo_LG.svg';
 import headerMoon from '@/assets/icons/moon (1).svg';
+import headerMoonLight from '@/assets/icons/MoonLight.svg';
 import headerSun from '@/assets/icons/sun.svg';
+import headerSunDark from '@/assets/icons/sunDark.svg';
 import userAdd from '@/assets/icons/User_Add.svg';
+import CartComponent from '@/components/Cart/Cart.component';
 
 import styles from './header.module.css';
 
 interface HeaderProps {
-    toggleAbout: () => void;
-    toggleProducts: () => void;
+    handleChangePage: (component: 'About' | 'ProductList') => void;
     cartCount: number;
+    toggleTheme: (newTheme: 'light' | 'dark') => void;
+    theme: 'light' | 'dark';
 }
 
-function Header({ toggleAbout, toggleProducts, cartCount }: HeaderProps) {
+function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps) {
+    const sunLogo = theme === 'light' ? headerSun : headerSunDark;
+    const moonLogo = theme === 'light' ? headerMoon : headerMoonLight;
+
     return (
         <>
-            <header className={`${styles.header} ${styles.flex}`}>
-                <div className={`${styles.headerFlex} ${styles.flex}`}>
+            <header className={`${styles.header} ${appStyles.flex} ${appStyles.container}`}>
+                <div className={`${styles.headerWrapper} ${appStyles.flex}`}>
                     <img src={headerLogo} alt="header" width={46} />
-                    <div className={`${styles.headerTheme} ${styles.flex}`}>
-                        <img className={styles.headerSun} src={headerSun} alt="header" width={24} />
-                        <img className={styles.headerMoon} src={headerMoon} alt="header" width={24} />
+                    <div className={`${styles.headerTheme} ${appStyles.flex}`}>
+                        <button className={styles.headerSun} onClick={() => toggleTheme('light')}>
+                            <img src={sunLogo} alt="header" width={24} />
+                        </button>
+
+                        <button className={styles.headerMoon} onClick={() => toggleTheme('dark')}>
+                            <img src={moonLogo} alt="header" width={24} />
+                        </button>
                     </div>
                 </div>
 
-                <div className={`${styles.navigation} ${styles.flex}`}>
-                    <div className={`${styles.navigationBtn} ${styles.flex}`}>
-                        <button className={styles.navigationAbout} onClick={toggleAbout}>
+                <div className={`${styles.navigation} ${appStyles.flex}`}>
+                    <div className={`${styles.navigationBtn} ${appStyles.flex}`}>
+                        <button className={styles.navigationAbout} onClick={() => handleChangePage('About')}>
                             About
                         </button>
-                        <button className={styles.navigationProduct} onClick={toggleProducts}>
+                        <button className={styles.navigationProduct} onClick={() => handleChangePage('ProductList')}>
                             Products
                         </button>
                     </div>
 
                     <div className={styles.navigationCart}>
-                        <button className={styles.cart}>
-                            <img src={Cart} alt="Cart" />
-                            {cartCount > 0 && <span className={styles.counter}>{cartCount}</span>}
-                        </button>
-
-                        <div className={styles.flex}>
+                        <CartComponent count={cartCount} onClick={() => {}} theme={theme} whiteCart={true} />
+                        <div className={appStyles.flex}>
                             <button className={styles.btnLogin}>
                                 <img src={logOut} alt="logOut" className={styles.btnImgLogout} />
                                 Log Out

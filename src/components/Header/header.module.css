@@ -1,11 +1,6 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .header {
-  padding: 17px 52px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   background-color: #111;
 }
 
@@ -17,22 +12,13 @@
   cursor: pointer;
 }
 
-.counter {
-  height: 17px;
-  width: 17px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #EF4934;
-  font-size: 10px;
-  font-weight: 700;
-  position: absolute;
-  top: 5px;
-  right: 25px;
+.headerMoon, .headerSun {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.headerFlex {
+.headerWrapper {
   width: 100%;
   max-width: 158px;
 }
@@ -83,13 +69,22 @@
 }
 
 .cart {
+  background: none;
+}
+
+.counter {
+  height: 17px;
+  width: 17px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 32px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
+  border-radius: 50%;
+  background-color: #EF4934;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 18px;
+  right: 1px;
 }
 
 .btn {
@@ -136,28 +131,80 @@
   display: none;
 }
 
-@media (max-width: 391px) {
+
+@media screen and (max-width: 767px) {
+
+  .header {
+    padding: 22px;
+  }
 
   .menuBtn {
     display: block;
   }
 
-  .headerMoon, .headerSun {
-    display: none;
-  }
-
-  .btnLogin, .btnSignUp, .productMenu, .aboutMenu {
+  .navigation, .headerTheme {
     display: none;
   }
 }
 
-@media (min-width: 391px) and (max-width: 1279px) {
+/* @media screen and (max-width: 767px) {
 
   .header {
-    padding: 10px;
+    padding: 22px;
   }
 
-  .containerFlex {
-    display: flex;
+  .menuBtn {
+    display: block;
+  }
+
+  .navigation, .headerTheme {
+    display: none;
   }
 }
+
+
+/*  .btnLogin, .btnSignUp, .productMenu, .aboutMenu {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
+
+/*@media (min-width: 391px) and (max-width: 1279px) {*/
+
+/*  .navigationCart {*/
+/*    gap: 10px;*/
+/*  }*/
+
+/*  .navigationBtn {*/
+/*    gap: 13px;*/
+/*  }*/
+
+/*  .containerFlex {*/
+/*    display: flex;*/
+/*  }*/
+
+/*  .btnLogin {*/
+/*    font-size: 13px;*/
+/*    padding: 6px 8px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    width: max-content;*/
+/*  }*/
+
+/*  .btnSignUp {*/
+/*    font-size: 13px;*/
+/*    padding: 6px 8px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    width: max-content;*/
+/*  }*/
+
+/*  .navigationProduct {*/
+/*    border: none;*/
+/*    font-size: 13px;*/
+/*  }*/
+
+/*  .navigationAbout {*/
+/*    font-size: 16px;*/
+/*    border: none;*/
+/*  }*/
+/*} */

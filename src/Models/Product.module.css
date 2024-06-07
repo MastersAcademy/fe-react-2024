@@ -7,12 +7,13 @@
 .productCard {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 275px;
   height: auto;
   font-size: 22px;
-  color: #221F1F;
+  color: var(--search-text);
   border-radius: 20px;
-  border: 1px solid #CCC;
+  border: 1px solid var(--card-border-color);
   margin-bottom: 15px;
 }
 
@@ -26,6 +27,7 @@
 .flexPrice {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 15px;
 }
 
@@ -52,7 +54,6 @@
 }
 
 .counter {
-  height: 17px;
   width: 17px;
   display: flex;
   justify-content: center;
@@ -86,11 +87,11 @@
   }
 }
 
-@media (max-width: 849px) {
+@media (min-width: 391px) and (max-width: 1279px) {
 
   .productList {
     display: flex;
     justify-content: center;
-    gap: 37px;
+    gap: 10px;
   }
 }
