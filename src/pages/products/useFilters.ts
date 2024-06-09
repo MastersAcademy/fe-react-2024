@@ -1,27 +1,29 @@
 import { useState } from 'react';
 
 export enum CategoryEnum {
-    ELECTRONICS = 'ELECTRONICS',
-    SHOES = 'SHOES',
-    CLOTHES = 'CLOTHES',
+    ELECTRONICS = 'Electronics',
+    SHOES = 'Shoes',
+    CLOTHES = 'Clothes',
 }
 
 export enum SortEnum {
-    PRICE_HIGH_LOW = 'PRICE_HIGH_LOW',
-    PRICE_LOW_HIGH = 'PRICE_LOW_HIGH',
-    NEWEST = 'NEWEST',
-    OLDEST = 'OLDEST',
+    PRICE_HIGH_LOW = 'priceSort',
+    PRICE_LOW_HIGH = 'priceAsc',
+    NEWEST = 'dataNewest',
+    OLDEST = 'dataOldest',
 }
 
 interface Filters {
-    category: CategoryEnum | null;
+    category: CategoryEnum[];
     sort: SortEnum;
+    searchQuery: string;
 }
 
 export const useFilters = () => {
     const [filters, setFilters] = useState<Filters>({
-        category: null,
+        category: [],
         sort: SortEnum.PRICE_HIGH_LOW,
+        searchQuery: '',
     });
 
     const handleChangeFilter = (filter: keyof Filters, value: any) => {
