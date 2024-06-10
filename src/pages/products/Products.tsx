@@ -2,17 +2,10 @@ import React from 'react';
 
 import type { ProductListProps } from '@/Models/ProductList';
 import ProductList from '@/Models/ProductList';
-import { useFilters } from '@/pages/products/useFilters';
 
-const Products: React.FC<ProductListProps> = ({ theme, addToCart }) => {
-    const {} = useFilters();
-
-    return (
-        <>
-            {/* <FiltersComponent filters={filters} handleChangeFilter={handleChangeFilter} />*/}
-            <ProductList addToCart={addToCart} theme={theme} />
-        </>
-    );
-};
-
+const Products: React.FC<ProductListProps> = ({ theme, addToCart }) => (
+    <>
+        <ProductList addToCart={addToCart} theme={theme} />
+    </>
+);
 export default Products;
