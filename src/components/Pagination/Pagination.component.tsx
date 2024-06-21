@@ -5,75 +5,88 @@ import styles from './Pagination.module.css';
 interface PaginationProps {
     currentPage: number;
     totalPages: number;
-    theme: 'light' | 'dark';
-    changePage: (page: number) => void;
+    onPageChange: (page: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, changePage, theme }) => {
-    const returnBack = () => {
-        if (currentPage > 1) {
-            changePage(currentPage - 1);
-        }
+const FIRST_PAGE = 1;
+const MAX_COLLAPSED_PAGES_COUNT = 5;
+const ELLIPSIS_THRESHOLD_START = 3;
+const ELLIPSIS_THRESHOLD_END = 2;
+
+export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
+    const handlePageChange = (page: number) => {
+        onPageChange(page);
     };
 
-    const returnForward = () => {
-        if (currentPage < totalPages) {
-            changePage(currentPage + 1);
+    const renderPageButton = (page: number, isActive: boolean = false) => (
+        <button
+            className={`${styles.pageButton} ${isActive ? styles.pageButton.active : ''}`}
+            key={page}
+            onClick={() => handlePageChange(page)}
+            disabled={isActive}
+        >
+            {page}
+        </button>
+    );
+
+    const shouldCollapse = totalPages > MAX_COLLAPSED_PAGES_COUNT;
+    const isStartEllipsisVisible = currentPage > ELLIPSIS_THRESHOLD_START;
+    const isEndEllipsisVisible = currentPage < totalPages - ELLIPSIS_THRESHOLD_END;
+
+    const INITIAL_ITEMS = () => (
+        <>
+            {renderPageButton(FIRST_PAGE, currentPage === FIRST_PAGE)}
+            {isStartEllipsisVisible && <span key="prevEllipsis">...</span>}
+        </>
+    );
+
+    const MIDDLE_ITEMS = () => {
+        const middleItems = [];
+        const startPage = Math.max(FIRST_PAGE + 1, currentPage - 1);
+        const endPage = Math.min(totalPages - 1, currentPage + 1);
+
+        for (let index = startPage; index <= endPage; index++) {
+            middleItems.push(renderPageButton(index, currentPage === index));
         }
+        return <>{middleItems}</>;
     };
 
-    const generatePageNumbers = () => {
-        const pages = [];
-        if (totalPages <= 6) {
-            for (let index = 1; index <= totalPages; index++) {
-                pages.push(index);
-            }
-        } else {
-            pages.push(1);
+    const LAST_ITEM = () => (
+        <>
+            {isEndEllipsisVisible && <span key="nextEllipsis">...</span>}
+            {totalPages > FIRST_PAGE && renderPageButton(totalPages, currentPage === totalPages)}
+        </>
+    );
 
-            if (currentPage > 3) {
-                pages.push('...');
-            }
-            if (currentPage > 2) {
-                pages.push(currentPage - 1);
-            }
-
-            if (currentPage !== 1 && currentPage !== totalPages) {
-                pages.push(currentPage);
-            }
-
-            if (currentPage < totalPages - 1) {
-                pages.push(currentPage + 1);
-            }
-
-            if (currentPage < totalPages - 2) {
-                pages.push('...');
-            }
-            pages.push(totalPages);
-        }
-        return pages;
-    };
+    const renderPagination = shouldCollapse ? (
+        <>
+            <INITIAL_ITEMS />
+            <MIDDLE_ITEMS />
+            <LAST_ITEM />
+        </>
+    ) : (
+        <>
+            {renderPageButton(FIRST_PAGE, currentPage === FIRST_PAGE)}
+            {MIDDLE_ITEMS()}
+            {totalPages > FIRST_PAGE && renderPageButton(totalPages, currentPage === totalPages)}
+        </>
+    );
 
     return (
-        <div className={`${styles.pagination} ${theme === 'dark' ? styles.darkTheme : styles.lightTheme}`}>
-            <button onClick={returnBack} disabled={currentPage === 1} className={styles.pageButton}>
+        <div className={styles.paginationFlex}>
+            <button
+                className={`${styles.pageButton} ${currentPage === FIRST_PAGE ? styles.active : ''}`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === FIRST_PAGE}
+            >
                 &lt;
             </button>
-            {generatePageNumbers().map((page, index) => (
-                <React.Fragment key={index}>
-                    {typeof page === 'number' ? (
-                        <button
-                            onClick={() => changePage(page)}
-                            className={`${styles.pageButton} ${page === currentPage ? styles.active : ''}`}
-                        >
-                            {page}
-                        </button>
-                    ) : (
-                        <span className={styles.ellipsis}>{page}</span>
-                    )}
-                </React.Fragment>
-            ))}
-            <button onClick={returnForward} disabled={currentPage === totalPages} className={styles.pageButton}>
+            {renderPagination}
+            <button
+                className={`${styles.pageButton} ${currentPage === totalPages ? styles.pageButton.disabled : ''}`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+            >
                 &gt;
             </button>
         </div>

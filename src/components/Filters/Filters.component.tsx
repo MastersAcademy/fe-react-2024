@@ -1,85 +1,57 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import searchIcon from '@/assets/icons/SearchIcon.svg';
-import { CategoryEnum, SortEnum } from '@/pages/products/useFilters';
+import CustomSelect from '@/components/Filters/CustomSelect.component';
+import CategoryFilterButtons from '@/components/Filters/FilterButton.component.tsx';
+import SearchInput from '@/components/Filters/SearchInput.component.tsx';
+import type { Category } from '@/constants/filtersCategory.ts';
+import type { SortOption } from '@/constants/filtersSortOption.ts';
 
 import styles from './Filters.module.css';
 
 interface FiltersComponentProps {
-    onCategorySelect: (categories: CategoryEnum[]) => void;
-    onSortSelect: (sortOption: SortEnum) => void;
-    onSearch: (searchQuery: string) => void;
+    selectedCategories: Category[];
+    sortOption: SortOption;
+    searchQuery: string;
+    handleCategorySelect: (category: Category) => void;
+    handleSortSelect: (sortOption: SortOption) => void;
+    setSearchQuery: (searchQuery: string) => void;
+    handleSearch: () => void;
 }
-
-export const FiltersComponent: React.FC<FiltersComponentProps> = ({ onCategorySelect, onSortSelect, onSearch }) => {
-    const [selectedCategories, setSelectedCategories] = useState<CategoryEnum[]>([]);
-    const [sortOption, setSortOption] = useState<SortEnum>(SortEnum.PRICE_HIGH_LOW);
-    const [searchQuery, setSearchQuery] = useState<string>('');
-
-    const handleCategorySelect = (category: CategoryEnum) => {
-        const updatedCategories = selectedCategories.includes(category)
-            ? selectedCategories.filter((cat) => cat !== category)
-            : [...selectedCategories, category];
-        setSelectedCategories(updatedCategories);
-        onCategorySelect(updatedCategories);
-    };
-
-    const handleSortSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const selectedSortOption = event.target.value as SortEnum;
-        setSortOption(selectedSortOption);
-        onSortSelect(selectedSortOption);
-    };
-
-    const handleSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchQuery(event.target.value);
-    };
-
-    const handleSearch = () => {
-        onSearch(searchQuery);
-    };
-
-    return (
-        <>
-            <div className={styles.container}>
-                <section className={styles.filterFlex}>
-                    <div className={styles.searchContainer}>
-                        <input
-                            className={styles.searchBar}
-                            type="search"
-                            placeholder={'Search...'}
-                            value={searchQuery}
-                            onChange={handleSearchInput}
-                        />
-                        <button className={styles.searchButton} onClick={handleSearch}>
-                            <img src={searchIcon} alt="search" />
-                        </button>
+export const FiltersComponent: React.FC<FiltersComponentProps> = ({
+    selectedCategories,
+    sortOption,
+    searchQuery,
+    setSearchQuery,
+    handleCategorySelect,
+    handleSortSelect,
+    handleSearch,
+}) => (
+    <>
+        <div className={styles.container}>
+            <section className={styles.filterFlex}>
+                <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} handleSearch={handleSearch} />
+                <div className={styles.rightFlex}>
+                    <CategoryFilterButtons selectedCategories={selectedCategories} handleCategorySelect={handleCategorySelect} />
+                    <div className={styles.sortFlex}>
+                        <p className={styles.sortBy}>Sort by:</p>
+                        <CustomSelect value={sortOption} onChange={handleSortSelect} />
+                        {/* <select*/}
+                        {/*    className={styles.sortSelect}*/}
+                        {/*    name="sortOption"*/}
+                        {/*    id="sortOption"*/}
+                        {/*    value={sortOption}*/}
+                        {/*    onChange={(event) => handleSortSelect(event.target.value as SortOption)}*/}
+                        {/* >*/}
+                        {/*    <option value={SortOption.PRICE_HIGH_TO_LOW}>Price (High - Low)</option>*/}
+                        {/*    <option value={SortOption.PRICE_LOW_TO_HIGH}>Price (Low - High)</option>*/}
+                        {/*    <option value={SortOption.NEWEST}>Newest</option>*/}
+                        {/*    <option value={SortOption.OLDEST}>Oldest</option>*/}
+                        {/* </select>*/}
                     </div>
-                    <div className={styles.rightFlex}>
-                        <div className={styles.filterButtonsFlex}>
-                            {Object.values(CategoryEnum).map((category) => (
-                                <button
-                                    key={category}
-                                    className={`${styles.filterButton} ${selectedCategories.includes(category) ? styles.activeFilterButton : ''}`}
-                                    onClick={() => handleCategorySelect(category)}
-                                >
-                                    {category}
-                                </button>
-                            ))}
-                        </div>
-                        <div className={styles.sortFlex}>
-                            <p className={styles.sortBy}>Sort by:</p>
-                            <select className={styles.sortSelect} value={sortOption} onChange={handleSortSelect}>
-                                <option value={SortEnum.PRICE_HIGH_LOW}>Price (High - Low)</option>
-                                <option value={SortEnum.PRICE_LOW_HIGH}>Price (Low - High)</option>
-                                <option value={SortEnum.NEWEST}>Newest</option>
-                                <option value={SortEnum.OLDEST}>Oldest</option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </>
-    );
-};
+                </div>
+            </section>
+        </div>
+    </>
+);
 
 export default FiltersComponent;

@@ -23,7 +23,9 @@
   --pagination-bg: #FFF;
   --pagination-color: #000;
   --pagination-border: #CCC;
-  --pagination-hover-bg: #656464;
+  --pagination-hover-bg: rgba(201, 56, 9, 0);
+  --pagination-text: #111;
+  --pagination-border-color: #F1F1F1 ;
 }
 
 .darkTheme {
@@ -36,4 +38,21 @@
   --about-link: #FFF;
   --footer-border: #333;
   --active-button: #EF4934;
+  --pagination-text: #FFF;
+  --pagination-border-color: #656565 ;
+}
+
+.darkTheme .pageButton,
+.lightTheme .pageButton {
+  background-color: var(--pagination-bg);
+  color: var(--pagination-color);
+  border: 1px solid var(--pagination-border);
+}
+
+.darkTheme .pageButton:hover:not(:disabled) {
+  background-color: var(--pagination-hover-bg);
+}
+
+.lightTheme .pageButton:hover:not(:disabled) {
+  background-color: var(--pagination-hover-bg);
 }

@@ -31,8 +31,13 @@
   flex-shrink: 0;
 }
 
-.activeFilterButton {
+.filterButton.active {
   background-color: var(--active-button);
+}
+
+.filterButtonsFlex {
+  display: flex;
+  gap: 10px;
 }
 
 .sortFlex {
@@ -72,8 +77,8 @@
 
 .searchIcon {
   position: absolute;
-  top: 11px;
-  right: 11px;
+  top: 0;
+  right: 0;
 }
 
 .searchButton {
@@ -100,6 +105,18 @@
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
+
+  .filterButtonsFlex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sortFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding: 0;
+  }
 
   .filterButton,
   .sortSelect {
