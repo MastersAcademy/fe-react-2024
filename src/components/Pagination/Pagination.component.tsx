@@ -20,7 +20,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages,
 
     const renderPageButton = (page: number, isActive: boolean = false) => (
         <button
-            className={`${styles.pageButton} ${isActive ? styles.pageButton.active : ''}`}
+            className={`${styles.pageButton} ${isActive ? styles.pageButton : ''}`}
             key={page}
             onClick={() => handlePageChange(page)}
             disabled={isActive}
@@ -75,7 +75,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages,
     return (
         <div className={styles.paginationFlex}>
             <button
-                className={`${styles.pageButton} ${currentPage === FIRST_PAGE ? styles.pageButton.active : ''}`}
+                className={`${styles.pageButton} ${currentPage === FIRST_PAGE ? styles.pageButton : ''}`}
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === FIRST_PAGE}
             >
@@ -83,7 +83,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages,
             </button>
             {renderPagination}
             <button
-                className={`${styles.pageButton} ${currentPage === totalPages ? styles.pageButton.disabled : ''}`}
+                className={`${styles.pageButton} ${currentPage === totalPages ? styles.pageButton : ''}`}
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
             >

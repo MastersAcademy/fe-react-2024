@@ -17,11 +17,11 @@
   font-weight: 500;
 }
 
-.pageButton.active {
-  background-color: #EF4934;
-  color: #FFF;
-  font-weight: 700;
-}
+/*.pageButton.active {*/
+/*  background-color: #EF4934;*/
+/*  color: #FFF;*/
+/*  font-weight: 700;*/
+/*}*/
 
 .pageButton:disabled {
   background-color: #EF4934;
