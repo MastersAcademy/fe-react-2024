@@ -75,7 +75,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages,
     return (
         <div className={styles.paginationFlex}>
             <button
-                className={`${styles.pageButton} ${currentPage === FIRST_PAGE ? styles.active : ''}`}
+                className={`${styles.pageButton} ${currentPage === FIRST_PAGE ? styles.pageButton.active : ''}`}
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === FIRST_PAGE}
             >

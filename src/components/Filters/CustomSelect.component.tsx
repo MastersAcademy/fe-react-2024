@@ -10,7 +10,7 @@ interface CustomSelectProps {
     // handleSortSelect: (sortOption: SortOption) => void;
 }
 
-const CustomSelect: React.FC<CustomSelectProps> = ({ value, onChange, handleSortSelect }) => (
+const CustomSelect: React.FC<CustomSelectProps> = ({ value, onChange }) => (
     <div className={styles.customSelectContainer}>
         <select
             className={styles.customSelect}

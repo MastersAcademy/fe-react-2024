@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import type { Product } from 'src/Models/product';
-
 import CartComponent from '@/components/Cart/Cart.component';
 import styles from '@/components/Product/Product.module.css';
+import type { Product } from '@/Models/product.ts';
 
 interface ProductCardProps {
     product: Product;
