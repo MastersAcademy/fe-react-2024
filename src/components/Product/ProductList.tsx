@@ -23,7 +23,7 @@ const ProductList: React.FC = () => {
     const [searchInput, setSearchInput] = useState<string>('');
 
     useEffect(() => {
-        let updatedProducts = mockData;
+        let updatedProducts = [...mockData];
 
         const filterProducts = () => {
             if (selectedCategories.length > 0) {

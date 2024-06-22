@@ -1,30 +1,30 @@
-.customSelectContainer {
-  position: relative;
-  display: inline-block;
-  width: 200px;
-}
+/*.customSelectContainer {*/
+/*  position: relative;*/
+/*  display: inline-block;*/
+/*  width: 200px;*/
+/*}*/
 
-.customSelect {
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  border-radius: 50px;
-  border: 1px solid var(--search-border-color);
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: var(--search-bg);
-  color: var(--search-text);
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  /* Очищает стили браузера для select */
-}
+/*.customSelect {*/
+/*  width: 100%;*/
+/*  padding: 10px;*/
+/*  text-align: center;*/
+/*  border-radius: 50px;*/
+/*  border: 1px solid var(--search-border-color);*/
+/*  appearance: none;*/
+/*  -webkit-appearance: none;*/
+/*  -moz-appearance: none;*/
+/*  background-color: #FFF;*/
+/*  color: var(--search-text);*/
+/*  font-size: 14px;*/
+/*  font-weight: 600;*/
+/*  cursor: pointer;*/
+/*  !* Очищает стили браузера для select *!*/
+/*}*/
 
-.customSelect:focus {
-  outline: none;
-  border-color: var(--active-button);
-}
+/*.customSelect:focus {*/
+/*  outline: none;*/
+/*  border-color: var(--active-button);*/
+/*}*/
 /*.customSelectContainer::after {*/
 /*  content: " ";*/
 /*  position: absolute;*/
@@ -35,26 +35,64 @@
 /*  color: var(--search-text);*/
 /*}*/
 
-.customSelectContainer select option {
-  background-color: #FFF; /* Фон опций */
-  color: #111; /* Цвет текста опций */
+/*.customSelectContainer select option {*/
+/*  background-color: #FFF; !* Фон опций *!*/
+/*  color: #111; !* Цвет текста опций *!*/
+/*}*/
+
+/*.customSelectContainer select option:hover {*/
+/*  background-color: #EF4934; !* Цвет фона при наведении на опцию *!*/
+/*  color: #FFF; !* Цвет текста при наведении на опцию *!*/
+/*}*/
+
+/*.customSelectContainer::after {*/
+/*  content: "▼";*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  right: 10px;*/
+/*  transform: translateY(-50%);*/
+/*  pointer-events: none;*/
+/*  color: #FFF;*/
+/*}*/
+
+/*.customSelect::-ms-expand {*/
+/*  display: none;*/
+/*}*/
+
+/* selectCustom.module.css */
+
+.customSelectContainer {
+  position: relative;
+  display: inline-block;
+  width: 200px;
 }
 
-.customSelectContainer select option:hover {
-  background-color: #EF4934; /* Цвет фона при наведении на опцию */
-  color: #FFF; /* Цвет текста при наведении на опцию */
+.customSelect {
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid var(--search-border-color);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--search-bg);
+  color: var(--search-text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.customSelect:focus {
+  outline: none;
+  border-color: var(--active-button);
 }
 
 .customSelectContainer::after {
   content: "▼";
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 20px;
   transform: translateY(-50%);
   pointer-events: none;
-  color: #FFF;
-}
-
-.customSelect::-ms-expand {
-  display: none;
+  color: var(--search-text);
 }
