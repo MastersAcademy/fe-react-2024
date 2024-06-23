@@ -1,6 +1,6 @@
 import React from 'react';
 
-import searchIcon from '@/assets/search icon.svg';
+import searchIcon from '@/assets/icons/SearchIcon.svg';
 
 import styles from './Filters.module.css';
 

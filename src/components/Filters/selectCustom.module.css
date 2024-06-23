@@ -40,10 +40,10 @@
 /*  color: #111; !* Цвет текста опций *!*/
 /*}*/
 
-/*.customSelectContainer select option:hover {*/
-/*  background-color: #EF4934; !* Цвет фона при наведении на опцию *!*/
-/*  color: #FFF; !* Цвет текста при наведении на опцию *!*/
-/*}*/
+.customSelectContainer select option:hover {
+  background-color: #EF4934; /* Цвет фона при наведении на опцию */
+  color: #FFF; /* Цвет текста при наведении на опцию */
+}
 
 /*.customSelectContainer::after {*/
 /*  content: "▼";*/
@@ -58,8 +58,6 @@
 /*.customSelect::-ms-expand {*/
 /*  display: none;*/
 /*}*/
-
-/* selectCustom.module.css */
 
 .customSelectContainer {
   position: relative;
@@ -88,8 +86,9 @@
 }
 
 .customSelectContainer::after {
-  content: "▼";
+  content: "ᨈ";
   position: absolute;
+  padding-bottom: 5px;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);

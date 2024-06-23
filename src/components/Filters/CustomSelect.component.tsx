@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import type { SortOption } from '@/constants/filtersSortOption.ts';
 import { SortOption } from '@/constants/filtersSortOption.ts';
 
 import styles from './selectCustom.module.css';
@@ -8,7 +7,6 @@ import styles from './selectCustom.module.css';
 interface CustomSelectProps {
     value: SortOption;
     onChange: (value: SortOption) => void;
-    // handleSortSelect: (sortOption: SortOption) => void;
 }
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ value, onChange }) => (
@@ -16,17 +14,10 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ value, onChange }) => (
         <select
             className={styles.customSelect}
             value={value}
-            onChange={(event) =>
-                // handleSortSelect(event.target.value as SortOption)}
-                onChange(event.target.value as SortOption)
-            }
+            onChange={(event) => onChange(event.target.value as SortOption)}
             aria-label="Sort options"
         >
             <option value={SortOption.PRICE_HIGH_TO_LOW}>Price (High - Low)</option>
-            {/* <option value="PRICE_LOW_TO_HIGH">Price (Low - High)</option>*/}
-            {/* <option value="NEWEST">Newest</option>*/}
-            {/* <option value="OLDEST">Oldest</option>*/}
-            {/* option value={SortOption.PRICE_HIGH_TO_LOW}> Price (High - Low) </option>*!/*/}
             <option value={SortOption.PRICE_LOW_TO_HIGH}>Price (Low - High)</option>
             <option value={SortOption.NEWEST}>Newest</option>
             <option value={SortOption.OLDEST}>Oldest</option>

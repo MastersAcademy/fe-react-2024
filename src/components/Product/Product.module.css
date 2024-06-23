@@ -20,8 +20,8 @@
 .productList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 40px;
+  gap: 50px;
+  margin-top: 15px;
 }
 
 .flexPrice {
@@ -92,6 +92,6 @@
   .productList {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
   }
 }
