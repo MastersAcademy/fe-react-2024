@@ -1,48 +1,52 @@
 import React from 'react';
 
-import searchIcon from '@/assets/icons/SearchIcon.svg';
-import type { FiltersReturnType } from '@/pages/products/useFilters';
-import { CategoryEnum } from '@/pages/products/useFilters';
+import CustomSelect from '@/components/Filters/CustomSelect.component';
+import CategoryFilterButtons from '@/components/Filters/FilterButton.component.tsx';
+import SearchInput from '@/components/Filters/SearchInput.component.tsx';
+import type { Category } from '@/constants/filtersCategory.ts';
+import type { SortOption } from '@/constants/filtersSortOption.ts';
 
 import styles from './Filters.module.css';
 
-const FiltersComponent: React.FC<FiltersReturnType> = ({ filters, handleChangeFilter }) => (
+interface FiltersComponentProps {
+    selectedCategories: Category[];
+    sortOption: SortOption;
+    searchQuery: string;
+    handleCategorySelect: (category: Category) => void;
+    handleSortSelect: (sortOption: SortOption) => void;
+    setSearchQuery: (searchQuery: string) => void;
+    handleSearch: () => void;
+}
+export const FiltersComponent: React.FC<FiltersComponentProps> = ({
+    selectedCategories,
+    sortOption,
+    searchQuery,
+    setSearchQuery,
+    handleCategorySelect,
+    handleSortSelect,
+    handleSearch,
+}) => (
     <>
         <div className={styles.container}>
             <section className={styles.filterFlex}>
-                <div className={styles.searchContainer}>
-                    <input className={styles.searchBar} type="search" placeholder={'Search...'} />
-                    <button className={styles.searchButton}>
-                        <img src={searchIcon} className={styles.searchIcon} alt="search" />
-                    </button>
-                </div>
+                <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} handleSearch={handleSearch} />
                 <div className={styles.rightFlex}>
-                    <button
-                        onClick={() => handleChangeFilter('category', CategoryEnum.ELECTRONICS)}
-                        className={`${styles.filterButton} ${filters.category === CategoryEnum.ELECTRONICS ? styles.activeFilterButton : ''}`}
-                    >
-                        Electronics
-                    </button>
-                    <button
-                        onClick={() => handleChangeFilter('category', CategoryEnum.SHOES)}
-                        className={`${styles.filterButton} ${filters.category === CategoryEnum.SHOES ? styles.activeFilterButton : ''}`}
-                    >
-                        Shoes
-                    </button>
-                    <button
-                        onClick={() => handleChangeFilter('category', CategoryEnum.CLOTHES)}
-                        className={`${styles.filterButton} ${filters.category === CategoryEnum.CLOTHES ? styles.activeFilterButton : ''}`}
-                    >
-                        Clothes
-                    </button>
+                    <CategoryFilterButtons selectedCategories={selectedCategories} handleCategorySelect={handleCategorySelect} />
                     <div className={styles.sortFlex}>
                         <p className={styles.sortBy}>Sort by:</p>
-                        <select className={styles.sortSelect} name="price" id="price">
-                            <option value="priceHighLow">Price (High - Low)</option>
-                            <option value="priceLowHigh">Price (Low- High)</option>
-                            <option value="newest">Newest</option>
-                            <option value="oldest">Oldest</option>
-                        </select>
+                        <CustomSelect value={sortOption} onChange={handleSortSelect} />
+                        {/* <select*/}
+                        {/*    className={styles.sortSelect}*/}
+                        {/*    name="sortOption"*/}
+                        {/*    id="sortOption"*/}
+                        {/*    value={sortOption}*/}
+                        {/*    onChange={(event) => handleSortSelect(event.target.value as SortOption)}*/}
+                        {/* >*/}
+                        {/*    <option value={SortOption.PRICE_HIGH_TO_LOW}>Price (High - Low)</option>*/}
+                        {/*    <option value={SortOption.PRICE_LOW_TO_HIGH}>Price (Low - High)</option>*/}
+                        {/*    <option value={SortOption.NEWEST}>Newest</option>*/}
+                        {/*    <option value={SortOption.OLDEST}>Oldest</option>*/}
+                        {/* </select>*/}
                     </div>
                 </div>
             </section>

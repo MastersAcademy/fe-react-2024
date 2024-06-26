@@ -8,17 +8,16 @@ import headerSun from '@/assets/icons/sun.svg';
 import headerSunDark from '@/assets/icons/sunDark.svg';
 import userAdd from '@/assets/icons/User_Add.svg';
 import CartComponent from '@/components/Cart/Cart.component';
+import { Theme, useTheme } from '@/Context/ThemeContext';
 
 import styles from './header.module.css';
 
-interface HeaderProps {
+interface HeaderComponentProps {
     handleChangePage: (component: 'About' | 'ProductList') => void;
-    cartCount: number;
-    toggleTheme: (newTheme: 'light' | 'dark') => void;
-    theme: 'light' | 'dark';
 }
 
-function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps) {
+function HeaderComponent({ handleChangePage }: HeaderComponentProps) {
+    const { theme, toggleTheme } = useTheme();
     const sunLogo = theme === 'light' ? headerSun : headerSunDark;
     const moonLogo = theme === 'light' ? headerMoon : headerMoonLight;
 
@@ -28,11 +27,11 @@ function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps
                 <div className={`${styles.headerWrapper} ${appStyles.flex}`}>
                     <img src={headerLogo} alt="header" width={46} />
                     <div className={`${styles.headerTheme} ${appStyles.flex}`}>
-                        <button className={styles.headerSun} onClick={() => toggleTheme('light')}>
+                        <button className={styles.headerSun} onClick={() => toggleTheme(Theme.LIGHT)}>
                             <img src={sunLogo} alt="header" width={24} />
                         </button>
 
-                        <button className={styles.headerMoon} onClick={() => toggleTheme('dark')}>
+                        <button className={styles.headerMoon} onClick={() => toggleTheme(Theme.DARK)}>
                             <img src={moonLogo} alt="header" width={24} />
                         </button>
                     </div>
@@ -49,7 +48,7 @@ function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps
                     </div>
 
                     <div className={styles.navigationCart}>
-                        <CartComponent count={cartCount} onClick={() => {}} theme={theme} whiteCart={true} />
+                        <CartComponent whiteCart={true} />
                         <div className={appStyles.flex}>
                             <button className={styles.btnLogin}>
                                 <img src={logOut} alt="logOut" className={styles.btnImgLogout} />
@@ -68,4 +67,4 @@ function Header({ handleChangePage, cartCount, toggleTheme, theme }: HeaderProps
     );
 }
 
-export default Header;
+export default HeaderComponent;
