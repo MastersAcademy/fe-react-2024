@@ -1,0 +1,11 @@
+.flexNotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  min-height: 100vh;
+}
+
+.backToThePage {
+  color: #EF4934;
+}

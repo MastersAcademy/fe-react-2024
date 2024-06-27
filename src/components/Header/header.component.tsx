@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import appStyles from '@/App.module.css';
 import logOut from '@/assets/icons/Log_Out.svg';
 import headerLogo from '@/assets/icons/logo.svg';
@@ -8,15 +10,12 @@ import headerSun from '@/assets/icons/sun.svg';
 import headerSunDark from '@/assets/icons/sunDark.svg';
 import userAdd from '@/assets/icons/User_Add.svg';
 import CartComponent from '@/components/Cart/Cart.component';
+import { ROUTES } from '@/constants/routes';
 import { Theme, useTheme } from '@/Context/ThemeContext';
 
 import styles from './header.module.css';
 
-interface HeaderComponentProps {
-    handleChangePage: (component: 'About' | 'ProductList') => void;
-}
-
-function HeaderComponent({ handleChangePage }: HeaderComponentProps) {
+function HeaderComponent() {
     const { theme, toggleTheme } = useTheme();
     const sunLogo = theme === 'light' ? headerSun : headerSunDark;
     const moonLogo = theme === 'light' ? headerMoon : headerMoonLight;
@@ -39,12 +38,13 @@ function HeaderComponent({ handleChangePage }: HeaderComponentProps) {
 
                 <div className={`${styles.navigation} ${appStyles.flex}`}>
                     <div className={`${styles.navigationBtn} ${appStyles.flex}`}>
-                        <button className={styles.navigationAbout} onClick={() => handleChangePage('About')}>
+                        <NavLink className={({ isActive }) => (isActive ? styles.navButtonActive : styles.navButton)} to={ROUTES.ABOUT}>
                             About
-                        </button>
-                        <button className={styles.navigationProduct} onClick={() => handleChangePage('ProductList')}>
+                        </NavLink>
+
+                        <NavLink className={({ isActive }) => (isActive ? styles.navButtonActive : styles.navButton)} to={ROUTES.PRODUCTS}>
                             Products
-                        </button>
+                        </NavLink>
                     </div>
 
                     <div className={styles.navigationCart}>
